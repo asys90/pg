@@ -1,0 +1,55 @@
+{
+ "v": 1,
+ "zonas": [
+  {
+   "id": "demo1",
+   "mapa": "kanto",
+   "nome": "Rota 1 - teste",
+   "x": 0,
+   "z": 35,
+   "raio": 22,
+   "especies": [
+    {
+     "dex": 16,
+     "glb": "pm0016_00.glb",
+     "nome": "Pidgey",
+     "peso": 100
+    },
+    {
+     "dex": 19,
+     "glb": "pm0019_00.glb",
+     "nome": "Rattata",
+     "peso": 80
+    }
+   ],
+   "lvMin": 4,
+   "lvMax": 8,
+   "max": 5,
+   "intervalo": 6,
+   "shiny": 0.02,
+   "ativa": true
+  },
+  {
+   "id": "demo2",
+   "mapa": "kanto",
+   "nome": "Mato denso",
+   "x": -40,
+   "z": -10,
+   "raio": 14,
+   "especies": [
+    {
+     "dex": 10,
+     "glb": "pm0010_00.glb",
+     "nome": "Caterpie",
+     "peso": 100
+    }
+   ],
+   "lvMin": 6,
+   "lvMax": 10,
+   "max": 3,
+   "intervalo": 8,
+   "shiny": 0,
+   "ativa": true
+  }
+ ]
+}

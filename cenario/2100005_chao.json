@@ -1,0 +1,18 @@
+{
+    "cx": -41.75,
+    "cy": 0.3522756099700928,
+    "cz": 8.975190162658692,
+    "sx": 85.5,
+    "sy": 5.295449256896973,
+    "sz": 22.049619674682618,
+    "malhas": 23,
+    "triangulos": 21230,
+    "objetos": 19,
+    "faltando": 0,
+    "amostraNome": "",
+    "amostraX": 0.0,
+    "amostraY": 0.0,
+    "amostraZ": 0.0,
+    "biblioteca": true,
+    "prefabs": 19
+}

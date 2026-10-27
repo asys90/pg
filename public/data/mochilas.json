@@ -1,0 +1,290 @@
+[
+ {
+  "id": 54001,
+  "glb": "Bag001",
+  "nome": "mochila 1",
+  "qualidade": 2,
+  "sexo": 0,
+  "icone": "fa_54001",
+  "glbOk": true
+ },
+ {
+  "id": 54002,
+  "glb": "Bag012",
+  "nome": "mochila 2",
+  "qualidade": 2,
+  "sexo": 0,
+  "icone": "fa_54002",
+  "glbOk": true
+ },
+ {
+  "id": 54003,
+  "glb": "Bag014",
+  "nome": "mochila 3",
+  "qualidade": 2,
+  "sexo": 0,
+  "icone": "fa_54003",
+  "glbOk": true
+ },
+ {
+  "id": 54004,
+  "glb": "Bag015",
+  "nome": "mochila 4",
+  "qualidade": 2,
+  "sexo": 0,
+  "icone": "fa_54004",
+  "glbOk": true
+ },
+ {
+  "id": 54005,
+  "glb": "Bag016",
+  "nome": "mochila 5",
+  "qualidade": 2,
+  "sexo": 0,
+  "icone": "fa_54005",
+  "glbOk": true
+ },
+ {
+  "id": 54006,
+  "glb": "Bag017",
+  "nome": "mochila 6",
+  "qualidade": 2,
+  "sexo": 0,
+  "icone": "fa_54006",
+  "glbOk": true
+ },
+ {
+  "id": 54007,
+  "glb": "Bag018",
+  "nome": "mochila 7",
+  "qualidade": 2,
+  "sexo": 0,
+  "icone": "fa_54007",
+  "glbOk": true
+ },
+ {
+  "id": 54008,
+  "glb": "Bag019",
+  "nome": "mochila 8",
+  "qualidade": 2,
+  "sexo": 0,
+  "icone": "fa_54008",
+  "glbOk": true
+ },
+ {
+  "id": 54009,
+  "glb": "Bag020",
+  "nome": "mochila 9",
+  "qualidade": 2,
+  "sexo": 0,
+  "icone": "fa_54009",
+  "glbOk": true
+ },
+ {
+  "id": 54010,
+  "glb": "Bag021",
+  "nome": "mochila 10",
+  "qualidade": 2,
+  "sexo": 0,
+  "icone": "fa_54010",
+  "glbOk": true
+ },
+ {
+  "id": 54011,
+  "glb": "Bag022",
+  "nome": "mochila 11",
+  "qualidade": 2,
+  "sexo": 0,
+  "icone": "fa_54011",
+  "glbOk": true
+ },
+ {
+  "id": 54012,
+  "glb": "Bag023",
+  "nome": "Mochila Asas de Dragão",
+  "qualidade": 3,
+  "sexo": 1,
+  "icone": "fa_54012",
+  "glbOk": true
+ },
+ {
+  "id": 54013,
+  "glb": "Bag024",
+  "nome": "Mochila Sino",
+  "qualidade": 3,
+  "sexo": 1,
+  "icone": "fa_54013",
+  "glbOk": true
+ },
+ {
+  "id": 54014,
+  "glb": "Bag023_1",
+  "nome": "Mochila Asas de Dragão",
+  "qualidade": 3,
+  "sexo": 2,
+  "icone": "fa_54014",
+  "glbOk": true
+ },
+ {
+  "id": 54015,
+  "glb": "Bag024",
+  "nome": "Mochila Sino",
+  "qualidade": 3,
+  "sexo": 2,
+  "icone": "fa_54015",
+  "glbOk": true
+ },
+ {
+  "id": 54016,
+  "glb": "Bag025",
+  "nome": "Coração de Ouro e Alma de Prata",
+  "qualidade": 1,
+  "sexo": 1,
+  "icone": "fa_54016",
+  "glbOk": true
+ },
+ {
+  "id": 54017,
+  "glb": "Bag025_1",
+  "nome": "Coração de Ouro e Alma de Prata",
+  "qualidade": 1,
+  "sexo": 2,
+  "icone": "fa_54017",
+  "glbOk": true
+ },
+ {
+  "id": 54018,
+  "glb": "Bag027",
+  "nome": "Mochila da Gardevoir",
+  "qualidade": 3,
+  "sexo": 0,
+  "icone": "fa_54018",
+  "glbOk": true
+ },
+ {
+  "id": 54019,
+  "glb": "Bag030",
+  "nome": "Troféu de Campeão da Liga",
+  "qualidade": 4,
+  "sexo": 0,
+  "icone": "fa_54019",
+  "glbOk": true
+ },
+ {
+  "id": 54020,
+  "glb": "Bag028",
+  "nome": "Cenoura",
+  "qualidade": 3,
+  "sexo": 0,
+  "icone": "fa_54020",
+  "glbOk": true
+ },
+ {
+  "id": 54021,
+  "glb": "Bag031",
+  "nome": "Coxa de Frango",
+  "qualidade": 3,
+  "sexo": 0,
+  "icone": "fa_54021",
+  "glbOk": true
+ },
+ {
+  "id": 54022,
+  "glb": "Bag036",
+  "nome": "Bolsa de Sorte de Qixi",
+  "qualidade": 3,
+  "sexo": 0,
+  "icone": "fa_54022",
+  "glbOk": true
+ },
+ {
+  "id": 54023,
+  "glb": "Bag033",
+  "nome": "Verão Refrescante",
+  "qualidade": 3,
+  "sexo": 0,
+  "icone": "fa_54023",
+  "glbOk": true
+ },
+ {
+  "id": 54024,
+  "glb": "Bag039",
+  "nome": "Lua Cheia",
+  "qualidade": 3,
+  "sexo": 1,
+  "icone": "fa_54024",
+  "glbOk": true
+ },
+ {
+  "id": 54025,
+  "glb": "Bag039_1",
+  "nome": "Lua Cheia",
+  "qualidade": 3,
+  "sexo": 2,
+  "icone": "fa_54025",
+  "glbOk": true
+ },
+ {
+  "id": 54026,
+  "glb": "Bag044",
+  "nome": "ceu de ardente",
+  "qualidade": 3,
+  "sexo": 0,
+  "icone": "fa_54026",
+  "glbOk": true
+ },
+ {
+  "id": 54027,
+  "glb": "Bag045",
+  "nome": "Mochila Coração",
+  "qualidade": 3,
+  "sexo": 0,
+  "icone": "fa_54027",
+  "glbOk": true
+ },
+ {
+  "id": 54028,
+  "glb": "Bag046",
+  "nome": "Mochila floral",
+  "qualidade": 3,
+  "sexo": 0,
+  "icone": "fa_54028",
+  "glbOk": true
+ },
+ {
+  "id": 54029,
+  "glb": "Bag047",
+  "nome": "Halo das Asas Sagradas",
+  "qualidade": 3,
+  "sexo": 0,
+  "icone": "fa_54029",
+  "glbOk": true
+ },
+ {
+  "id": 54030,
+  "glb": "Bag050",
+  "nome": "Mochila Campeã",
+  "qualidade": 4,
+  "sexo": 0,
+  "icone": "fa_54030",
+  "glbOk": true
+ },
+ {
+  "id": 54031,
+  "glb": "Bag049",
+  "nome": "Mochila Top 10",
+  "qualidade": 3,
+  "sexo": 0,
+  "icone": "fa_54031",
+  "glbOk": true
+ },
+ {
+  "id": 54032,
+  "glb": "Bag048",
+  "nome": "Mochila do Rei",
+  "qualidade": 2,
+  "sexo": 0,
+  "icone": "fa_54032",
+  "glbOk": true
+ }
+]

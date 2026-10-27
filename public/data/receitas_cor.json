@@ -1,0 +1,907 @@
+{
+ "boy_012": {
+  "modelo": "Boy_012",
+  "texturas": {
+   "fc0001_12_hero_body_col": {
+    "mask": "fc0001_12_hero_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": "roupa",
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0001_12_hero_face_col": {
+    "mask": "fc0001_00_hero_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo e blusa",
+   "roupa": "estampa",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#2b0030",
+   "roupa": "#ffb84e",
+   "olhos": "#ffffff"
+  }
+ },
+ "boy_013": {
+  "modelo": "Boy_013",
+  "texturas": {
+   "fc0001_13_hero_body_col": {
+    "mask": "fc0001_13_hero_body_msk.png",
+    "R": "cabelo",
+    "G": "roupa",
+    "B": "roupa2",
+    "K": "pele"
+   },
+   "fc0001_00_hero_face_col": {
+    "mask": "fc0001_00_hero_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo e jaqueta",
+   "roupa": "boina",
+   "roupa2": "calça",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#ffffff",
+   "roupa": "#ff2525",
+   "roupa2": "#4f3d39",
+   "olhos": "#ffffff"
+  }
+ },
+ "boy_014": {
+  "modelo": "Boy_014",
+  "texturas": {
+   "fc0001_14_hero_body_col": {
+    "mask": "fc0001_14_hero_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": "roupa",
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0001_00_hero_face_col": {
+    "mask": "fc0001_00_hero_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo/macacão",
+   "roupa": "remendos",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#837ba8",
+   "roupa": "#bdc3d5",
+   "olhos": "#ffffff"
+  }
+ },
+ "boy_015": {
+  "modelo": "Boy_015",
+  "texturas": {
+   "fc0001_15_hero_body_col": {
+    "mask": "fc0001_22_hero_body_msk.png",
+    "R": "pele",
+    "G": "roupa",
+    "B": "roupa2",
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0001_00_hero_face_col": {
+    "mask": "fc0001_00_hero_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "roupa": "calça e listras",
+   "roupa2": "tênis",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "roupa": "#4f3b44",
+   "roupa2": "#ff4334",
+   "olhos": "#ffffff"
+  }
+ },
+ "boy_016": {
+  "modelo": "Boy_016",
+  "texturas": {
+   "fc0001_16_hero_body_col": {
+    "mask": "fc0001_16_hero_body_msk.png",
+    "R": [
+     0,
+     0,
+     0
+    ],
+    "G": "roupa",
+    "B": "roupa2",
+    "K": "pele"
+   },
+   "fc0001_00_hero_face_col": {
+    "mask": "fc0001_00_hero_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "roupa": "detalhes",
+   "roupa2": "jaqueta e calça",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "roupa": "#e6f12b",
+   "roupa2": "#ecdfdb",
+   "olhos": "#ffffff"
+  }
+ },
+ "boy_017": {
+  "modelo": "Boy_017",
+  "texturas": {
+   "fc0001_17_hero_body_col": {
+    "mask": "fc0001_17_hero_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": "roupa",
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0001_00_hero_face_col": {
+    "mask": "fc0001_00_hero_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo",
+   "roupa": "camiseta",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#48133f",
+   "roupa": "#5a504f",
+   "olhos": "#ffffff"
+  }
+ },
+ "boy_018": {
+  "modelo": "Boy_018",
+  "texturas": {
+   "fc0001_18_hero_body_col": {
+    "mask": "fc0001_18_hero_body_msk.png",
+    "R": "pele",
+    "G": "roupa",
+    "B": "roupa2",
+    "K": "roupa3"
+   },
+   "fc0001_00_hero_face_col": {
+    "mask": "fc0001_00_hero_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "roupa": "gorro",
+   "roupa2": "cachecol",
+   "roupa3": "jaqueta",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "roupa": "#6b7986",
+   "roupa2": "#a0ada0",
+   "roupa3": "#d18449",
+   "olhos": "#ffffff"
+  }
+ },
+ "boy_020": {
+  "modelo": "Boy_020",
+  "texturas": {
+   "fc0001_20_hero_body_col": {
+    "mask": "fc0001_20_hero_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0001_00_hero_face_col": {
+    "mask": "fc0001_00_hero_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#7d4c6e",
+   "olhos": "#ffffff"
+  }
+ },
+ "boy_021": {
+  "modelo": "Boy_021",
+  "texturas": {
+   "fc0001_21_hero_body_col": {
+    "mask": "fc0001_21_hero_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": "roupa",
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0001_00_hero_face_col": {
+    "mask": "fc0001_00_hero_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo e jaqueta",
+   "roupa": "boné e calça",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#7b4e4d",
+   "roupa": "#431c1a",
+   "olhos": "#ffffff"
+  }
+ },
+ "boy_022": {
+  "modelo": "Boy_022",
+  "texturas": {
+   "fc0001_22_hero_body_col": {
+    "mask": "fc0001_15_hero_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": "roupa",
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0001_00_hero_face_col": {
+    "mask": "fc0001_00_hero_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo e jaqueta",
+   "roupa": "tênis",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#782070",
+   "roupa": "#f07045",
+   "olhos": "#ffffff"
+  }
+ },
+ "girl_010": {
+  "modelo": "Girl_010",
+  "texturas": {
+   "fc0002_10_heroine_body_col": {
+    "mask": "fc0002_10_heroine_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": "roupa",
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0002_00_heroine_face_col": {
+    "mask": "fc0002_00_heroine_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo",
+   "roupa": "laços",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#6a3c69",
+   "roupa": "#ffd91c",
+   "olhos": "#00bdff"
+  }
+ },
+ "girl_012": {
+  "modelo": "Girl_012",
+  "texturas": {
+   "fc0002_12_body_col": {
+    "mask": "fc0002_12_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": "roupa",
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0002_00_heroine_face_col 3": {
+    "mask": "fc0002_00_heroine_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo",
+   "roupa": "estampa",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#410028",
+   "roupa": "#ffc12f",
+   "olhos": "#ffffff"
+  }
+ },
+ "girl_013": {
+  "modelo": "Girl_013",
+  "texturas": {
+   "fc0002_13_heroine_body_col": {
+    "mask": "fc0002_13_heroine_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": "roupa",
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0002_00_heroine_face_col 6": {
+    "mask": "fc0002_00_heroine_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo",
+   "roupa": "gorro",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#220043",
+   "roupa": "#ffaeaf",
+   "olhos": "#ffa2cd"
+  }
+ },
+ "girl_014": {
+  "modelo": "Girl_014",
+  "texturas": {
+   "fc0002_14_heroine_body_col": {
+    "mask": "fc0002_14_heroine_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": "roupa",
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0002_00_heroine_face_col": {
+    "mask": "fc0002_00_heroine_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo",
+   "roupa": "acessório",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#d6c37c",
+   "roupa": "#ffcb69",
+   "olhos": "#00bdff"
+  }
+ },
+ "girl_015": {
+  "modelo": "Girl_015",
+  "texturas": {
+   "fc0002_15_heroine_body_col": {
+    "mask": "fc0002_15_heroine_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": [
+     0.9434,
+     0.3515,
+     0.3515
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0002_00_heroine_face_col": {
+    "mask": "fc0002_00_heroine_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#30002b",
+   "olhos": "#00bdff"
+  }
+ },
+ "girl_016": {
+  "modelo": "Girl_016",
+  "texturas": {
+   "fc0002_16_heroine_body_col": {
+    "mask": "fc0002_16_heroine_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": [
+     0.6698,
+     0.3949,
+     0.3949
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0002_16_heroine_face_col": {
+    "mask": "fc0002_16_heroine_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#29002b",
+   "olhos": "#ff3000"
+  }
+ },
+ "girl_017": {
+  "modelo": "Girl_017",
+  "texturas": {
+   "fc0002_17_heroine_body_col": {
+    "mask": "fc0002_17_heroine_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": "roupa",
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0002_00_heroine_face_col": {
+    "mask": "fc0002_00_heroine_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo",
+   "roupa": "tênis",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#350a3c",
+   "roupa": "#494356",
+   "olhos": "#00bdff"
+  }
+ },
+ "girl_018": {
+  "modelo": "Girl_018",
+  "texturas": {
+   "fc0002_18_heroine_body_col": {
+    "mask": "fc0002_18_heroine_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": "roupa",
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0002_00_heroine_face_col 4": {
+    "mask": "fc0002_00_heroine_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo",
+   "roupa": "gorro",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#4b0040",
+   "roupa": "#ff4e3b",
+   "olhos": "#ffab28"
+  }
+ },
+ "girl_019": {
+  "modelo": "Girl_019",
+  "texturas": {
+   "fc0002_19_heroine_body_col": {
+    "mask": "fc0002_19_heroine_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": "roupa",
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0002_00_heroine_face_col 5": {
+    "mask": "fc0002_00_heroine_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo",
+   "roupa": "boina",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#210030",
+   "roupa": "#197621",
+   "olhos": "#5bff28"
+  }
+ },
+ "girl_020": {
+  "modelo": "Girl_020",
+  "texturas": {
+   "fc0002_20_heroine_body_col": {
+    "mask": "fc0002_20_heroine_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": "roupa",
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0002_00_heroine_face_col": {
+    "mask": "fc0002_00_heroine_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo",
+   "roupa": "boné",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#57175b",
+   "roupa": "#000000",
+   "olhos": "#00bdff"
+  }
+ },
+ "girl_021": {
+  "modelo": "Girl_021",
+  "texturas": {
+   "fc0002_21_heroine_body_col": {
+    "mask": "fc0002_21_heroine_body_msk.png",
+    "R": "pele",
+    "G": "cabelo",
+    "B": "roupa",
+    "K": [
+     1,
+     1,
+     1
+    ]
+   },
+   "fc0002_00_heroine_face_col 2": {
+    "mask": "fc0002_00_heroine_face_msk.png",
+    "R": "pele",
+    "G": "olhos",
+    "B": [
+     1,
+     1,
+     1
+    ],
+    "K": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "rotulos": {
+   "pele": "pele",
+   "cabelo": "cabelo",
+   "roupa": "tênis",
+   "olhos": "olhos"
+  },
+  "padrao": {
+   "pele": "#ffcbaa",
+   "cabelo": "#d10050",
+   "roupa": "#1f1c1b",
+   "olhos": "#ff008b"
+  }
+ }
+}

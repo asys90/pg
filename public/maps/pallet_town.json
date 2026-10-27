@@ -1,0 +1,136 @@
+{
+  "name": "Pallet Town",
+  "version": 1,
+  "description": "Cidade inicial - baseado em Pokemon",
+  "ambient": {
+    "skyColor": "#87CEEB",
+    "groundColor": "#4a7c23",
+    "fogColor": "#e8f4f8",
+    "fogNear": 50,
+    "fogFar": 200
+  },
+  "objects": [
+    {
+      "id": "ground",
+      "name": "Chao",
+      "primitive": "plane",
+      "position": { "x": 0, "y": 0, "z": 0 },
+      "rotation": { "x": -90, "y": 0, "z": 0 },
+      "scale": { "x": 50, "y": 50, "z": 1 },
+      "material": { "color": "#4a7c23" }
+    },
+    {
+      "id": "house_player",
+      "name": "Casa do Jogador",
+      "primitive": "box",
+      "position": { "x": -8, "y": 2, "z": -5 },
+      "scale": { "x": 4, "y": 4, "z": 4 },
+      "material": { "color": "#8B4513" }
+    },
+    {
+      "id": "house_rival",
+      "name": "Casa do Rival",
+      "primitive": "box",
+      "position": { "x": 8, "y": 2, "z": -5 },
+      "scale": { "x": 4, "y": 4, "z": 4 },
+      "material": { "color": "#654321" }
+    },
+    {
+      "id": "lab_oak",
+      "name": "Laboratorio Oak",
+      "primitive": "box",
+      "position": { "x": 0, "y": 3, "z": 10 },
+      "scale": { "x": 8, "y": 6, "z": 6 },
+      "material": { "color": "#D2691E" }
+    },
+    {
+      "id": "tree_1",
+      "name": "Arvore 1",
+      "primitive": "cylinder",
+      "position": { "x": -15, "y": 2, "z": 0 },
+      "scale": { "x": 1, "y": 4, "z": 1 },
+      "material": { "color": "#228B22" }
+    },
+    {
+      "id": "tree_2",
+      "name": "Arvore 2",
+      "primitive": "cylinder",
+      "position": { "x": -15, "y": 2, "z": 8 },
+      "scale": { "x": 1, "y": 4, "z": 1 },
+      "material": { "color": "#228B22" }
+    },
+    {
+      "id": "tree_3",
+      "name": "Arvore 3",
+      "primitive": "cylinder",
+      "position": { "x": 15, "y": 2, "z": 0 },
+      "scale": { "x": 1, "y": 4, "z": 1 },
+      "material": { "color": "#228B22" }
+    },
+    {
+      "id": "tree_4",
+      "name": "Arvore 4",
+      "primitive": "cylinder",
+      "position": { "x": 15, "y": 2, "z": 8 },
+      "scale": { "x": 1, "y": 4, "z": 1 },
+      "material": { "color": "#228B22" }
+    },
+    {
+      "id": "fence_1",
+      "name": "Cerca 1",
+      "primitive": "box",
+      "position": { "x": -20, "y": 0.5, "z": 0 },
+      "scale": { "x": 0.5, "y": 1, "z": 40 },
+      "material": { "color": "#8B4513" }
+    },
+    {
+      "id": "fence_2",
+      "name": "Cerca 2",
+      "primitive": "box",
+      "position": { "x": 20, "y": 0.5, "z": 0 },
+      "scale": { "x": 0.5, "y": 1, "z": 40 },
+      "material": { "color": "#8B4513" }
+    },
+    {
+      "id": "path_1",
+      "name": "Caminho",
+      "primitive": "box",
+      "position": { "x": 0, "y": 0.05, "z": 0 },
+      "scale": { "x": 3, "y": 0.1, "z": 30 },
+      "material": { "color": "#D2B48C" }
+    },
+    {
+      "id": "pokecenter",
+      "name": "Pokemon Center",
+      "primitive": "box",
+      "position": { "x": -12, "y": 2.5, "z": 15 },
+      "scale": { "x": 5, "y": 5, "z": 5 },
+      "material": { "color": "#FF6B6B" }
+    },
+    {
+      "id": "pokemart",
+      "name": "Poke Mart",
+      "primitive": "box",
+      "position": { "x": 12, "y": 2.5, "z": 15 },
+      "scale": { "x": 5, "y": 5, "z": 5 },
+      "material": { "color": "#4169E1" }
+    },
+    {
+      "id": "sign_1",
+      "name": "Placa Pallet Town",
+      "primitive": "box",
+      "position": { "x": 3, "y": 0.75, "z": -15 },
+      "scale": { "x": 1.5, "y": 1.5, "z": 0.2 },
+      "material": { "color": "#8B4513" }
+    },
+    {
+      "id": "water",
+      "name": "Lago",
+      "primitive": "plane",
+      "position": { "x": -10, "y": 0.1, "z": 20 },
+      "rotation": { "x": -90, "y": 0, "z": 0 },
+      "scale": { "x": 8, "y": 8, "z": 1 },
+      "material": { "color": "#4169E1", "opacity": 0.7 }
+    }
+  ]
+}

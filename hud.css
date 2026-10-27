@@ -1,0 +1,405 @@
+/* HUD do jogo — usado por index.html e pelo editor de HUD (o editor mostra exatamente o que o jogo mostra). */
+/* Barra de ação: parceiro · 4 golpes + bola · alvo. Botões quadrados grandes (dedo), recarga
+   como cortina que sobe, faixa da cor do tipo. No celular a barra ocupa o rodapé inteiro e
+   ganha joystick + botões de câmera; os painéis de depuração ficam atrás do ☰. */
+#barra{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);display:flex;gap:12px;align-items:center;padding:8px 10px;border:1px solid var(--line);border-radius:12px;background:var(--panel);box-shadow:0 8px 18px #000a;max-width:calc(100vw - 16px);box-sizing:border-box}
+#barra[hidden]{display:none}
+.ficha{min-width:150px;font-size:12px}
+.ficha i{display:block;height:6px;background:#2a3550;border-radius:3px;margin-top:4px;overflow:hidden}
+.ficha i b{display:block;height:100%;background:#86ef5f;transition:width .15s}
+#skills{display:flex;gap:8px;align-items:center}
+/* peça montada do Figma (hud.mjs montarFigma): filhos absolutos no tamanho do layout; o botão vira só a caixa clicável */
+.fig{position:relative}.fig .fig-img,.fig .fig-var,.fig .fig-txt,.fig .fig-fill{position:absolute;pointer-events:none}
+.fig .fig-img,.fig .fig-var,.fig .fig-fill,.fig .fig-txt{border:0;background-color:transparent;box-shadow:none}
+.fig .fig-fx{position:absolute;pointer-events:none;border-radius:0}
+#time-hud:not(.fig) .tk{display:none}
+#time-hud .tc-lvn{display:none}   /* só o número do nível: a maquete do celular liga (txt/lvl) e o estiloTexto o mostra */
+.fig .fig-grupo{pointer-events:none}.fig .fig-grupo .fig-slot,.fig [data-tag]{pointer-events:auto}
+.peca-segue{will-change:left,top;z-index:26}
+#missao:not(.fig) .passo::before{content:' · '}#missao:not(.fig) .rec{display:none}#missao:not(.fig) .etapa{display:none}
+#missao:not(.fig) #missao-txt,#missao:not(.fig) .missao-header,#missao:not(.fig) .missao-corpo{display:contents}#missao:not(.fig) #missao-toggle{display:none}   /* CSS antigo: texto corrido; a recompensa só aparece na maquete do Figma */
+#missao.fig{display:block}#missao.fig .prog{margin-left:4px}
+#skills .vazio > .fig-grupo[data-fig="slot-tipo"]{display:none !important}   /* 17/09 (auditoria dos placeholders): golpe vazio do v2 não mostra o encaixe do ícone de tipo (ficava a moldura sem ícone). Só o v2: lá o slot-tipo é um GRUPO (fig-grupo); no HUD padrão ele é a arte do encaixe (fig-img) e a maquete desenha o slot vazio com ela */
+#barra .fig button.sk,#barra .fig button.sk.frio,#barra .fig button.sk.vazio{opacity:1;cursor:pointer;border:0;border-radius:0;background:none;box-shadow:none;text-shadow:none}
+#barra .fig button.sk.frio > b,#barra .fig button.sk.frio > em,#barra .fig button.sk.frio > small,#barra .fig button.sk.frio .fig-var{opacity:.55}
+#barra .fig button.sk:active{transform:scale(.97)}
+#barra button.sk{position:relative;width:64px;height:64px;padding:4px 3px 6px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:3px;border:1px solid #b47622;border-radius:10px;background:linear-gradient(#342317,#10131b);color:var(--p-cor,#ffe6b0);font:inherit;font-size:var(--p-fs,11px);line-height:1.1;cursor:pointer;overflow:hidden;text-align:center;-webkit-tap-highlight-color:transparent;touch-action:manipulation;user-select:none}
+#barra button.sk:active{transform:scale(.95)}
+#barra button.sk b{position:absolute;left:5px;top:4px;padding:0 4px;border:1px solid #b47622;border-radius:3px;font-family:ui-monospace,Consolas,monospace;font-size:10px;font-weight:700}
+#barra button.sk em{font-style:normal;font-weight:700;font-size:var(--p-fs,11px);max-width:58px;white-space:normal}
+#barra button.sk s{display:block;width:100%;height:3px;border-radius:2px;text-decoration:none;background:#556}
+#barra button.sk i{position:absolute;left:0;right:0;bottom:0;height:0;background:#000b;pointer-events:none}
+#barra button.sk small{position:absolute;right:5px;top:4px;font-size:10px;color:#ffd23a;font-weight:700}
+#barra button.sk.frio{opacity:.55;cursor:default}
+/* atalhos 5–8 (peça #atalhos): poções/bolas da mochila e montarias, com o ícone real; vazio = "+" (clique escolhe) */
+#atalhos{display:flex;gap:6px}
+#atalhos .atalho{position:relative;width:64px;height:64px;padding:4px 3px 5px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:2px;border:1px solid #4a5a80;border-radius:10px;background:linear-gradient(#1a2440,#0b1020);color:var(--p-cor,#d6e2ff);font:inherit;font-size:var(--p-fs,10px);line-height:1.1;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+#atalhos .atalho b{position:absolute;left:5px;top:4px;padding:0 4px;border:1px solid #4a5a80;border-radius:3px;font-family:ui-monospace,Consolas,monospace;font-size:10px;font-weight:700}
+#atalhos .atalho i{width:34px;height:34px;background:center/contain no-repeat;pointer-events:none}
+#atalhos .atalho em{font-style:normal;font-weight:700;font-size:var(--p-fs,10px);max-width:58px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#atalhos .atalho small{position:absolute;right:5px;top:4px;font-size:10px;color:#ffd23a;font-weight:700}
+#atalhos .atalho.vazio{border-style:dashed;color:var(--p-cor,#6a7590)}#atalhos .atalho.vazio span{font-size:22px;line-height:1;margin-bottom:8px}
+#atalhos .atalho.frio{opacity:.5}#atalhos .atalho.on{border-color:#8ef58e;box-shadow:0 0 0 2px #8ef58e44}
+#atalhos .atalho:active{transform:translateY(1px)}
+#barra button.sk.bola{border-color:#ff5f5f;background:linear-gradient(#3a1416,#10131b);color:#ffd9d9;margin-left:6px}
+#barra button.sk.bola b{border-color:#ff5f5f}
+#barra button.sk.bola span{position:absolute;right:3px;bottom:3px;width:20px;height:20px;line-height:20px;border:1px solid #ff5f5f;border-radius:50%;font-size:12px;background:#10131b}
+#bola-icone{width:22px;height:22px;border-radius:50%;background:linear-gradient(#e6323c 0 46%,#111 46% 54%,#eee 54%);border:1px solid #333;position:relative}
+#bola-icone::after{content:'';position:absolute;left:7px;top:7px;width:6px;height:6px;border-radius:50%;background:#fff;border:1px solid #333}
+#bola-icone.real{width:28px;height:28px;border:0;background:center/contain no-repeat}#bola-icone.real::after{display:none}   /* ícone da bola do jogo (ui/itens/ic_100N.png), posto pelo pintarBarra */
+#joy{position:fixed;left:18px;bottom:160px;width:132px;height:132px;border-radius:50%;background:#10162488;border:1px solid var(--line);touch-action:none;z-index:31;backdrop-filter:blur(3px)}
+#joy[hidden]{display:none}
+#joy-knob{position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:linear-gradient(#3a4a7a,#1a2140);border:1px solid #79a7ff;box-shadow:0 4px 10px #0008}
+#cam-btns{position:fixed;right:18px;bottom:160px;display:flex;gap:10px;z-index:31}
+#cam-btns[hidden]{display:none}
+#cam-btns button,#menu-btn,#chat-btn{width:50px;height:50px;border-radius:50%;border:1px solid var(--line);background:#101624cc;color:var(--text);font:inherit;font-size:20px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+#menu-btn{position:fixed;right:12px;top:12px;z-index:32}
+#menu-btn[hidden]{display:none}
+#chat-btn{position:fixed;left:12px;bottom:12px;z-index:32}
+#chat-btn[hidden]{display:none}
+body.mobile #hud,body.mobile #chefe-ctl,body.mobile #monta-ctl,body.mobile #segue-ctl,body.mobile #admin-ctl,body.sem-dbg #hud,body.sem-dbg #chefe-ctl,body.sem-dbg #monta-ctl,body.sem-dbg #segue-ctl,body.sem-dbg #admin-ctl{display:none !important}
+body.mobile.menu-aberto #hud{display:block !important}
+body.mobile.menu-aberto #chefe-ctl,body.mobile.menu-aberto #monta-ctl,body.mobile.menu-aberto #segue-ctl,body.mobile.menu-aberto #admin-ctl{display:flex !important;right:12px}
+body.mobile.menu-aberto #chefe-ctl{top:70px} body.mobile.menu-aberto #monta-ctl{top:108px} body.mobile.menu-aberto #segue-ctl{top:146px} body.mobile.menu-aberto #admin-ctl{top:184px}
+body.mobile #barra{left:0;right:0;bottom:0;transform:none;max-width:none;border-radius:14px 14px 0 0;flex-wrap:wrap;justify-content:center;gap:8px;padding:8px 8px calc(8px + env(safe-area-inset-bottom))}
+body.mobile .ficha{min-width:0;flex:1 1 42%;font-size:12px}
+body.mobile #skills{order:3;flex:0 0 100%;justify-content:center;gap:10px}
+body.mobile #barra button.sk{width:72px;height:72px;font-size:var(--p-fs,12px)}
+body.mobile #barra button.sk b{display:none}
+body.mobile #atalhos .atalho{width:64px;height:64px;font-size:var(--p-fs,11px)}body.mobile #atalhos .atalho b{display:none}
+body.mobile .rotulo.mon{font-size:12px}
+#fala{position:fixed;left:50%;bottom:112px;transform:translateX(-50%);max-width:min(600px,92vw);padding:10px 14px;border:1px solid #b47622;border-radius:10px;background:var(--panel);color:#ffe6b0;font-size:14px;line-height:1.35;box-shadow:0 8px 18px #000a;z-index:30;cursor:pointer}
+#fala[hidden]{display:none}
+#fala b{color:#ffe07a;margin-right:6px}
+#fala small{display:block;margin-top:4px;color:var(--muted);font-size:11px}
+body.mobile #fala{bottom:140px}
+/* seletor do inicial (mesa do laboratório) e a faixa da missão */
+#inicial{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#000a;z-index:40}
+#inicial[hidden]{display:none}
+#inicial .caixa{position:relative;width:min(680px,94vw);max-height:92vh;overflow:auto;padding:14px;border:1px solid #b47622;border-radius:14px;background:var(--panel);box-shadow:0 12px 30px #000c;box-sizing:border-box}
+#inicial h2{margin:0 0 4px;font-size:18px;color:#ffe07a}
+#inicial .sub{color:var(--muted);font-size:12px;margin-bottom:10px}
+#inicial .gens{display:flex;gap:8px;margin-bottom:10px}
+#inicial .gens button,#inicial .acoes button{padding:9px 14px;border:1px solid var(--line);border-radius:8px;background:#0b1020;color:var(--text);font:inherit;cursor:pointer;touch-action:manipulation}
+#inicial .gens button.on{border-color:#ffd23a;color:#ffe07a}
+#inicial .cartas{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+#inicial .carta{padding:8px 8px 12px;border:2px solid var(--line);border-radius:12px;background:#101624;text-align:center;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none;touch-action:pan-y}
+/* palco 3D: o canvas .palco-3d cobre a caixa inteira (sem receber cliques) e desenha cada Pokémon dentro do .palco da carta */
+#inicial .palco-3d{position:absolute;left:0;top:0;pointer-events:none;z-index:2}
+#inicial .carta .palco{position:relative;height:180px;margin:0 auto 6px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:radial-gradient(ellipse at 50% 88%,#25335a 0,#101624 62%)}
+#inicial .carta.on .palco{background:radial-gradient(ellipse at 50% 88%,#4a3d1a 0,#1b2238 62%)}
+#inicial .carta .palco .bola{margin:0;opacity:.35}
+#inicial .carta .palco.pronto .bola{display:none}
+#inicial .carta.on{border-color:#ffd23a;background:#1b2238}
+#inicial .carta .bola{width:44px;height:44px;margin:0 auto 8px;border-radius:50%;background:linear-gradient(#e6323c 0 46%,#111 46% 54%,#eee 54%);border:2px solid #333;position:relative}
+#inicial .carta .bola::after{content:'';position:absolute;left:13px;top:13px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid #333}
+#inicial .carta b{display:block;font-size:15px}
+#inicial .carta i{display:inline-block;margin:6px 2px 0;padding:1px 7px;border-radius:4px;font-style:normal;font-size:11px;color:#fff}
+#inicial .carta small{display:block;margin-top:6px;color:var(--muted);font-size:11px}
+#inicial .acoes{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}
+#inicial .acoes .ok{border-color:#b47622;background:linear-gradient(#342317,#10131b);color:#ffe6b0;font-weight:700}
+/* @media (max-width:480px) -> classe tela-estreita (posta pelo jogo e pelo editor) */
+body.tela-estreita #inicial .cartas{grid-template-columns:1fr}
+body.tela-estreita #inicial .carta{display:grid;grid-template-columns:110px 1fr;gap:4px 12px;text-align:left;align-items:center}
+body.tela-estreita #inicial .carta .palco{width:110px;height:110px;margin:0;grid-row:1/4}
+
+#missao{position:fixed;left:50%;top:12px;transform:translateX(-50%);padding:6px 12px;border:1px solid #b47622;border-radius:8px;background:var(--panel);font-size:12px;color:#ffe6b0;z-index:20;max-width:min(420px,70vw);text-align:center}
+#missao[hidden]{display:none}
+.fig[hidden]{display:none!important}   /* peça do Figma recebe display:block inline; o `hidden` do jogo (placa sem missão, fala) tem de vencer */
+#missao b{color:#ffe07a}
+/* @media (max-width:480px) -> classe tela-estreita (posta pelo jogo e pelo editor) */
+body.tela-estreita.mobile #barra{gap:6px;padding:6px 6px calc(6px + env(safe-area-inset-bottom))}
+body.tela-estreita.mobile #skills{gap:7px}
+body.tela-estreita.mobile #barra button.sk{width:60px;height:60px;font-size:10px;border-radius:9px}
+body.tela-estreita.mobile #barra button.sk em{max-width:54px}
+body.tela-estreita.mobile #atalhos .atalho{width:54px;height:54px;border-radius:9px}
+body.tela-estreita.mobile .ficha{font-size:11px}
+body.tela-estreita #joy{width:112px;height:112px;left:12px;bottom:150px}
+body.tela-estreita #joy-knob{width:48px;height:48px;margin:-24px 0 0 -24px}
+body.tela-estreita #cam-btns{right:12px;bottom:150px}
+
+/* @media (max-height:480px) -> classe tela-baixa (posta pelo jogo e pelo editor) */
+body.tela-baixa.mobile #barra{flex-wrap:nowrap;gap:8px;padding:6px 8px}
+body.tela-baixa.mobile #skills{order:0;flex:0 0 auto;gap:8px}
+body.tela-baixa.mobile .ficha{flex:1 1 0;min-width:0}
+body.tela-baixa.mobile #barra button.sk{width:58px;height:58px;font-size:10px}
+body.tela-baixa.mobile #atalhos .atalho{width:52px;height:52px}
+body.tela-baixa #joy{width:104px;height:104px;bottom:86px}
+body.tela-baixa #joy-knob{width:44px;height:44px;margin:-22px 0 0 -22px}
+body.tela-baixa #cam-btns{bottom:86px}
+
+
+/* ===== Peças do kit (ui/kit/*.png, folha hf_20260829_080113) — só quando a peça tem a classe
+   `kit` (marcada no editor de HUD). Sem a classe, vale o visual simples acima. */
+:root{--ouro:#c9a24a;--marinho:#14243d;--marinho2:#1b3358}
+#skills.kit .sk,#barra #skills.kit button.sk{border:0;border-radius:10px;background:url(./ui/kit/slot_ativo.png) center/100% 100% no-repeat;color:#eaf1ff;text-shadow:0 1px 2px #000}
+#barra #skills.kit button.sk b{border-color:var(--ouro);color:#ffe07a;background:#0c162baa}
+#barra #skills.kit button.sk.frio{opacity:1;background-image:url(./ui/kit/slot.png);color:#9fb0d0}
+#barra #skills.kit button.sk.frio i{background:#0a1226aa}
+#barra #skills.kit button.sk.vazio{background-image:url(./ui/kit/slot_cadeado.png)}
+#barra #bola-btn.kit{background:url(./ui/kit/botao_pokemon.png) center/contain no-repeat;border:0;border-radius:50%;overflow:visible}
+#barra #bola-btn.kit.frio{opacity:1;filter:grayscale(.8) brightness(.7)}
+#barra #bola-btn.kit em,#barra #bola-btn.kit s,#barra #bola-btn.kit #bola-icone{display:none}
+#barra #bola-btn.kit b{left:-2px;top:-2px}
+#barra #bola-btn.kit small{right:-4px;top:-4px;padding:1px 6px;border:1px solid var(--ouro);border-radius:10px;background:var(--marinho);color:#ffe07a;font-size:11px}
+#barra #bola-btn.kit span{border-color:var(--ouro);background:var(--marinho);right:-6px;bottom:-4px}
+#f-parceiro.kit,#f-alvo.kit{border:11px solid transparent;border-image:url(./ui/kit/painel_barra.png) 22 fill / 11px stretch;padding:0 6px;color:#eaf1ff}
+#f-parceiro.kit i,#f-alvo.kit i{background:#0c162b;border:1px solid var(--ouro);border-radius:5px;height:8px;box-sizing:border-box}
+#missao.kit{background:transparent;border:11px solid transparent;border-image:url(./ui/kit/painel_barra.png) 22 fill / 11px stretch;border-radius:0;padding:2px 10px;color:#eaf1ff}
+#fala.kit{background:transparent;border:12px solid transparent;border-image:url(./ui/kit/painel_plano.png) 24 fill / 12px stretch;border-radius:0;padding:4px 10px;color:#eaf1ff}
+#fala.kit b{color:#ffe07a}
+#joy.kit{background:url(./ui/kit/moldura_circulo.png) center/contain no-repeat;border:0;backdrop-filter:none}
+#joy.kit #joy-knob{background:url(./ui/kit/anel_azul.png) center/contain no-repeat;border:0;box-shadow:none}
+#cam-btns.kit button{background:url(./ui/kit/redondo.png) center/contain no-repeat;border:0;color:#ffe07a;font-weight:700;text-shadow:0 1px 2px #000}
+#menu-btn.kit{background:url(./ui/kit/botao_config.png) center/contain no-repeat;border:0;color:transparent}
+#painel-fundo.kit{background:transparent;border:12px solid transparent;border-image:url(./ui/kit/painel_plano.png) 24 fill / 12px stretch;border-radius:0;box-shadow:none}
+body.tema-kit #inicial .caixa{position:relative;background:transparent;border:13px solid transparent;border-top-width:26px;border-image:url(./ui/kit/painel_faixa.png) 52 26 26 26 fill / 26px 13px 13px 13px stretch;border-radius:0;padding:6px 10px 10px}
+
+/* ===== Layout montado no editor de HUD (hud.mjs): peças soltas presas a um canto da tela. */
+#painel-fundo{position:fixed;z-index:20;background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 18px #000a}
+#painel-fundo[hidden]{display:none}
+.peca-solta{position:fixed;margin:0;z-index:25}
+.peca-solta.movivel{cursor:grab;user-select:none;-webkit-user-select:none}.peca-solta.movivel.arrastando{cursor:grabbing;opacity:.92}.peca-solta.movivel #missao-toggle{cursor:pointer}   /* painel de missão: o jogador arrasta (hud.mjs ligarArrasto) */
+#barra.solto:not([hidden]){display:contents}
+
+/* ===== Botões de menu (peça #menu-icones): base redonda do kit + ícone da folha ui/icones (um por
+   janela). PC: grade 5×2 no canto inferior direito (como no mockup); celular: coluna à direita. */
+.ic{display:block;width:48px;height:48px;background:url(./ui/kit/redondo.png) center/contain no-repeat;position:relative}
+.ic::after{content:'';position:absolute;inset:11px;background:var(--icone) center/contain no-repeat}
+.ic-ajuda{--icone:url(./ui/icones/ajuda.png)}
+.ic-amigos{--icone:url(./ui/icones/amigos.png)}
+.ic-batalha{--icone:url(./ui/icones/batalha.png)}
+.ic-loja{--icone:url(./ui/icones/loja.png)}
+.ic-mapa{--icone:url(./ui/icones/mapa.png)}
+.ic-missoes{--icone:url(./ui/icones/missoes.png)}
+.ic-mochila{--icone:url(./ui/icones/mochila.png)}
+.ic-personagem{--icone:url(./ui/icones/personagem.png)}
+.ic-pokebola{--icone:url(./ui/icones/pokebola.png)}
+.ic-pokedex{--icone:url(./ui/icones/pokedex.png)}
+#menu-icones{position:fixed;right:12px;bottom:12px;display:grid;grid-template-columns:repeat(5,58px);gap:2px 4px;z-index:22}
+#menu-icones[hidden]{display:none}
+#menu-icones button{width:58px;padding:0;border:0;background:none;color:var(--p-cor,#ffe6b0);font:inherit;font-size:var(--p-fs,10px);line-height:1;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:1px;touch-action:manipulation;-webkit-tap-highlight-color:transparent;text-shadow:0 1px 2px #000}
+#menu-icones button:active{transform:scale(.94)}
+#menu-icones b{font-weight:600}
+body.mobile #menu-icones{display:flex;flex-direction:column;gap:2px;top:66px;right:8px;bottom:auto}
+body.mobile #menu-icones button{width:44px}
+body.mobile #menu-icones .ic{width:40px;height:40px}
+body.mobile #menu-icones .ic::after{inset:9px}
+body.mobile #menu-icones b{display:none}
+body.tela-baixa #menu-icones{flex-direction:row;top:8px;right:70px}
+/* grade do Menu com os mesmos ícones */
+#menu-grade button .ic{width:52px;height:52px}
+
+/* ===== Chat (peça #chat, chat.mjs): abas Local/Global/Trade/Help como no PRO, no canto. */
+#chat,.chat-caixa{display:flex;flex-direction:column;font-size:12px;color:var(--text)}
+#chat{position:fixed;left:12px;bottom:12px;width:var(--chat-w,380px);height:var(--chat-h,230px);border:1px solid var(--line);border-radius:10px;background:#101624d9;box-shadow:0 8px 18px #000a;z-index:21}
+#chat[hidden]{display:none}
+.chat-caixa .abas{display:flex;gap:2px;padding:4px 4px 0;border-bottom:1px solid var(--line)}
+.chat-caixa .abas button{padding:4px 10px;border:1px solid var(--line);border-bottom:0;border-radius:8px 8px 0 0;background:#0b1020;color:var(--muted);font:inherit;font-size:11px;cursor:pointer;position:relative;touch-action:manipulation}
+.chat-caixa .abas button.on{color:#ffe07a;background:#1b2238}
+.chat-caixa .abas button i{position:absolute;right:-3px;top:-5px;min-width:14px;height:14px;padding:0 3px;border-radius:7px;background:#ff5f5f;color:#fff;font-style:normal;font-size:9px;line-height:14px;text-align:center}
+.chat-caixa .abas button i[hidden]{display:none}
+.chat-caixa .abas .min{margin-left:auto;border-radius:6px;padding:2px 9px;border-bottom:1px solid var(--line)}
+.chat-caixa .msgs{flex:1;overflow:auto;padding:4px 8px;line-height:1.35;min-height:60px}
+.chat-caixa .m{word-break:break-word}
+.chat-caixa .m .h{color:#5d6a8a;font-size:10px;font-family:ui-monospace,Consolas,monospace}
+.chat-caixa .m .tag{font-weight:700}
+.chat-caixa .m.sis em{font-style:italic}
+.chat-caixa form{display:flex;gap:4px;padding:4px;border-top:1px solid var(--line)}
+.chat-caixa .canal{align-self:center;padding:0 6px;font-size:11px;font-weight:700}
+.chat-caixa input{flex:1;min-width:0;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:#0b1020;color:var(--text);font:inherit}
+.chat-caixa form button{padding:4px 10px;border:1px solid #b47622;border-radius:6px;background:linear-gradient(#342317,#10131b);color:#ffe6b0;font:inherit;cursor:pointer}
+#chat.fechado{height:auto}
+#chat.fechado .msgs,#chat.fechado form{display:none}
+body.mobile #chat{left:8px;bottom:150px;width:min(340px,58vw);height:160px;font-size:11px}
+body.mobile #chat.fechado,body.tela-baixa #chat.fechado{height:auto}
+#chat.fig .msgs,#chat.dock .msgs{min-height:40px}   /* na caixa da maquete do celular (320×120): abas 29 + mensagens + campo 36 têm de caber */   /* recolhido: só a fila de abas (a altura fixa do celular vencia o .fechado e deixava um caixote escuro em cima do joystick) */
+body.tela-baixa #chat{bottom:8px;left:130px;width:300px;height:120px}
+#chat.kit{border:12px solid transparent;border-image:url(./ui/kit/painel_plano.png) 24 fill / 12px stretch;background:transparent;border-radius:0}
+
+/* ===== Grade do time (peça #time-hud): 6 slots à esquerda; clique = troca rápida com recarga; ícone = cabeça do jogo (ui/mon) */
+#time-hud{position:fixed;left:12px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:6px;z-index:22}
+#time-hud[hidden]{display:none}
+#time-hud .tslot{position:relative;width:56px;height:56px;padding:0;border:2px solid var(--line);border-radius:12px;background:#101624d9;color:#5d6a8a;font:inherit;cursor:pointer;overflow:hidden;touch-action:manipulation;-webkit-tap-highlight-color:transparent;box-shadow:0 4px 10px #0008;user-select:none}
+#time-hud .tslot img{position:absolute;left:2px;top:2px;width:48px;height:48px;object-fit:contain;pointer-events:none}
+#time-hud .tslot small{position:absolute;right:3px;top:2px;font-size:var(--p-fs,9px);font-weight:700;color:var(--p-cor,#ffe07a);text-shadow:0 1px 2px #000}
+#time-hud .tslot i{position:absolute;left:4px;right:4px;bottom:3px;height:4px;border-radius:2px;background:#0009}
+#time-hud .tslot i b{display:block;height:100%;border-radius:2px}
+#time-hud .tslot u{position:absolute;left:0;right:0;bottom:0;background:#000a;pointer-events:none;text-decoration:none}
+#time-hud .tslot em{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:700;color:#f58e8e;background:#000a;font-size:14px}
+#time-hud .tslot.on{border-color:#ffd23a;box-shadow:0 0 0 2px #ffd23a55,0 4px 10px #0008}
+#time-hud .tslot.frio img{filter:grayscale(.6)}
+#time-hud .tslot.ko img{filter:grayscale(1) brightness(.6)}
+#time-hud .tslot.vazio{border-style:dashed;background:#10162466;cursor:default;font-size:11px;display:flex;align-items:center;justify-content:center}
+#time-hud .tslot:not(.vazio):active{transform:scale(.95)}
+body.mobile #time-hud{left:8px;top:26%;transform:none;gap:5px}
+body.mobile #time-hud .tslot{width:48px;height:48px}
+body.mobile #time-hud .tslot img{left:1px;top:1px;width:42px;height:42px}
+body.tela-baixa.mobile #time-hud{top:64px;display:grid;grid-template-columns:repeat(2,44px);gap:4px}
+body.tela-baixa.mobile #time-hud .tslot{width:44px;height:44px}
+body.tela-baixa.mobile #time-hud .tslot img{width:38px;height:38px}
+#time-hud.kit .tslot{border:0;background:url(./ui/kit/slot.png) center/100% 100% no-repeat}
+#time-hud.kit .tslot.on{background-image:url(./ui/kit/slot_ativo.png)}
+
+/* botão de evolução (✧) no canto do slot do parceiro em campo — atalho pra testar sem menu (celular) */
+#time-hud .tcel{position:relative}
+#time-hud:not(.fig) .tcard{display:none}
+#time-hud.fig .tcard{position:absolute;box-sizing:border-box;pointer-events:none}
+#time-hud.fig .tcard i{position:absolute;display:block;overflow:hidden;background:none;border:0}
+#time-hud.fig .tcard i b{display:block;height:100%;border-radius:inherit}
+#time-hud .tslot.evo small{left:3px;right:auto}
+#time-hud .tevo{position:absolute;right:-9px;top:-9px;width:28px;height:28px;padding:0;border-radius:50%;border:2px solid #ffd23a;background:#1b2238f2;color:#ffe07a;font:inherit;font-size:15px;line-height:1;cursor:pointer;z-index:2;touch-action:manipulation;-webkit-tap-highlight-color:transparent;animation:tevo-pulsa 1.6s ease-in-out infinite}
+#time-hud .tevo:active{transform:scale(.9)}
+@keyframes tevo-pulsa{0%,100%{box-shadow:0 0 5px #ffd23a66}50%{box-shadow:0 0 14px #ffd23acc,0 0 0 3px #ffd23a33}}
+body.mobile #time-hud .tevo{width:32px;height:32px;right:-11px;top:-11px;font-size:17px}
+
+/* ===== batalha por turno (#turno): convite e painel de rodada, acima da barra ===== */
+#turno{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);z-index:26;display:flex;flex-direction:column;gap:6px;padding:8px 10px;border:1px solid #b47622;border-radius:12px;background:var(--panel);box-shadow:0 8px 18px #000a;max-width:calc(100vw - 16px);box-sizing:border-box}
+#turno[hidden]{display:none}
+#turno .tcab{font-size:12px;color:#ffe6b0;text-align:center}
+#turno .tmini{color:var(--muted);font-size:11px}
+#turno .tlinha{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+#turno .tbt{position:relative;min-width:86px;padding:7px 10px;display:flex;flex-direction:column;align-items:center;gap:2px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(#1c2436,#10131b);color:var(--text);font:inherit;font-size:12px;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;user-select:none}
+#turno .tbt:active{transform:scale(.95)}
+#turno .tbt[disabled]{opacity:.45;cursor:default}
+#turno .tbt small{color:var(--muted);font-size:10px}
+#turno .tbt b{position:absolute;left:5px;top:4px;padding:0 4px;border:1px solid #b47622;border-radius:3px;font-family:ui-monospace,Consolas,monospace;font-size:10px}
+#turno .tbt.golpe{border-color:#b47622;background:linear-gradient(#342317,#10131b);color:#ffe6b0}
+#turno .tbt.luta{border-color:#ff5f5f;background:linear-gradient(#4a1414,#10131b);color:#ffd9d9;font-weight:700}
+#turno .tbt.fugir{border-color:#5a6b8c}
+@media (max-width:760px){#turno{bottom:120px;padding:6px}#turno .tbt{min-width:72px;padding:6px 8px;font-size:11px}}
+/* celular deitado (tela baixa): o painel de turno encolhe e desce pra não cobrir a luta.
+   20/09 — silikgnt (iPhone) e diego5itu8334 (Android) relataram a MESMA coisa no mesmo dia: "a UI tampa quase tudo
+   importante da tela… contra treinador não dá pra ver o HP de ninguém" e "os atks/moves ficam na frente". Medido no
+   celular deitado (844×390): o painel ocupava 44,6% da ALTURA e começava a 40% do topo, bem em cima de onde a luta
+   acontece. Encolhe assim: golpes numa linha só, sem o detalhe que os ATALHOS DA HUD já mostram ao lado (tipo, poder e
+   PP), fundo translúcido pra a luta aparecer atrás, e mais perto da base. O `.tmini` ("…executando") FICA: é ele que
+   diz "espere a sua vez". */
+@media (max-height:480px){
+  #turno{bottom:44px;padding:4px 6px;gap:2px;background:color-mix(in srgb, var(--panel) 86%, transparent)}
+  #turno .tcab{font-size:10px;line-height:1.15}
+  #turno .tlinha{gap:4px;flex-wrap:nowrap}
+  #turno .tbt{min-width:0;flex:1 1 0;padding:3px 5px;font-size:10px;gap:0;line-height:1.15}
+  #turno .tbt small{display:none}
+  #turno .tbt b{position:static;order:-1;border:none;padding:0;font-size:9px;opacity:.7}
+}
+#minimapa{position:fixed;right:10px;top:64px;z-index:6;pointer-events:none;text-align:center;transition:opacity .25s}
+#mm-janela{width:180px;height:180px;border:5px solid #9fd1ef;outline:2px solid #26506e;border-radius:10px;box-shadow:0 4px 14px #0008}
+#mm-dot{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#ff5f5f;border:2px solid #fff;box-shadow:0 0 6px #000a;z-index:1}
+#mm-area{margin-top:4px;font:600 12px system-ui;color:#fff;text-shadow:0 1px 3px #000;background:#0007;border-radius:8px;padding:2px 8px;display:inline-block}
+body.cinematica #minimapa{display:none}
+.chat-caixa .abas .dim{margin-left:2px;cursor:nwse-resize;color:#8a95b0;background:none;border:none;font-size:12px;padding:2px 6px;touch-action:none}.chat-caixa .abas .dim:hover{color:#ffe07a}#chat.fechado .abas .dim{display:none}
+#mm-janela{position:relative;overflow:hidden}#mm-janela canvas{position:absolute;inset:0;width:100%;height:100%}
+body.mobile #minimapa{top:56px;right:66px}body.mobile #mm-janela{width:128px;height:128px}body.mobile #mm-area{font-size:10px;padding:1px 6px}
+.hud-img{position:fixed;background-size:100% 100%;background-repeat:no-repeat;pointer-events:none;z-index:5}
+/* ===== Pele da Amanda (?pele=amanda; ?pele=0 volta ao visual padrão) — as artes dela (ui/amanda/, fatiadas
+   de scratch/amanda_hud.json) vestem as peças funcionais: os botões continuam os mesmos, só trocam de roupa. */
+body.pele-amanda .ic{background:none}
+body.pele-amanda .ic::after{inset:0;background:var(--icone-am) center/contain no-repeat}
+body.pele-amanda .ic-pokebola{--icone-am:url(./ui/amanda/menu_pokemon.png)}
+body.pele-amanda .ic-mochila{--icone-am:url(./ui/amanda/menu_mochila.png)}
+body.pele-amanda .ic-missoes{--icone-am:url(./ui/amanda/menu_missoes.png)}
+body.pele-amanda .ic-mapa{--icone-am:url(./ui/amanda/menu_mapa.png)}
+body.pele-amanda .ic-pokedex{--icone-am:url(./ui/amanda/menu_pokedex.png)}
+body.pele-amanda .ic-personagem{--icone-am:url(./ui/amanda/menu_treinador.png)}
+body.pele-amanda .ic-loja{--icone-am:url(./ui/amanda/menu_loja.png)}
+body.pele-amanda .ic-amigos{--icone-am:url(./ui/amanda/menu_social.png)}
+body.pele-amanda .ic-batalha{--icone-am:url(./ui/amanda/menu_batalha.png)}
+body.pele-amanda .ic-ajuda{--icone-am:url(./ui/amanda/menu_config.png)}
+body.pele-amanda #barra{background:none;border:0;box-shadow:none;padding:0;gap:14px}   /* a faixa escura de trás some: só as artes flutuando sobre o jogo */
+body.pele-amanda:not(.mobile) #barra:not(.solto){left:0;right:0;transform:none;justify-content:center;max-width:none}   /* sem transform: senão as fichas 'fixed' viram relativas ao barra */
+body.pele-amanda:not(.mobile) #chat{width:262px}                                                     /* em 1500px o chat entrava por cima da barra de golpes */
+body.pele-amanda:not(.mobile) #menu-icones{grid-template-columns:repeat(5,50px);gap:2px 3px;right:8px}   /* mais compacto: em 1500px os consumíveis encostavam nos ícones */
+body.pele-amanda:not(.mobile) #menu-icones button{width:50px}
+body.pele-amanda:not(.mobile) #menu-icones .ic{width:44px;height:44px}
+body.pele-amanda:not(.mobile) #time-hud{top:47%}                                                    /* sobe um tico: não toca o topo do chat */
+body.pele-amanda:not(.mobile) #barra #f-parceiro{position:fixed;left:76px!important;right:auto!important;bottom:250px!important;top:auto!important;transform:none;width:210px;margin:0}         /* fichas saem da fileira das barras: acima do chat / dos ícones do menu */
+body.pele-amanda:not(.mobile) #barra #f-alvo{position:fixed;right:12px!important;left:auto!important;bottom:250px!important;top:auto!important;transform:none;width:210px;margin:0}
+body.pele-amanda #skills{background:url(./ui/amanda/skills.png) center/100% 100% no-repeat;width:400px;height:106px;box-sizing:border-box;padding:17px 52px 17px 52px;gap:8px;align-items:stretch}
+body.pele-amanda #barra button.sk:not(.bola){flex:1;width:auto;height:auto;border:0;border-radius:12px;background:url(./ui/amanda/slot_ouro.png) center/100% 100% no-repeat;box-shadow:none;padding:6px 4px 8px;justify-content:center;gap:2px}
+body.pele-amanda #barra button.sk:not(.bola) b{left:3px;top:3px;font-size:9px;border-color:#ffd23a44;background:#0b1020cc}
+body.pele-amanda #barra button.sk:not(.bola) small{right:3px;top:3px;font-size:9px}
+body.pele-amanda #barra button.sk:not(.bola) em{font-size:var(--p-fs,10px);max-width:100%}
+body.pele-amanda #barra button.sk:not(.bola) s{width:64%;margin:0 auto}
+body.pele-amanda #barra button.sk b{border-color:#ffd23a66;background:#0b1020aa}
+body.pele-amanda #atalhos{background:url(./ui/amanda/atalhos.png) center/100% 100% no-repeat;width:436px;height:102px;box-sizing:border-box;display:grid;grid-template-columns:repeat(5,1fr);padding:16px 48px 16px 48px;gap:8px}   /* moldura vazada da Amanda (5 casas) + slots prata avulsos nos botões */
+body.pele-amanda #atalhos .atalho{width:auto;height:auto;border:0;border-radius:10px;background:url(./ui/amanda/slot_prata.png) center/100% 100% no-repeat;padding:6px 3px 7px;justify-content:center;gap:2px}
+body.pele-amanda #atalhos .atalho b{position:static;order:-1;border:0;background:none;padding:0;font-size:9px;color:#c9d4ea}
+body.pele-amanda #atalhos .atalho i{width:26px;height:26px}
+body.pele-amanda #atalhos .atalho em{font-size:var(--p-fs,8.5px);max-width:100%}
+body.pele-amanda #atalhos .atalho small{right:4px;top:3px;font-size:9px}
+body.pele-amanda #atalhos .atalho.vazio span{font-size:20px;margin:0;line-height:1}
+body.pele-amanda #atalhos .atalho.vazio{border:0}
+body.pele-amanda #atalhos .atalho.on{border:0;box-shadow:0 0 0 2px #8ef58e88,inset 0 0 12px #8ef58e33;border-radius:12px}
+body.pele-amanda #barra button.sk.bola, body.pele-amanda #bola-btn{width:80px;height:80px;box-sizing:border-box;border:0;box-shadow:none;border-radius:50%;background:url(./ui/amanda/bola_circulo.png) center/100% 100% no-repeat;padding:10px 8px 11px;position:relative;top:-26px;align-self:center;justify-content:center;gap:2px;flex:none;overflow:visible}   /* casinha da bola: o CÍRCULO dourado da Amanda (botão-pokebolas-mobile-e-pc), separado, no meio e um pouco acima */
+body.pele-amanda #bola-btn b{left:4px;top:4px;font-size:9px;border-color:#aab3c766;background:#0b1020cc}
+body.pele-amanda #bola-btn small{right:4px;top:4px;font-size:9px}
+body.pele-amanda #bola-icone{width:28px;height:28px}
+body.pele-amanda #bola-nome{font-size:8.5px;max-width:100%}
+body.pele-amanda #bola-btn #bola-tipo{position:absolute;right:-8px;bottom:-8px;font-size:10px;padding:2px 4px;background:#0e141f;border:1px solid #a7b0c0;border-radius:50%;line-height:1;opacity:.95}   /* o ⇄ na quina, metade PRA FORA do quadrado: não tapa nome nenhum */
+body.pele-amanda #time-hud{background:none;box-sizing:border-box;width:auto;padding:0;gap:8px}
+body.pele-amanda #time-hud .tslot{width:56px;height:56px;border:0;border-radius:12px;background:url(./ui/amanda/time_slot.png) center/100% 100% no-repeat;box-shadow:none}
+body.pele-amanda #time-hud .tslot img{left:4px;top:4px;width:48px;height:48px}
+body.pele-amanda #missao{background:url(./ui/amanda/missao_placa.png) center/100% 100% no-repeat;border:0;border-radius:0;padding:12px 28px 14px;min-width:320px;color:#5b4326;text-shadow:none}
+body.pele-amanda #missao b{color:#a0132f}
+#missao.fig .missao-header b{color:inherit}   /* peça do Figma: o título segue a cor do lugar combinado (semPar, branco no celular); sem isto a pele da Amanda o pintava de vinho onde a maquete não tem txt/titulo-missao (11/09) */
+/* ===== Pele da Amanda no CELULAR (esboço do Jaime 31/08): cluster de golpes em "colchete" em volta da bola
+   (polegar direito) + barra de consumíveis EM PÉ na borda direita (a barra dela girada). Sem layout salvo
+   vale isto; com layout do editor, as posições inline do posicionar ganham. Seletores com #barra button.sk…
+   de propósito: precisam PESAR mais que as regras de PC da pele (1,4,2) — senão a bola fica presa na coluna. */
+body.mobile.pele-amanda #barra:not(.solto){position:fixed;left:8px;top:118px;right:auto;bottom:auto;width:176px;display:flex;flex-direction:column;gap:6px;padding:0;border-radius:0;flex-wrap:nowrap;justify-content:flex-start}
+body.mobile.pele-amanda .ficha{flex:none;width:176px}
+body.mobile.pele-amanda #barra #skills{position:fixed;right:88px;bottom:22px;width:152px;height:236px;display:block;padding:0;background:none;order:0;flex:none}
+body.mobile.pele-amanda #barra button.sk:not(.bola){position:absolute;width:58px;height:58px;flex:none;padding:4px 2px 5px;font-size:var(--p-fs,10px);background-image:url(./ui/amanda/slot_ouro_mobile.png)}
+body.mobile.pele-amanda #barra button.sk:nth-child(1){left:0;top:50px}
+body.mobile.pele-amanda #barra button.sk:nth-child(2){left:0;top:128px}
+body.mobile.pele-amanda #barra button.sk:nth-child(3){left:94px;top:0}
+body.mobile.pele-amanda #barra button.sk:nth-child(4){left:94px;top:178px}
+body.mobile.pele-amanda #barra button.sk:not(.bola) em{font-size:var(--p-fs,9px);max-width:54px}
+body.mobile.pele-amanda #barra button.sk.bola, body.mobile.pele-amanda #bola-btn{position:fixed;right:80px;bottom:103px;top:auto;left:auto;width:74px;height:74px;padding:9px 6px 10px}
+body.mobile.pele-amanda #atalhos{position:fixed;right:10px;bottom:14px;top:auto;left:auto;width:70px;height:299px;display:flex;flex-direction:column;grid-template-columns:none;padding:34px 10px;gap:5px;background:url(./ui/amanda/atalhos_v.png) center/100% 100% no-repeat}
+body.mobile.pele-amanda #atalhos .atalho{flex:1;width:auto;height:auto;min-height:0;padding:3px 2px;gap:1px;font-size:var(--p-fs,9px)}
+body.mobile.pele-amanda #atalhos .atalho i{width:22px;height:22px}
+body.mobile.pele-amanda #atalhos .atalho em{display:none}
+body.mobile.pele-amanda #atalhos .atalho b{display:block;position:static;order:-1;font-size:8px;padding:0;border:0;background:none;color:#c9d4ea}
+body.mobile.pele-amanda #atalhos .atalho.vazio span{font-size:16px;margin:0}
+body.mobile.pele-amanda #cam-btns{position:fixed;left:150px;bottom:8px;right:auto;top:auto;display:flex;flex-direction:row;gap:8px}
+body.mobile.pele-amanda #missao{min-width:0;max-width:min(260px,52vw);padding:8px 18px 10px;font-size:11px;left:8px;top:8px;transform:none}   /* à esquerda: não encosta no minimapa */
+body.mobile.pele-amanda #chat{left:70px;bottom:262px;width:min(280px,58vw)}   /* sai de cima do cluster */
+/* deitado (tela baixa): fichas no topo, barra em pé mais curta, placa abaixo da fileira de ícones, chat embaixo no meio */
+body.tela-baixa.pele-amanda #barra:not(.solto){top:8px}
+body.tela-baixa.pele-amanda #atalhos{height:250px;width:58px;padding:28px 8px;gap:4px}
+body.tela-baixa.pele-amanda #missao{top:52px}
+body.tela-baixa.pele-amanda #barra #skills{right:200px}                                                     /* deitado: cluster mais pra esquerda, longe do minimapa */
+body.tela-baixa.pele-amanda #barra button.sk.bola, body.tela-baixa.pele-amanda #bola-btn{right:196px}
+body.tela-baixa.pele-amanda #chat{left:250px;bottom:8px;width:230px;height:120px}   /* mais estreito: não encosta no cluster (que começa em x≈492) */
+/* balão de diálogo do NPC (place-texto-dialogo-npc da Amanda): rabinho embaixo à esquerda, texto escuro no creme */
+body.pele-amanda #fala{background:url(./ui/amanda/fala.png) center/100% 100% no-repeat;border:0;border-radius:0;box-shadow:none;padding:22px 34px 34px 40px;min-width:340px;min-height:96px;color:#4a3320;text-shadow:none}
+body.pele-amanda #fala b{color:#a0132f}
+body.pele-amanda #fala small{color:#8a6a48}
+
+/* ===== Modo dev desligado (padrão): tudo que é ferramenta some — painel de diagnóstico (#hud), chefe/montaria/seguidor,
+   ☰ Páginas, Gravar vídeo. ?dev=1 / F8 / a página de dev ligam (body.dev). */
+body:not(.dev) #hud,body:not(.dev) #chefe-ctl,body:not(.dev) #monta-ctl,body:not(.dev) #segue-ctl,body:not(.dev) #admin-ctl,body:not(.dev) #nav-botao,body:not(.dev) #nav-painel,body:not(.dev) [id^="grav-"]{display:none!important}
+/* HUD invisível até o layout do Figma ser aplicado (a troca de área recarrega a página e o CSS antigo piscava antes) */
+body.hud-esperando #barra,body.hud-esperando #f-parceiro,body.hud-esperando #f-alvo,body.hud-esperando #missao,body.hud-esperando #fala,body.hud-esperando #joy,body.hud-esperando #cam-btns,body.hud-esperando #menu-btn,body.hud-esperando #chat-btn,body.hud-esperando #menu-icones,body.hud-esperando #time-hud,body.hud-esperando #chat,body.hud-esperando #minimapa,body.hud-esperando #painel-fundo{visibility:hidden!important}
+/* Chat ancorado do celular (SOBRE no hud.mjs): transparente pra acompanhar o jogo por trás */
+#chat.dock{background:rgba(16,22,36,.42);border-color:rgba(255,255,255,.14);box-shadow:none}
+#chat.dock .abas{border-bottom-color:rgba(255,255,255,.14)}
+#chat.dock .abas button{background:rgba(11,16,32,.5)}
+#chat.dock .abas button.on{background:rgba(27,34,56,.85)}
+#chat.dock .msgs{text-shadow:0 1px 2px #000}
+#chat.dock form{border-top-color:rgba(255,255,255,.14)}
+#chat.dock input{background:rgba(11,16,32,.6)}
+#chat.dock.fechado{height:auto!important}   /* recolhido (–): só a fila de abas, sem o caixote transparente de 120 px */
+
+/* ===== Celular em pé: o jogo é na horizontal (05/09). A tela cobre tudo até deitar; a HUD deitada não é remontada. */
+#gire{position:fixed;inset:0;z-index:500;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:#06080dee;color:#e8ecf5;font:16px/1.4 "Nunito Sans",system-ui,sans-serif;text-align:center;padding:24px}
+#gire[hidden]{display:none}
+#gire .gire-icone{font-size:64px;transform:rotate(90deg);animation:gire-vira 1.6s ease-in-out infinite alternate}
+#gire b{font-size:22px;color:#ffe07a} #gire span{color:#9fb0d0}
+#gire button{margin-top:14px;font:inherit;padding:8px 18px;border-radius:8px;border:1px solid #b47622;background:linear-gradient(#342317,#10131b);color:#ffe6b0}
+@keyframes gire-vira{from{transform:rotate(0deg)}to{transform:rotate(90deg)}}
+
+/* Jogo novo, antes do Carvalho (index: jogo.semParceiro): sem golpes, bola nem ficha do parceiro. */
+body.sem-parceiro #skills, body.sem-parceiro #bola-btn, body.sem-parceiro #f-parceiro{display:none !important}

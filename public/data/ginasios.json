@@ -1,0 +1,433 @@
+{
+ "101": {
+  "numero": 1,
+  "nome": "Ginásio Cinza Escuro",
+  "lider": "Brock",
+  "cidade": "Pewter",
+  "tipo": "Pedra",
+  "cena": 4120017,
+  "cenaComPorta": true,
+  "cfgLider": 4160199,
+  "cfgGuia": 4160198,
+  "glb": "npc/NPC1004",
+  "modeloDump": "npc1004",
+  "insignia": {
+   "id": 101,
+   "nome": "medalha Cinza",
+   "icone": "dghz_1"
+  },
+  "time": [
+   {
+    "dex": 74,
+    "lv": 14,
+    "glb": "pm0074_00"
+   },
+   {
+    "dex": 95,
+    "lv": 16,
+    "glb": "pm0095_00"
+   }
+  ],
+  "dinheiro": 1300,
+  "fala": [
+   "Sou Brock, líder do Ginásio de Pewter! Meus Pokémon de pedra são duros como rocha.",
+   "Vamos ver se você tem o que é preciso!"
+  ],
+  "vitoria": [
+   "Ótima batalha! Aceite a Medalha Cinza — ela prova a sua força."
+  ],
+  "derrota": [
+   "Seus Pokémon precisam ficar mais fortes. Volte quando estiver pronto."
+  ],
+  "cooldownMin": [
+   15,
+   30,
+   60
+  ],
+  "resetMoedas": 500
+ },
+ "102": {
+  "numero": 2,
+  "nome": "Ginásio Azul Claro",
+  "lider": "Misty",
+  "cidade": "Cerulean",
+  "tipo": "Água",
+  "cena": 4120002,
+  "cenaComPorta": true,
+  "cfgLider": 4160299,
+  "cfgGuia": 4160299,
+  "glb": "pc/Girl_012",
+  "modeloDump": "npc1017",
+  "insignia": {
+   "id": 102,
+   "nome": "medalha Azul",
+   "icone": "dghz_2"
+  },
+  "time": [
+   {
+    "dex": 120,
+    "lv": 22,
+    "glb": "pm0120_00"
+   },
+   {
+    "dex": 121,
+    "lv": 24,
+    "glb": "pm0121_00"
+   }
+  ],
+  "dinheiro": 1800,
+  "fala": [
+   "Sou Misty, a sereia de Cerulean! Meus Pokémon de água vão te levar na correnteza.",
+   "Mostre o que você sabe!"
+  ],
+  "vitoria": [
+   "Uau, você me venceu! A Medalha Azul é sua."
+  ],
+  "derrota": [
+   "Não foi dessa vez. Treine e volte pra revanche!"
+  ],
+  "cooldownMin": [
+   15,
+   30,
+   60
+  ],
+  "resetMoedas": 1000
+ },
+ "103": {
+  "numero": 3,
+  "nome": "Ginásio Folha Secas",
+  "lider": "Lt. Surge",
+  "cidade": "Vermilion",
+  "tipo": "Elétrico",
+  "cena": 4120016,
+  "cenaComPorta": true,
+  "cfgLider": 4160599,
+  "cfgGuia": 4160599,
+  "glb": "npc/NPC1001",
+  "modeloDump": "npc1001",
+  "insignia": {
+   "id": 103,
+   "nome": "medalha Laranja",
+   "icone": "dghz_3"
+  },
+  "time": [
+   {
+    "dex": 100,
+    "lv": 28,
+    "glb": "pm0100_00"
+   },
+   {
+    "dex": 25,
+    "lv": 28,
+    "glb": "pm0025_00"
+   },
+   {
+    "dex": 26,
+    "lv": 30,
+    "glb": "pm0026_00"
+   }
+  ],
+  "dinheiro": 2300,
+  "fala": [
+   "Sou o Tenente Surge! Meus Pokémon elétricos me salvaram na guerra.",
+   "Prepare-se pra levar um choque, soldado!"
+  ],
+  "vitoria": [
+   "Caramba, você é forte! Leve a Medalha Laranja."
+  ],
+  "derrota": [
+   "Fraco demais, soldado. Volte mais forte!"
+  ],
+  "cooldownMin": [
+   15,
+   30,
+   60
+  ],
+  "resetMoedas": 1500
+ },
+ "104": {
+  "numero": 4,
+  "nome": "Ginásio Arco-íris de Jade",
+  "lider": "Erika",
+  "cidade": "Celadon",
+  "tipo": "Planta",
+  "cena": 4120019,
+  "cenaComPorta": true,
+  "cfgLider": 4160699,
+  "cfgGuia": 4160699,
+  "glb": "npc/NPC1002",
+  "modeloDump": "npc1002",
+  "insignia": {
+   "id": 104,
+   "nome": "medalha Arco-Íris",
+   "icone": "dghz_6"
+  },
+  "time": [
+   {
+    "dex": 114,
+    "lv": 34,
+    "glb": "pm0114_00"
+   },
+   {
+    "dex": 71,
+    "lv": 35,
+    "glb": "pm0071_00"
+   },
+   {
+    "dex": 45,
+    "lv": 36,
+    "glb": "pm0045_00"
+   }
+  ],
+  "dinheiro": 2800,
+  "fala": [
+   "Sou Erika, líder do Ginásio de Celadon. Meus Pokémon de planta são graciosos e fortes.",
+   "Vamos batalhar com elegância."
+  ],
+  "vitoria": [
+   "Que batalha linda. Aceite a Medalha Arco-Íris."
+  ],
+  "derrota": [
+   "Você ainda não está pronto. Volte quando florescer."
+  ],
+  "cooldownMin": [
+   15,
+   30,
+   60
+  ],
+  "resetMoedas": 2000
+ },
+ "105": {
+  "numero": 5,
+  "nome": "Ginásio Vermelho Claro",
+  "lider": "Koga",
+  "cidade": "Fuchsia",
+  "tipo": "Venenoso",
+  "cena": 4120015,
+  "cenaComPorta": true,
+  "cfgLider": 4161199,
+  "cfgGuia": 4161199,
+  "glb": "npc/NPC1003",
+  "modeloDump": "npc1003",
+  "insignia": {
+   "id": 105,
+   "nome": "medalha Rosa",
+   "icone": "dghz_7"
+  },
+  "time": [
+   {
+    "dex": 109,
+    "lv": 42,
+    "glb": "pm0109_00"
+   },
+   {
+    "dex": 109,
+    "lv": 42,
+    "glb": "pm0109_00"
+   },
+   {
+    "dex": 89,
+    "lv": 43,
+    "glb": "pm0089_00"
+   },
+   {
+    "dex": 110,
+    "lv": 44,
+    "glb": "pm0110_00"
+   }
+  ],
+  "dinheiro": 3300,
+  "fala": [
+   "Sou Koga, mestre ninja de Fuchsia! O veneno é uma arte.",
+   "Você conseguirá enxergar através das minhas ilusões?"
+  ],
+  "vitoria": [
+   "Impressionante. A Medalha Rosa é sua, por direito."
+  ],
+  "derrota": [
+   "O veneno venceu. Treine sua mente e volte."
+  ],
+  "cooldownMin": [
+   15,
+   30,
+   60
+  ],
+  "resetMoedas": 2500
+ },
+ "106": {
+  "numero": 6,
+  "nome": "Ginásio Amarelo Dourado",
+  "lider": "Sabrina",
+  "cidade": "Saffron",
+  "tipo": "Psíquico",
+  "cena": 4120006,
+  "cenaComPorta": true,
+  "cfgLider": 4161299,
+  "cfgGuia": 4161299,
+  "glb": "npc/NPC1000",
+  "modeloDump": "npc1000",
+  "insignia": {
+   "id": 106,
+   "nome": "medalha Dourada",
+   "icone": "dghz_8"
+  },
+  "time": [
+   {
+    "dex": 64,
+    "lv": 48,
+    "glb": "pm0064_00"
+   },
+   {
+    "dex": 122,
+    "lv": 48,
+    "glb": "pm0122_00"
+   },
+   {
+    "dex": 49,
+    "lv": 49,
+    "glb": "pm0049_00"
+   },
+   {
+    "dex": 65,
+    "lv": 50,
+    "glb": "pm0065_00"
+   }
+  ],
+  "dinheiro": 3800,
+  "fala": [
+   "Sou Sabrina. Eu já vi o resultado desta batalha antes mesmo de ela começar.",
+   "Mas venha, mostre se a visão estava certa."
+  ],
+  "vitoria": [
+   "A visão estava errada… Leve a Medalha Dourada."
+  ],
+  "derrota": [
+   "Como previsto. Volte quando mudar o seu destino."
+  ],
+  "cooldownMin": [
+   15,
+   30,
+   60
+  ],
+  "resetMoedas": 3000
+ },
+ "107": {
+  "numero": 7,
+  "nome": "Ginásio Lótus Vermelho",
+  "lider": "Blaine",
+  "cidade": "Cinnabar",
+  "tipo": "Fogo",
+  "cena": 4120007,
+  "cenaComPorta": true,
+  "cfgLider": 4161399,
+  "cfgGuia": 4161399,
+  "glb": "npc/NPC1006",
+  "modeloDump": "npc1006",
+  "insignia": {
+   "id": 107,
+   "nome": "medalha Vermelho Escuro",
+   "icone": "dghz_4"
+  },
+  "time": [
+   {
+    "dex": 58,
+    "lv": 54,
+    "glb": "pm0058_00"
+   },
+   {
+    "dex": 77,
+    "lv": 54,
+    "glb": "pm0077_00"
+   },
+   {
+    "dex": 78,
+    "lv": 55,
+    "glb": "pm0078_00"
+   },
+   {
+    "dex": 59,
+    "lv": 56,
+    "glb": "pm0059_00"
+   }
+  ],
+  "dinheiro": 4300,
+  "fala": [
+   "Sou Blaine, o velho do Ginásio de Cinnabar! Meus Pokémon queimam tudo!",
+   "Sinta o calor da batalha!"
+  ],
+  "vitoria": [
+   "Você me derreteu! A Medalha Vermelho Escuro é sua."
+  ],
+  "derrota": [
+   "Virou cinzas. Volte quando aguentar o fogo."
+  ],
+  "cooldownMin": [
+   15,
+   30,
+   60
+  ],
+  "resetMoedas": 3500
+ },
+ "108": {
+  "numero": 8,
+  "nome": "Ginásio Viridian",
+  "lider": "Giovanni",
+  "cidade": "Viridian",
+  "tipo": "Terra",
+  "cena": 4120008,
+  "cenaComPorta": true,
+  "cfgLider": 4161499,
+  "cfgGuia": 4161499,
+  "glb": "npc/NPC1005",
+  "modeloDump": "npc1005",
+  "insignia": {
+   "id": 108,
+   "nome": "medalha Verde",
+   "icone": "dghz_5"
+  },
+  "time": [
+   {
+    "dex": 111,
+    "lv": 58,
+    "glb": "pm0111_00"
+   },
+   {
+    "dex": 51,
+    "lv": 58,
+    "glb": "pm0051_00"
+   },
+   {
+    "dex": 31,
+    "lv": 59,
+    "glb": "pm0031_00"
+   },
+   {
+    "dex": 34,
+    "lv": 59,
+    "glb": "pm0034_00"
+   },
+   {
+    "dex": 112,
+    "lv": 60,
+    "glb": "pm0112_00"
+   }
+  ],
+  "dinheiro": 4800,
+  "fala": [
+   "Então você chegou até aqui. Sou Giovanni, líder do Ginásio de Viridian.",
+   "Vou esmagar você com o poder da terra."
+  ],
+  "vitoria": [
+   "Eu, derrotado…? Leve a Medalha Verde. Você é digno da Liga."
+  ],
+  "derrota": [
+   "Patético. Volte quando for um treinador de verdade."
+  ],
+  "cooldownMin": [
+   15,
+   30,
+   60
+  ],
+  "resetMoedas": 4000
+ }
+}

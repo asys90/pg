@@ -1,0 +1,27 @@
+{
+ "v": 1,
+ "zonas": [
+  {
+   "id": "undefined",
+   "mapa": "kanto",
+   "nome": "Teste",
+   "x": 10,
+   "z": -20,
+   "raio": 15,
+   "especies": [
+    {
+     "dex": 19,
+     "glb": "pm0019_00.glb",
+     "nome": "Rattata",
+     "peso": 100
+    }
+   ],
+   "lvMin": 5,
+   "lvMax": 9,
+   "max": 5,
+   "intervalo": 6,
+   "shiny": 0,
+   "ativa": true
+  }
+ ]
+}

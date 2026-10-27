@@ -1,0 +1,222 @@
+[
+ {
+  "glb": "pm0249_00",
+  "nome": "Lugia",
+  "poseIdle": "RideIdle1",
+  "poseRun": "Ride1",
+  "voa": true,
+  "escala": 0.6,
+  "vel": 37500,
+  "meio": "anfibia",
+  "livre": false
+ },
+ {
+  "glb": "pm0250_00",
+  "nome": "Ho-Oh",
+  "poseIdle": "RideIdle1",
+  "poseRun": "Ride1",
+  "voa": true,
+  "escala": 0.7,
+  "vel": 37500,
+  "meio": "anfibia",
+  "livre": false
+ },
+ {
+  "glb": "pm0384_00",
+  "nome": "Rayquaza",
+  "poseIdle": "RideIdle5",
+  "poseRun": "Ride5",
+  "voa": true,
+  "escala": 0.8,
+  "vel": 50000,
+  "meio": "anfibia",
+  "livre": false
+ },
+ {
+  "glb": "pm0146_00",
+  "nome": "Moltres",
+  "poseIdle": "RideIdle1",
+  "poseRun": "Ride1",
+  "voa": true,
+  "escala": 1,
+  "vel": 25000,
+  "meio": "terra",
+  "livre": false
+ },
+ {
+  "glb": "pm0487_11",
+  "nome": "Giratina",
+  "poseIdle": "RideIdle",
+  "poseRun": "Ride",
+  "voa": true,
+  "escala": 0.6,
+  "vel": 37500,
+  "meio": "anfibia",
+  "livre": false
+ },
+ {
+  "glb": "pm0493_11",
+  "nome": "Arceus",
+  "poseIdle": "RideIdle1",
+  "poseRun": "Ride1",
+  "voa": true,
+  "escala": 1.2,
+  "vel": 37500,
+  "meio": "anfibia",
+  "livre": false
+ },
+ {
+  "glb": "pm0483_00",
+  "nome": "Dialga",
+  "poseIdle": "RideIdle2",
+  "poseRun": "Ride2",
+  "voa": false,
+  "escala": 0.6,
+  "vel": 37500,
+  "meio": "anfibia",
+  "livre": false
+ },
+ {
+  "glb": "pm0376_00",
+  "nome": "Metagross",
+  "poseIdle": "RideIdle5",
+  "poseRun": "Ride5",
+  "voa": false,
+  "escala": 0.9,
+  "vel": 31250,
+  "meio": "anfibia",
+  "livre": false
+ },
+ {
+  "glb": "pm0382_00",
+  "nome": "Kyogre",
+  "poseIdle": "RideIdle5",
+  "poseRun": "Ride5",
+  "voa": false,
+  "escala": 0.8,
+  "vel": 31250,
+  "meio": "anfibia",
+  "livre": false
+ },
+ {
+  "glb": "pm0383_00",
+  "nome": "Groudon",
+  "poseIdle": "RideIdle",
+  "poseRun": "Ride",
+  "voa": false,
+  "escala": 0.6,
+  "vel": 37500,
+  "meio": "anfibia",
+  "livre": false
+ },
+ {
+  "glb": "pm0130_00",
+  "nome": "Gyarados",
+  "poseIdle": "RideIdle1",
+  "poseRun": "Ride1",
+  "voa": false,
+  "escala": 0.9,
+  "vel": 18750,
+  "meio": "agua",
+  "livre": false
+ },
+ {
+  "glb": "pm0006_00",
+  "nome": "Charizard",
+  "poseIdle": "RideIdle1",
+  "poseRun": "Ride1",
+  "voa": false,
+  "escala": 1.1,
+  "vel": 25000,
+  "meio": "terra",
+  "livre": false
+ },
+ {
+  "glb": "pm0149_00",
+  "nome": "Dragonite",
+  "poseIdle": "RideIdle1",
+  "poseRun": "Ride1",
+  "voa": false,
+  "escala": 1.1,
+  "vel": 25000,
+  "meio": "terra",
+  "livre": false
+ },
+ {
+  "glb": "pm0059_00",
+  "nome": "Arcanine",
+  "poseIdle": "RideIdle1",
+  "poseRun": "Ride1",
+  "voa": false,
+  "escala": 0.9,
+  "vel": 25000,
+  "meio": "terra",
+  "livre": true
+ },
+ {
+  "glb": "pm0142_00",
+  "nome": "Aerodactyl",
+  "poseIdle": "RideIdle1",
+  "poseRun": "Ride1",
+  "voa": false,
+  "escala": 1.1,
+  "vel": 25000,
+  "meio": "terra",
+  "livre": false
+ },
+ {
+  "glb": "pm0128_00",
+  "nome": "Tauros",
+  "poseIdle": "RideIdle1",
+  "poseRun": "Ride1",
+  "voa": false,
+  "escala": 1.3,
+  "vel": 18750,
+  "meio": "terra",
+  "livre": false
+ },
+ {
+  "glb": "pm0111_00",
+  "nome": "Rhyhorn",
+  "poseIdle": "RideIdle1",
+  "poseRun": "Ride1",
+  "voa": false,
+  "escala": 1.5,
+  "vel": 18750,
+  "meio": "terra",
+  "livre": false
+ },
+ {
+  "glb": "pm0143_00",
+  "nome": "Snorlax",
+  "poseIdle": "RideIdle3",
+  "poseRun": "Ride3",
+  "voa": false,
+  "escala": 1.6,
+  "vel": 12500,
+  "meio": "terra",
+  "livre": false
+ },
+ {
+  "glb": "pm0131_00",
+  "nome": "Lapras",
+  "poseIdle": "RideIdle2",
+  "poseRun": "Ride2",
+  "voa": false,
+  "escala": 0.9,
+  "vel": 18750,
+  "meio": "agua",
+  "livre": true
+ },
+ {
+  "glb": "pm0211_00",
+  "nome": "Qwilfish",
+  "poseIdle": "RideIdle5",
+  "poseRun": "Ride5",
+  "voa": false,
+  "escala": 2.3,
+  "vel": 10000,
+  "meio": "agua",
+  "livre": false
+ }
+]

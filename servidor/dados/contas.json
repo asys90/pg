@@ -1,0 +1,232 @@
+{
+  "darkninoxd": {
+    "senha": "90f0b7b8cae295c14952739af6232a1f:01c6657a08e4ff727a57030db8b593a1bb7b35c051e14f8a5bbb80c4d1bbfb6eda99fe444db749762061cf83063dee1f0097c565aa86add85ba78ce81a125621",
+    "email": "agmarhmartins@gmail.com",
+    "save": {
+      "nome": "DarkninoxD",
+      "personagem": {
+        "tipo": "ash"
+      },
+      "introVista": true,
+      "missoes": {
+        "atual": 101,
+        "passo": 1,
+        "prog": {},
+        "feitas": []
+      },
+      "time": [
+        {
+          "dex": 4,
+          "glb": "pm0004_00",
+          "nome": "Charmander",
+          "uid": "17930747200550686",
+          "lv": 5,
+          "ivs": [
+            0,
+            4,
+            19,
+            10,
+            20,
+            15
+          ],
+          "natureza": "Brave",
+          "shiny": false,
+          "inicial": true,
+          "hp": 100,
+          "status": null
+        }
+      ],
+      "inicial": {
+        "dex": 4,
+        "glb": "pm0004_00",
+        "nome": "Charmander",
+        "i": 0
+      },
+      "dex": {
+        "4": "pego"
+      },
+      "tempo": 1260,
+      "caixa": [],
+      "conhecimento": {
+        "esp": {},
+        "titulos": [],
+        "v": 1
+      },
+      "seguidor": "pm0004_00"
+    },
+    "rev": 33,
+    "codigo": "8653202f021ac00c",
+    "token": "85731f0457c7b1f31d67247fb607e2671765883998d0f60ee4479f409b9620f4",
+    "tokenExp": 1795718297385,
+    "idioma": "pt",
+    "gm": true,
+    "cargo": "staff"
+  },
+  "teste": {
+    "senha": "ec3a683021e8622555cb7bc94401a489:42ac9e48529316a6472f1d6c30bbda43a1fb9ab73026a1c8a770195eb4fca727957956285a710b42430f4fa96c96fe55caa39ccb807cb4c3e0735531f564f331",
+    "email": "dawkdwa@gmail.com",
+    "save": null,
+    "rev": 0,
+    "codigo": "babdb7d4978ddc77",
+    "token": "9893a488723f0d0190cad65d5de4db2b455e620fb08b9f72f99d65d438c008e1",
+    "tokenExp": 1795680937603,
+    "idioma": "pt"
+  },
+  "admin": {
+    "senha": "2364a7b33e28529192b252334c0f490f:072a8f1bfb282f54f0aaca6e3a73953bc57779f07253caf3cda77cfcf7c331b841faa2c306f0257fd3aba01a70681355f590cb926f5f73291efa8e534b529392",
+    "email": "admin@admin.com",
+    "save": {
+      "nome": "Admin",
+      "personagem": {
+        "tipo": "boy_016",
+        "cores": {
+          "pele": "#ffcbaa",
+          "roupa": "#e6f12b",
+          "roupa2": "#ecdfdb",
+          "olhos": "#ffffff"
+        }
+      },
+      "introVista": true,
+      "missoes": {
+        "atual": 102,
+        "passo": 1,
+        "prog": {},
+        "feitas": [
+          101
+        ]
+      },
+      "tempo": 560,
+      "time": [
+        {
+          "dex": 4,
+          "glb": "pm0004_00",
+          "nome": "Charmander",
+          "uid": "17931270032134713",
+          "lv": 5,
+          "ivs": [
+            1,
+            24,
+            22,
+            16,
+            17,
+            13
+          ],
+          "natureza": "Impish",
+          "shiny": false,
+          "inicial": true
+        },
+        {
+          "dex": 16,
+          "nome": "Pidgey",
+          "glb": "pm0016_00.glb",
+          "lv": 3,
+          "ivs": [
+            14,
+            17,
+            6,
+            24,
+            27,
+            17
+          ],
+          "natureza": "Rash",
+          "shiny": false,
+          "uid": "17931270647472616"
+        },
+        {
+          "dex": 16,
+          "nome": "Pidgey",
+          "glb": "pm0016_00.glb",
+          "lv": 2,
+          "ivs": [
+            10,
+            28,
+            6,
+            27,
+            4,
+            2
+          ],
+          "natureza": "Docile",
+          "shiny": false,
+          "uid": "17931270902778956"
+        },
+        {
+          "dex": 19,
+          "nome": "Rattata",
+          "glb": "pm0019_00.glb",
+          "lv": 5,
+          "ivs": [
+            27,
+            22,
+            9,
+            4,
+            17,
+            16
+          ],
+          "natureza": "Hasty",
+          "shiny": false,
+          "uid": "17931271162571442"
+        },
+        {
+          "dex": 16,
+          "nome": "Pidgey",
+          "glb": "pm0016_00.glb",
+          "lv": 5,
+          "ivs": [
+            11,
+            30,
+            28,
+            21,
+            21,
+            9
+          ],
+          "natureza": "Timid",
+          "shiny": false,
+          "uid": "17931273135700710"
+        }
+      ],
+      "inicial": {
+        "dex": 4,
+        "glb": "pm0004_00",
+        "nome": "Charmander",
+        "i": 0
+      },
+      "dex": {
+        "4": "pego",
+        "16": "pego",
+        "19": "pego"
+      },
+      "caixa": [],
+      "conhecimento": {
+        "esp": {},
+        "titulos": [],
+        "v": 1
+      },
+      "seguidor": "pm0004_00",
+      "seguidorUid": "17931271162571442",
+      "atalhos": [
+        {
+          "tipo": "montaria",
+          "glb": "pm0059_00",
+          "nome": "Arcanine",
+          "icone": "./ui/mon/pm0059.png"
+        },
+        {
+          "tipo": "montaria",
+          "glb": "pm0131_00",
+          "nome": "Lapras",
+          "icone": "./ui/mon/pm0131.png"
+        },
+        null,
+        null,
+        null
+      ]
+    },
+    "rev": 24,
+    "codigo": "8bfd6e8e6e7e7394",
+    "token": "04a82b02d5c515bc662009f9d250395c3b6ce05984e923f231a95a4060f4212e",
+    "tokenExp": 1795718461517,
+    "idioma": "pt",
+    "gm": true,
+    "cargo": "staff"
+  }
+}

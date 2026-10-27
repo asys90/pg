@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon 3D Viewer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #1a1a2e;
+            overflow: hidden;
+        }
+        #canvas-container { width: 100vw; height: 100vh; }
+        #info {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            color: white;
+            background: rgba(0,0,0,0.7);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        #info h2 { margin-bottom: 10px; }
+        #info select {
+            background: #333;
+            color: white;
+            border: 1px solid #555;
+            padding: 8px;
+            border-radius: 4px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        #info button {
+            background: #2a5298;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        #info button:hover { background: #3a6ab8; }
+        #stats {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <div id="info">
+        <h2>Pokemon 3D Viewer</h2>
+        <select id="pokemon-select">
+            <option value="">Selecione um Pokemon</option>
+        </select>
+        <div>
+            <button onclick="loadPokemon()">Carregar</button>
+            <button onclick="toggleWireframe()">Wireframe</button>
+            <button onclick="toggleRotate()">Auto-Rotacionar</button>
+        </div>
+        <div id="stats"></div>
+    </div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+
+        const container = document.getElementById('canvas-container');
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x1a1a2e);
+
+        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(3, 2, 3);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        container.appendChild(renderer.domElement);
+
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+
+        // Lights
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+        directionalLight.position.set(5, 10, 5);
+        scene.add(directionalLight);
+
+        const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.5);
+        directionalLight2.position.set(-5, 5, -5);
+        scene.add(directionalLight2);
+
+        // Grid
+        const gridHelper = new THREE.GridHelper(10, 10, 0x444444, 0x222222);
+        scene.add(gridHelper);
+
+        // State
+        let currentModel = null;
+        let wireframe = false;
+        let autoRotate = false;
+
+        // Available Pokemon
+        const pokemonList = [
+            { id: '0493', name: 'Arceus', meshes: [
+                '00493_11_Mesh', '00493_12_Mesh', '00493_13_Mesh', '00493_14_Mesh',
+                '00493_15_Mesh', '00493_16_Mesh', '00493_17_Mesh', '00493_18_Mesh'
+            ]}
+        ];
+
+        // Populate select
+        const select = document.getElementById('pokemon-select');
+        pokemonList.forEach(p => {
+            p.meshes.forEach((mesh, i) => {
+                const opt = document.createElement('option');
+                opt.value = `/assets/pokemon/pm${p.id}_${mesh}.obj`;
+                opt.textContent = `#${p.id} ${p.name} (Forma ${i + 1})`;
+                select.appendChild(opt);
+            });
+        });
+
+        // OBJ Loader
+        const objLoader = new OBJLoader();
+
+        window.loadPokemon = function() {
+            const path = select.value;
+            if (!path) return;
+
+            document.getElementById('stats').textContent = 'Carregando...';
+
+            if (currentModel) {
+                scene.remove(currentModel);
+            }
+
+            objLoader.load(
+                path,
+                (obj) => {
+                    // Center and scale
+                    const box = new THREE.Box3().setFromObject(obj);
+                    const center = box.getCenter(new THREE.Vector3());
+                    const size = box.getSize(new THREE.Vector3());
+                    const maxDim = Math.max(size.x, size.y, size.z);
+                    const scale = 2 / maxDim;
+
+                    obj.scale.setScalar(scale);
+                    obj.position.sub(center.multiplyScalar(scale));
+
+                    // Apply material
+                    obj.traverse((child) => {
+                        if (child.isMesh) {
+                            child.material = new THREE.MeshStandardMaterial({
+                                color: 0xcccccc,
+                                roughness: 0.5,
+                                metalness: 0.2,
+                                wireframe: wireframe
+                            });
+                        }
+                    });
+
+                    scene.add(obj);
+                    currentModel = obj;
+
+                    // Stats
+                    let verts = 0, faces = 0;
+                    obj.traverse((child) => {
+                        if (child.isMesh && child.geometry) {
+                            const pos = child.geometry.attributes.position;
+                            if (pos) {
+                                verts += pos.count;
+                                faces += pos.count / 3;
+                            }
+                        }
+                    });
+
+                    document.getElementById('stats').textContent =
+                        `Vertices: ${verts.toLocaleString()} | Faces: ${Math.floor(faces).toLocaleString()}`;
+                },
+                (xhr) => {
+                    const pct = Math.round(xhr.loaded / xhr.total * 100);
+                    document.getElementById('stats').textContent = `Carregando... ${pct}%`;
+                },
+                (error) => {
+                    document.getElementById('stats').textContent = `Erro: ${error.message}`;
+                }
+            );
+        };
+
+        window.toggleWireframe = function() {
+            wireframe = !wireframe;
+            if (currentModel) {
+                currentModel.traverse((child) => {
+                    if (child.isMesh) {
+                        child.material.wireframe = wireframe;
+                    }
+                });
+            }
+        };
+
+        window.toggleRotate = function() {
+            autoRotate = !autoRotate;
+        };
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+
+            if (autoRotate && currentModel) {
+                currentModel.rotation.y += 0.01;
+            }
+
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // Load first by default
+        select.selectedIndex = 1;
+        loadPokemon();
+    </script>
+</body>
+</html>

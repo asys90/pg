@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- os módulos do jogo que o painel reaproveita (personagem.mjs, tinta.mjs) buscam './cenario/…' e './data/…' relativos à página:
+     com a base na raiz isso vale tanto em /admin quanto em /admin/index.html -->
+<base href="/">
+<title>Admin — Pokemon 3D Base</title>
+<style>
+:root {
+  --bg: #0e1117; --painel: #161a23; --painel2: #1d2230; --borda: #2a3142; --texto: #e6e9f0; --fraco: #8b93a7;
+  --acento: #ffcf3a; --ok: #3ecf8e; --erro: #ff5d5d; --azul: #4da3ff;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--texto); font: 14px/1.4 system-ui, "Segoe UI", Roboto, sans-serif; }
+button, input, select { font: inherit; color: inherit; }
+button { background: var(--painel2); border: 1px solid var(--borda); border-radius: 6px; padding: 6px 11px; cursor: pointer; }
+button:hover { border-color: #3d4660; }
+button.prim { background: var(--acento); color: #1a1405; border-color: var(--acento); font-weight: 600; }
+button.perigo { color: var(--erro); }
+button.on { background: #2b3550; border-color: var(--azul); }
+button:disabled { opacity: .45; cursor: default; }
+input[type=text], input[type=number], input[type=password], input[type=search], select {
+  background: #0f131b; border: 1px solid var(--borda); border-radius: 6px; padding: 6px 8px; min-width: 0;
+}
+input:focus, select:focus { outline: 1px solid var(--azul); border-color: var(--azul); }
+label.chk { display: inline-flex; gap: 5px; align-items: center; cursor: pointer; user-select: none; }
+.fraco { color: var(--fraco); }
+[hidden] { display: none !important; }
+
+/* login */
+#login { display: grid; place-items: center; height: 100%; }
+#login form { background: var(--painel); border: 1px solid var(--borda); border-radius: 12px; padding: 28px; width: 340px; display: grid; gap: 12px; }
+#login h1 { margin: 0 0 4px; font-size: 20px; }
+#login .msg { color: var(--erro); min-height: 1.4em; font-size: 13px; }
+
+/* casca */
+#app { display: grid; grid-template-columns: 220px 1fr; grid-template-rows: 48px 1fr; height: 100%; }
+header { grid-column: 1 / 3; display: flex; align-items: center; gap: 14px; padding: 0 16px; background: var(--painel); border-bottom: 1px solid var(--borda); }
+header .marca { font-weight: 700; color: var(--acento); }
+header .eu { margin-left: auto; display: flex; gap: 10px; align-items: center; }
+header .tag { background: #ff4d4d; color: #fff; font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 4px; }
+header a { color: var(--azul); text-decoration: none; }
+nav#lado { background: var(--painel); border-right: 1px solid var(--borda); padding: 12px 8px; overflow: auto; }
+nav#lado .sec { color: var(--fraco); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; margin: 12px 8px 6px; }
+nav#lado button { display: block; width: 100%; text-align: left; background: none; border: 0; padding: 8px 10px; border-radius: 6px; }
+nav#lado button:hover { background: var(--painel2); }
+nav#lado button.atual { background: #2b3550; color: #fff; }
+nav#lado a.nav-link { display: block; padding: 8px 10px; border-radius: 6px; color: var(--texto); text-decoration: none; }
+nav#lado a.nav-link:hover { background: var(--painel2); }
+main { overflow: hidden; position: relative; }
+.vista { height: 100%; }
+
+/* editor de mapa */
+#v-mapa { display: grid; grid-template-rows: auto 1fr; }
+.barra { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 8px 12px; background: var(--painel); border-bottom: 1px solid var(--borda); }
+.barra .sep { width: 1px; align-self: stretch; background: var(--borda); margin: 0 4px; }
+.barra .camadas { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 13px; }
+.barra .direita { margin-left: auto; display: flex; gap: 8px; align-items: center; }
+.sujo { color: var(--acento); font-size: 13px; }
+.corpo-mapa { display: grid; grid-template-columns: 1fr 360px; min-height: 0; }
+.tela { position: relative; overflow: hidden; background: #0a0d12; cursor: grab; }
+.tela.arrastando { cursor: grabbing; }
+.tela.colocando { cursor: crosshair; }
+.tela canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.leitura { position: absolute; left: 10px; bottom: 10px; background: rgba(10,13,18,.82); border: 1px solid var(--borda); border-radius: 6px; padding: 5px 9px; font-size: 12px; pointer-events: none; }
+.dica { position: absolute; right: 10px; bottom: 10px; background: rgba(10,13,18,.82); border: 1px solid var(--borda); border-radius: 6px; padding: 5px 9px; font-size: 12px; color: var(--fraco); pointer-events: none; }
+.lado-dir { background: var(--painel); border-left: 1px solid var(--borda); overflow: auto; padding: 12px; display: grid; gap: 14px; align-content: start; }
+.caixa { background: var(--painel2); border: 1px solid var(--borda); border-radius: 10px; padding: 12px; }
+.caixa h3 { margin: 0 0 10px; font-size: 14px; display: flex; align-items: center; gap: 8px; }
+.lista-zonas { display: grid; gap: 4px; max-height: 220px; overflow: auto; }
+.lista-zonas button { display: flex; gap: 8px; align-items: center; text-align: left; width: 100%; }
+.lista-zonas button.atual { border-color: var(--azul); background: #23304a; }
+.bola { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.novo { background: var(--acento); color: #1a1405; font-size: 10px; font-weight: 700; padding: 0 5px; border-radius: 4px; }
+#a-lista { max-height: 260px; }
+.form { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 10px; }
+.form label { display: grid; gap: 3px; font-size: 12px; color: var(--fraco); }
+.form .inteira { grid-column: 1 / 3; }
+.raio { display: grid; grid-template-columns: 1fr 70px; gap: 8px; align-items: center; }
+.acoes { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* tabela de espécies (zona e habitats) */
+table.esp { width: 100%; border-collapse: collapse; font-size: 13px; }
+table.esp th { text-align: left; color: var(--fraco); font-weight: 500; font-size: 12px; padding: 4px; border-bottom: 1px solid var(--borda); }
+table.esp td { padding: 4px; border-bottom: 1px solid #222838; vertical-align: middle; }
+table.esp input[type=number] { width: 66px; }
+table.esp .pct { color: var(--fraco); width: 48px; text-align: right; }
+table.esp .sem-modelo { color: var(--erro); font-size: 11px; }
+.add-esp { display: grid; grid-template-columns: 1fr auto; gap: 6px; margin-top: 8px; }
+
+/* habitats */
+#v-habitats { display: grid; grid-template-columns: 300px 1fr; height: 100%; }
+#v-habitats .col-areas { background: var(--painel); border-right: 1px solid var(--borda); display: grid; grid-template-rows: auto 1fr; min-height: 0; }
+#v-habitats .col-areas .topo { padding: 10px; display: grid; gap: 8px; border-bottom: 1px solid var(--borda); }
+#v-habitats .areas { overflow: auto; padding: 6px; display: grid; gap: 3px; align-content: start; }
+#v-habitats .areas button { display: flex; justify-content: space-between; gap: 8px; text-align: left; }
+#v-habitats .areas button.atual { border-color: var(--azul); background: #23304a; }
+#v-habitats .col-edit { overflow: auto; padding: 16px; display: grid; gap: 14px; align-content: start; }
+
+/* dados genéricos + histórico */
+#v-dados { display: grid; grid-template-columns: 260px 1fr; height: 100%; }
+#v-dados .col-esq { background: var(--painel); border-right: 1px solid var(--borda); overflow: auto; padding: 10px; display: grid; gap: 6px; align-content: start; }
+#v-dados .col-esq button { text-align: left; display: grid; gap: 2px; }
+#v-dados .col-esq button.atual { border-color: var(--azul); background: #23304a; }
+#v-dados .col-esq small { color: var(--fraco); font-size: 11px; }
+#v-dados .col-dir, #v-historico { overflow: auto; padding: 16px; display: grid; gap: 14px; align-content: start; }
+.topo-edit { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.topo-edit h2 { margin: 0; font-size: 18px; margin-right: auto; }
+.grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 420px); gap: 14px; align-items: start; }
+table.dados { width: 100%; border-collapse: collapse; font-size: 13px; }
+table.dados th { text-align: left; color: var(--fraco); font-weight: 500; font-size: 12px; padding: 6px; border-bottom: 1px solid var(--borda); position: sticky; top: 0; background: var(--painel2); }
+table.dados td { padding: 6px; border-bottom: 1px solid #222838; cursor: pointer; max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+table.dados tr:hover td { background: #222a3b; }
+table.dados tr.atual td { background: #23304a; }
+.rolagem { max-height: 60vh; overflow: auto; border: 1px solid var(--borda); border-radius: 8px; }
+.form-reg { display: grid; gap: 10px; }
+.form-reg label { display: grid; gap: 4px; font-size: 12px; color: var(--fraco); }
+.form-reg label.chk { display: flex; color: var(--texto); }
+.form-reg textarea { background: #0f131b; border: 1px solid var(--borda); border-radius: 6px; padding: 6px 8px; color: var(--texto); font: 12px/1.4 ui-monospace, Consolas, monospace; min-height: 70px; resize: vertical; }
+.form-reg .ajuda { font-size: 11px; color: var(--fraco); }
+.form-reg .erro-campo { font-size: 12px; color: var(--erro); }
+.form-reg .invalido { border-color: var(--erro) !important; }
+.backups td { cursor: default; }
+.grade > #d-form { position: sticky; top: 0; }
+/* jogadores */
+#v-jogadores { display: grid; grid-template-columns: 300px 1fr; height: 100%; }
+#v-jogadores .col-esq { background: var(--painel); border-right: 1px solid var(--borda); overflow: auto; padding: 10px; display: grid; gap: 8px; align-content: start; }
+#v-jogadores .col-dir { overflow: auto; padding: 16px; display: grid; gap: 12px; align-content: start; }
+#j-lista button { align-items: flex-start; }
+.selo { font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 4px; background: #2b3550; color: var(--texto); }
+.selo.gm { background: #ff4d4d; color: #fff; } .selo.ban { background: #7a1f1f; color: #fff; } .selo.mudo { background: #5a4a1a; color: #fff; }
+.j-grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 12px; }
+.j-larga { grid-column: 1 / -1; }
+.j-grade h4 { margin: 14px 0 6px; font-size: 12px; color: var(--fraco); text-transform: uppercase; letter-spacing: .06em; }
+.j-bolas { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 6px 12px; }
+.j-bolas label { display: flex; justify-content: space-between; align-items: center; gap: 6px; font-size: 12px; }
+.j-bolas input { width: 80px; }
+.j-insignias { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 4px 10px; font-size: 12px; }
+.form label.chk { display: flex; align-items: center; gap: 6px; color: var(--texto); }
+#j-time { overflow-x: auto; }
+.j-mons .j-ivs, .j-mons td:last-child { white-space: nowrap; }
+.j-mons .j-ivs input[type=number] { width: 36px; padding: 3px 1px; text-align: center; }   /* [type] vence o table.esp input[type=number] (66px) */
+.j-mons input.lv[type=number] { width: 52px; }
+.j-mons select.nat { width: 96px; }
+.j-mons td button { padding: 3px 7px; margin-left: 2px; }
+.j-codigo { margin-top: 10px; padding: 8px; border: 1px dashed var(--acento); border-radius: 8px; }
+.j-codigo code { font-size: 15px; color: var(--acento); }
+/* prévia 3D da skin (admin/previa_skin.mjs — o palco é o mesmo da tela de criação do jogo) */
+.previa-skin { position: relative; }
+.previa-skin .palco { position: relative; height: 260px; border-radius: 10px; cursor: grab; touch-action: pan-y; background: radial-gradient(ellipse at 50% 90%, #4a3d1a 0, #1b2238 62%); }
+.previa-skin .palco:not(.pronto)::after { content: '…'; position: absolute; inset: 0; display: grid; place-items: center; color: var(--fraco); font-size: 26px; }
+.previa-skin .palco-3d { position: absolute; left: 0; top: 0; pointer-events: none; z-index: 2; }
+.previa-info { font-size: 12px; color: var(--fraco); margin-top: 8px; line-height: 1.45; }
+.previa-info.aviso { color: #ffb35c; }
+.previa-cores { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin-top: 8px; }
+.previa-cores .cor { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--texto); }
+.previa-cores input[type=color] { width: 30px; height: 24px; border: 0; padding: 0; background: none; cursor: pointer; }
+/* camadas do mapa (admin/camadas.mjs) */
+#c-painel h4 { margin: 4px 0 8px; font-size: 14px; }
+.c-legenda { font-size: 11px; color: var(--fraco); margin-top: 8px; line-height: 1.6; }
+.aviso-c { color: #ffb35c; font-size: 12px; }
+.h-nivel { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; padding: 8px 10px; border: 1px solid var(--borda); border-radius: 8px; background: var(--painel); font-size: 13px; }
+.h-nivel input { width: 70px; }
+/* prévias de item e de treinador, e a sub-tabela das lojas (Fase 1) */
+.previa-item { display: grid; grid-template-columns: 72px 1fr; gap: 12px; align-items: start; padding-bottom: 6px; border-bottom: 1px solid var(--borda); }
+.pi-icone { width: 72px; height: 72px; border-radius: 10px; background: radial-gradient(ellipse at 50% 60%, #2a3550 0, #141a26 70%); display: grid; place-items: center; overflow: hidden; }
+.pi-icone img { max-width: 64px; max-height: 64px; image-rendering: auto; }
+.pi-sem { font-size: 10px; color: var(--fraco); text-align: center; padding: 4px; }
+.pi-desc { font-size: 12px; line-height: 1.45; margin-top: 6px; color: var(--texto); }
+.previa-time { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.pt-mon { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px 2px 2px; border: 1px solid var(--borda); border-radius: 999px; font-size: 12px; background: var(--painel); }
+.pt-mon img { width: 26px; height: 26px; }
+table.d-sublista input[type=number] { width: 92px; }
+table.d-sublista td .ajuda { max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#toast { position: fixed; right: 16px; top: 60px; display: grid; gap: 8px; z-index: 50; }
+#toast div { background: var(--painel2); border: 1px solid var(--borda); border-left: 4px solid var(--ok); border-radius: 8px; padding: 9px 13px; max-width: 360px; box-shadow: 0 6px 20px rgba(0,0,0,.35); }
+#toast div.erro { border-left-color: var(--erro); }
+</style>
+</head>
+<body>
+
+<div id="login" hidden>
+  <form id="f-login">
+    <h1>Admin — Pokemon 3D Base</h1>
+    <div class="fraco">Entre com uma conta <b>GM</b>.</div>
+    <input type="text" id="l-usuario" placeholder="usuário" autocomplete="username" required>
+    <input type="password" id="l-senha" placeholder="senha" autocomplete="current-password" required>
+    <button class="prim" type="submit">Entrar</button>
+    <div class="msg" id="l-msg"></div>
+  </form>
+</div>
+
+<div id="app" hidden>
+  <header>
+    <span class="marca">Pokemon 3D Base</span><span class="fraco">Painel Admin</span>
+    <div class="eu"><a href="/" target="jogo">Abrir o jogo ↗</a><span class="tag">GM</span><b id="eu-nome"></b><button id="b-sair">Sair</button></div>
+  </header>
+
+  <nav id="lado">
+    <div class="sec">Mundo</div>
+    <button data-vista="mapa" class="atual">🗺️ Editor de Mapa</button>
+    <button data-vista="habitats">🌿 Habitats por Área</button>
+    <div class="sec">Comunidade</div>
+    <button data-vista="jogadores">👥 Jogadores</button>
+    <button data-vista="eventos">🎉 Eventos ao vivo</button>
+    <div class="sec">Cenário</div>
+    <a class="nav-link" href="/admin/cenario">🏗️ Editor 3D</a>
+    <div class="sec">Conteúdo</div>
+    <button data-vista="missoes">📜 Missões</button>
+    <button data-vista="especies">🧬 Espécies</button>
+    <button data-vista="evolucoes">🔀 Evoluções</button>
+    <button data-vista="learnset">💥 Learnset</button>
+    <div class="sec">Dados do jogo</div>
+    <button data-vista="dados">⚙️ Arquivos de dados</button>
+    <button data-vista="historico">🕘 Histórico / Desfazer</button>
+  </nav>
+
+  <main>
+    <!-- EDITOR DE MAPA: zonas de spawn -->
+    <section id="v-mapa" class="vista">
+      <div class="barra">
+        <label>Mapa <select id="m-mapa"></select></label>
+        <span class="sep"></span>
+        <button id="m-nova" title="Clique no mapa pra colocar o centro da zona">➕ Nova zona</button>
+        <button id="m-aqui" title="Cria uma zona onde o seu personagem está agora">📍 Zona onde estou</button>
+        <button id="m-eu" title="Centraliza o mapa no seu personagem">🎯 Onde estou</button>
+        <span class="sep"></span>
+        <button id="m-nova-area" title="Arraste um retângulo no mapa pra criar uma área com nome">▭ Nova área</button>
+        <span class="sep"></span>
+        <label title="O que o clique no mapa faz">Ferramenta <select id="m-ferramenta">
+          <option value="zonas">Zonas e áreas</option><option value="pontos">Pontos: NPCs, portas, treinadores</option><option value="pincel">Pincel: grama, água, piso</option></select></label>
+        <span class="sep"></span>
+        <div class="camadas" id="m-camadas"></div>
+        <div class="direita">
+          <span class="sujo" id="m-sujo" hidden>● alterações não salvas</span>
+          <button id="m-recarregar">Descartar</button>
+          <button class="prim" id="m-salvar" title="Salva as zonas e as áreas alteradas">Salvar</button>
+        </div>
+      </div>
+      <div class="corpo-mapa">
+        <div class="tela" id="m-tela">
+          <canvas id="m-canvas"></canvas>
+          <div class="leitura"><span id="m-leitura">—</span> <span class="fraco" id="m-foto"></span></div>
+          <div class="dica" id="m-dica">roda: zoom · arrastar: mover · clique numa área pra editar (arraste o miolo/as bordas) · arraste o centro/borda da zona</div>
+        </div>
+        <div class="lado-dir">
+          <div class="caixa" id="c-painel" hidden></div>
+          <div class="caixa">
+            <h3>Zonas neste mapa <span class="fraco" id="m-qtd"></span></h3>
+            <div class="lista-zonas" id="m-lista"></div>
+          </div>
+          <div class="caixa" id="m-edit" hidden>
+            <h3><span class="bola" id="e-cor"></span><span id="e-titulo">Zona</span></h3>
+            <div class="form">
+              <label class="inteira">Nome <input type="text" id="e-nome" maxlength="60"></label>
+              <label class="inteira">Raio (m)
+                <div class="raio"><input type="range" id="e-raio-r" min="2" max="80" step="0.5"><input type="number" id="e-raio" min="1" max="200" step="0.5"></div>
+              </label>
+              <label>Vivos ao mesmo tempo <input type="number" id="e-max" min="1" max="30"></label>
+              <label>Intervalo (s) <input type="number" id="e-intervalo" min="1" max="600"></label>
+              <label>Nível mínimo <input type="number" id="e-lvmin" min="1" max="100"></label>
+              <label>Nível máximo <input type="number" id="e-lvmax" min="1" max="100"></label>
+              <label>Chance de shiny (%) <input type="number" id="e-shiny" min="0" max="100" step="0.1"></label>
+              <label class="chk" style="align-self:end"><input type="checkbox" id="e-ativa"> Ativa</label>
+              <div class="inteira fraco" id="e-pos"></div>
+            </div>
+            <h3 style="margin-top:14px">Espécies</h3>
+            <div id="e-especies"></div>
+            <div class="acoes" style="margin-top:12px">
+              <button id="e-centro">Centralizar</button>
+              <button id="e-tp" title="Leva o seu personagem até a zona (o jogo precisa estar aberto em outra aba)">Ir até lá no jogo</button>
+              <button id="e-dup">Duplicar</button>
+              <button id="e-del" class="perigo">Excluir</button>
+            </div>
+          </div>
+          <div class="caixa">
+            <h3>Áreas neste mapa <span class="fraco" id="a-qtd"></span></h3>
+            <input type="search" id="a-filtro" placeholder="filtrar áreas…" style="width:100%;margin-bottom:6px">
+            <div class="lista-zonas" id="a-lista"></div>
+          </div>
+          <div class="caixa" id="a-edit" hidden>
+            <h3><span class="bola" style="background:#ffcf3a"></span><span id="a-titulo">Área</span></h3>
+            <div class="form">
+              <label class="inteira">Nome (aparece no jogo) <input type="text" id="a-nome" maxlength="60"></label>
+              <label class="inteira">ID da área <input type="number" id="a-id" min="1" step="1"><span class="fraco" id="a-id-ajuda" style="font-size:11px"></span></label>
+              <label>Centro X <input type="number" id="a-x" step="0.5"></label>
+              <label>Centro Z <input type="number" id="a-z" step="0.5"></label>
+              <label>Largura (X, m) <input type="number" id="a-sx" min="1" step="0.5"></label>
+              <label>Altura (Z, m) <input type="number" id="a-sz" min="1" step="0.5"></label>
+              <div class="inteira fraco" id="a-info" style="font-size:12px"></div>
+            </div>
+            <div class="acoes" style="margin-top:12px">
+              <button id="a-centro">Centralizar</button>
+              <button id="a-tp" title="Leva o seu personagem até o centro da área (o jogo precisa estar aberto em outra aba)">Ir até lá no jogo</button>
+              <button id="a-dup" title="Outra caixa na MESMA área — pra área que não é um retângulo só">＋ Caixa</button>
+              <button id="a-puxar" title="Os tiles de grama/água dentro da caixa passam a ser desta área (o spawn usa o habitat dela)">Puxar grama/água</button>
+              <button id="a-del" class="perigo">Excluir área</button>
+            </div>
+            <div class="fraco" style="font-size:12px;margin-top:10px">A área dá o nome na tela, a música e o limite do mundo na água. Os Pokémon dela vêm de
+              <b>Habitats por Área</b> (pela grama/água da área) ou de uma <b>zona</b>.</div>
+          </div>
+          <div class="caixa fraco" id="m-ajuda">
+            Clique em <b>➕ Nova zona</b> e depois no mapa pra criar. Cada zona nasce os Pokémon escolhidos dentro do círculo,
+            somando aos do habitat da área. Depois de <b>Salvar</b>, o jogo aberto em outra aba recarrega as zonas sozinho.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HABITATS: espécies por área -->
+    <section id="v-habitats" class="vista" hidden>
+      <div class="col-areas">
+        <div class="topo">
+          <input type="search" id="h-busca" placeholder="Filtrar áreas…">
+          <div class="acoes"><span class="sujo" id="h-sujo" hidden>● não salvo</span><button class="prim" id="h-salvar" style="margin-left:auto">Salvar habitats</button></div>
+        </div>
+        <div class="areas" id="h-areas"></div>
+      </div>
+      <div class="col-edit">
+        <div class="caixa">
+          <h3 id="h-titulo">Escolha uma área</h3>
+          <div class="fraco" id="h-desc" style="margin-bottom:10px">Espécies que nascem na grama/água da área. O <b>peso</b> é a chance relativa (100 = comum, 16 = raríssimo).</div>
+          <div class="h-nivel" id="h-nivel" hidden>
+            <span>Nível dos selvagens:</span>
+            <input type="number" id="h-lvmin" min="1" max="100" placeholder="mín"> a <input type="number" id="h-lvmax" min="1" max="100" placeholder="máx">
+            <button id="h-nivel-ok">Salvar nível</button><span class="fraco" id="h-nivel-info"></span>
+          </div>
+          <div id="h-especies"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DADOS DO JOGO: editor genérico guiado por esquema (admin/esquemas.mjs) -->
+    <section id="v-dados" class="vista" hidden>
+      <div class="col-esq" id="d-lista"></div>
+      <div class="col-dir" id="d-edit"><div class="caixa fraco">Escolha um arquivo à esquerda.</div></div>
+    </section>
+
+    <!-- HISTÓRICO: backups gravados a cada salvamento; restaurar um volta o arquivo àquela versão -->
+    <section id="v-historico" class="vista" hidden></section>
+
+    <!-- JOGADORES (admin/jogadores.mjs): contas, quem está online, bolsa, time, cargo e moderação -->
+    <section id="v-jogadores" class="vista" hidden>
+      <div class="col-esq">
+        <div class="topo-edit"><input type="search" id="j-busca" placeholder="buscar usuário, nome ou e-mail…" style="flex:1"><button id="j-recarregar" title="Atualizar">↻</button></div>
+        <label class="chk"><input type="checkbox" id="j-online"> só quem está online</label>
+        <div class="fraco" id="j-qtd" style="font-size:12px"></div>
+        <div class="lista-zonas" id="j-lista" style="max-height:none"></div>
+      </div>
+      <div class="col-dir" id="j-ficha"><div class="caixa fraco">Escolha um jogador à esquerda.</div></div>
+      <datalist id="dl-itens"></datalist>
+    </section>
+
+    <!-- EVENTOS AO VIVO (admin/eventos.mjs, Fase 3): EXP/shiny/densidade, aviso global, manutenção -->
+    <section id="v-eventos" class="vista" hidden></section>
+
+    <!-- CONTEÚDO (admin/conteudo*.mjs, Fase 2): telas próprias, montadas no 1º clique -->
+    <section id="v-missoes" class="vista" hidden></section>
+    <section id="v-especies" class="vista" hidden></section>
+    <section id="v-evolucoes" class="vista" hidden></section>
+    <section id="v-learnset" class="vista" hidden></section>
+  </main>
+</div>
+
+<div id="toast"></div>
+<datalist id="dl-especies"></datalist>
+<script type="module" src="/admin/admin.mjs"></script>
+</body>
+</html>

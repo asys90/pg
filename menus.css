@@ -1,0 +1,278 @@
+/* Menus do jogo (menus.mjs): grade do Menu + janelas (Pokémon, mochila, missões, mapa, pokédex,
+   treinador, loja, social, batalha, configurações). Casca DOM, mesmo tema da HUD (hud.css). */
+#menu-grade{position:fixed;inset:0;z-index:45;display:flex;align-items:center;justify-content:center;background:#000a}
+#menu-grade[hidden]{display:none}
+#menu-grade .caixa{width:min(720px,94vw);padding:14px;border:1px solid #b47622;border-radius:14px;background:var(--panel);box-shadow:0 12px 30px #000c}
+#menu-grade h2{margin:0 0 10px;font-size:16px;color:#ffe07a;display:flex;justify-content:space-between;align-items:center}
+#menu-grade h2 small{color:var(--muted);font-weight:400;font-size:11px}
+#menu-grade .itens{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px}
+#menu-grade button{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 6px;border:1px solid var(--line);border-radius:12px;background:#0b1020;color:var(--text);font:inherit;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+#menu-grade button:hover,#menu-grade button:focus-visible{border-color:#ffd23a;color:#ffe07a}
+#menu-grade button i{font-style:normal;font-size:26px;line-height:1}
+#menu-grade button b{font-size:12px;font-weight:600}
+#menu-grade button small{color:var(--muted);font-size:10px}
+#menu-grade button.breve{opacity:.55}
+/* janela */
+.janela{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(860px,96vw);max-height:92vh;display:flex;flex-direction:column;border:1px solid #b47622;border-radius:14px;background:var(--panel);box-shadow:0 12px 30px #000c;z-index:46;color:var(--text)}
+.janela[hidden]{display:none}
+.janela>header{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line)}
+.janela>header h2{margin:0;font-size:16px;color:#ffe07a;flex:1}
+.janela>header .abas{display:flex;gap:6px}
+.janela>header .abas button,.janela .btn{padding:6px 12px;border:1px solid var(--line);border-radius:8px;background:#0b1020;color:var(--text);font:inherit;cursor:pointer;touch-action:manipulation}
+.janela>header .abas button.on{border-color:#ffd23a;color:#ffe07a;background:#1b2238}
+.janela .btn.ouro{border-color:#b47622;background:linear-gradient(#342317,#10131b);color:#ffe6b0;font-weight:700}
+.janela .btn:disabled{opacity:.45;cursor:default}
+.janela>header .x{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;background:#0b1020;color:#ffe07a;font-size:16px;cursor:pointer}
+.janela>.corpo{padding:12px 14px;overflow:auto;flex:1;min-height:200px}
+.janela .vazio{padding:30px 10px;text-align:center;color:var(--muted)}
+.janela .dois{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.janela .lista{display:flex;flex-direction:column;gap:6px}
+.janela .linha{display:flex;align-items:center;gap:10px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:#0b1020;cursor:pointer}
+.janela .linha.on{border-color:#ffd23a;background:#1b2238}
+.janela .linha .nome{flex:1}
+.janela .linha .nome b{display:block}
+.janela .linha .nome small{color:var(--muted)}
+.janela .tipo{display:inline-block;padding:1px 7px;border-radius:4px;font-size:10px;color:#fff;margin-right:3px}
+.janela .hp{height:7px;background:#2a3550;border-radius:4px;overflow:hidden;margin-top:4px}
+.janela .hp b{display:block;height:100%;background:#86ef5f}
+.janela .ficha{border:1px solid var(--line);border-radius:12px;padding:12px;background:#0b1020}
+.janela .ficha h3{margin:0 0 6px;font-size:15px;color:#ffe07a}
+.janela table.stats{border-collapse:collapse;width:100%;font-size:12px;margin-top:8px}
+.janela table.stats td{padding:2px 4px;border-bottom:1px solid #1e2740}
+.janela table.stats td:last-child{text-align:right;font-family:ui-monospace,Consolas,monospace}
+.janela .acoes{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.janela .grade-itens{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px}
+.janela .item{position:relative;display:grid;grid-template-columns:56px 1fr;gap:2px 10px;align-items:start;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:#0b1020}
+/* ícone do item (ui/itens/ic_<id>.png, do pacote FairyGUI Item) com a moldura na cor da qualidade (q 1–6) */
+.janela .item .ic-item{grid-row:1/4;width:56px;height:56px;border:1px solid var(--line);border-radius:10px;background:#101624 center/46px no-repeat}
+.janela .item.q2 .ic-item{border-color:#86ef5f}.janela .item.q3 .ic-item{border-color:#4ea1ff}.janela .item.q4 .ic-item{border-color:#b46cff}.janela .item.q5 .ic-item{border-color:#ffb347}.janela .item.q6 .ic-item{border-color:#ff5f5f}
+.janela .item b{display:block;font-size:12px;padding-right:58px}
+.janela .item small{color:var(--muted)}
+.janela .item .n{position:absolute;right:8px;top:6px;color:#ffe07a;font-family:ui-monospace,Consolas,monospace;font-size:12px}
+.janela .ficha .evo-linha{margin-top:5px;font-size:12px;line-height:1.35}.janela .ficha .evo-linha small{color:var(--muted)}.janela .ficha .evo-linha .ok{color:#86ef5f;font-size:11px}.janela .ficha .evo-linha .falta{color:#ffb347;font-size:11px}
+.janela .insignias{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+.janela .insignia{aspect-ratio:1;border:1px dashed var(--line);border-radius:50%;display:grid;place-items:center;color:var(--muted);font-size:11px;text-align:center}
+.janela .insignia.tem{border:2px solid #ffd23a;color:#ffe07a}
+.janela canvas.mapa{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#0b1020}
+.janela .chat{display:flex;flex-direction:column;height:100%;min-height:280px}
+.janela .chat .msgs{flex:1;overflow:auto;border:1px solid var(--line);border-radius:10px;padding:8px;background:#0b1020;font-size:12px}
+.janela .chat .msgs div{margin:2px 0}
+.janela .chat .msgs b{color:#ffe07a}
+.janela .chat form{display:flex;gap:6px;margin-top:8px}
+.janela .chat input{flex:1;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#0b1020;color:var(--text);font:inherit}
+.janela .config label{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #1e2740}
+.janela .config label span{flex:1}
+.janela .config select,.janela .config input[type=range]{min-width:160px}
+.janela .config select{padding:4px 6px;border:1px solid var(--line);border-radius:6px;background:#0b1020;color:var(--text);font:inherit}
+.janela .missao-atual{padding:10px 12px;border:1px solid #b47622;border-radius:10px;background:#1b1a14;margin-bottom:10px}
+.janela .missao-atual b{color:#ffe07a}
+.janela .dex-grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:6px}
+.janela .dex{padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#0b1020;font-size:12px;color:var(--muted)}
+.janela .dex.visto{color:var(--text)}
+.janela .dex.pego{border-color:#86ef5f;color:#c9f5b5}
+.janela .dex small{display:block;font-size:10px}
+body.mobile .janela{width:100vw;max-height:100vh;height:100vh;left:0;top:0;transform:none;border-radius:0;border:0}
+body.mobile .janela .dois{grid-template-columns:1fr}
+/* Caixa (20/09): as duas colunas ficam lado a lado também no celular DEITADO — é entre elas que se arrasta, e uma
+   embaixo da outra o dedo teria de rolar a janela inteira no meio do arrasto. */
+body.mobile .janela .dois.arr-dois{grid-template-columns:1fr 1fr}
+body.mobile #menu-grade .caixa{width:100vw;height:100vh;border-radius:0;border:0;overflow:auto}
+
+/* Pokédex com o 3D */
+.janela.larga{width:min(1240px,97vw)}
+.janela .dex-dois{grid-template-columns:1fr 640px}
+.janela .dex{cursor:pointer}
+.janela .dex.on{outline:2px solid #ffd23a}
+.janela .dex-ficha{position:sticky;top:0;align-self:start}
+.janela .dex-visor{width:100%;aspect-ratio:2/1;margin:6px 0 8px;border-radius:12px;background:radial-gradient(circle at 50% 40%,#1e2a48 0,#0b1020 70%);border:1px solid var(--line);overflow:hidden}
+.janela canvas.dex-3d{width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+.janela .dex-stats{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:8px;text-align:center;font-family:ui-monospace,Consolas,monospace;font-size:13px}
+.janela .dex-stats span{padding:4px 0;border:1px solid var(--line);border-radius:6px;background:#0b1020}
+.janela .dex-stats small{display:block;font-family:system-ui;font-size:10px;color:var(--muted)}
+body.mobile .janela .dex-dois{grid-template-columns:1fr}
+body.mobile .janela .dex-ficha{position:static;order:-1}
+
+/* Pokédex v2: lista com busca, ficha completa */
+.janela .dex-topo{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.janela .dex-topo input{flex:1;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:#0b1020;color:var(--text);font:inherit}
+.janela .dex-topo span{color:var(--muted);font-size:12px;white-space:nowrap}
+.janela .dex-lista{display:flex;flex-direction:column;gap:3px;max-height:70vh;overflow:auto}
+.janela .dex{display:flex;align-items:center;gap:8px;padding:5px 8px}
+.janela .dex .num{font-family:ui-monospace,Consolas,monospace;color:var(--muted);width:34px}
+.janela .dex .nm{flex:1;font-weight:600}
+.janela .dex .pego-ic{color:#86ef5f}
+.janela .dex-acoes{align-items:center;margin-top:0}
+.janela .dex-des{font-size:12px;color:#c9d6f0;margin:6px 0}
+.janela .dex-tab td:last-child{text-align:left;font-family:inherit}
+.janela .dex-secao{margin-top:10px;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.janela .dex-cadeia span{display:block;padding:2px 0;cursor:pointer}
+.janela .dex-cadeia span.on{color:#ffe07a;font-weight:700}
+.janela .dex-golpes{display:flex;flex-direction:column;gap:3px;max-height:260px;overflow:auto;font-size:12px}
+.janela .dex-golpes div{display:flex;align-items:center;gap:8px;padding:3px 6px;border:1px solid #1e2740;border-radius:6px}
+.janela .dex-golpes .lv{width:26px;text-align:right;font-family:ui-monospace,Consolas,monospace;color:#ffe07a}
+.janela .dex-golpes b{flex:0 0 auto}
+.janela .dex-golpes small{color:var(--muted);margin-left:auto}
+
+.janela .dex-rotulos{display:flex;justify-content:space-around;font-size:12px;color:#ffe07a;margin:-4px 0 4px}
+body.mobile .janela .dex-dois{grid-template-columns:1fr}
+
+.janela .chat-janela{height:min(60vh,520px);border:1px solid var(--line);border-radius:10px;background:#0b1020}
+.janela .chat-janela .chat-caixa{height:100%}
+.btn.perigo{background:#7a2a2a;border-color:#d05a5a;color:#ffe3e3}
+.btn.perigo:hover{background:#9a3333}
+.premium-cab{margin-bottom:10px}.premium-cab>b{display:block;font-size:15px;color:#ffe07a}.premium-cab small{display:block;margin-top:3px;color:var(--muted);line-height:1.35}.premium-cab small b{color:#ffe07a}
+.janela .stats td.iv{color:var(--muted);font-size:11px;text-align:right;padding-left:10px}.janela .stats .mais{color:#8ef58e}.janela .stats .menos{color:#f58e8e}
+.janela .m-grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(66px,1fr));gap:8px}.janela .m-poke{text-align:center;font-size:11px;color:var(--muted)}.janela .m-poke img{width:52px;height:52px;image-rendering:pixelated}.janela .m-poke.sombra img{filter:brightness(0)}.janela .m-poke b{display:block;color:#dfe6f0;font-size:11px;font-weight:600}.janela .m-poke .pego{color:#8ef58e;display:block}
+/* ===== Pele da Amanda — o LIVRO (ABA_POKEMONS): fundo com as abas na lombada; página esquerda = time,
+   página direita = ficha. Só no PC (no celular o livro precisa de outra diagramação). */
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon]{width:min(920px,96vw,126vh);aspect-ratio:1800/1308;max-height:none;border:0;border-radius:0;background:url(./ui/amanda/livro.png) center/100% 100% no-repeat;box-shadow:none;color:#4a3320;overflow:visible}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon]>header{position:absolute;left:0;right:0;top:5.5%;padding:0 4.5% 0 15.5%;border:0;background:none;gap:8px;z-index:2}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon]>header h2{flex:0 0 auto}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon]>header h2{font-size:13px;color:#6b4a2b}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon]>header h2 .ic{display:none!important}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon]>header .abas button{padding:3px 9px;border:1px solid #b98a5a;border-radius:6px;background:#fbf3e2;color:#6b4a2b;font-size:11px}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon]>header .abas button.on{background:#f0d9a8;border-color:#8a5a2b;color:#4a3320}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon]>header .x{margin-left:auto;width:30px;height:30px;border-color:#8a5a2b;background:#fbf3e2;color:#a0132f}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon]>.corpo{position:absolute;inset:0;width:auto;height:auto;padding:0;overflow:visible;min-height:0}   /* width/height auto: a regra genérica (71%/75%) espremia as páginas e a ficha cruzava a lombada */
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .dois{display:block}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .dois>div:first-child{position:absolute;left:15.5%;top:12.5%;width:34%;height:76%;display:flex;flex-direction:column;gap:2.2%}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .dois>div:last-child{position:absolute;left:54%;top:11%;width:32.5%;height:78%;overflow:auto;scrollbar-width:thin}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .dois>div:first-child>div:last-child{color:#8a6a48!important;font-size:11px!important;margin-top:auto!important;text-align:center}
+/* fileiras do time (place-texto-lista-pokemon-owner) — 6 casas, as vazias só a arte */
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .dois .lista{gap:2.2%;flex:1}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .dois .lista .linha{flex:1;min-height:0;border:0;border-radius:0;background:url(./ui/amanda/livro_lista.png) center/100% 100% no-repeat;padding:6px 8% 6px 9%;gap:6px}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .dois .lista .linha.on{filter:drop-shadow(0 0 5px #e0a840) brightness(1.04)}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .dois .lista .linha.vazia{display:block;opacity:.85}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .dois .lista .linha .nome b{font-size:13px;color:#4a3320}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .dois .lista .linha .nome small{color:#8a6a48;font-size:10.5px}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .dois .lista .linha .hp{background:#e8d6b6;height:5px}
+/* ficha na página direita: miniatura na moldura, linhas separadoras, golpes tracejados, alerta rosa */
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .ficha{border:0;border-radius:0;background:none;padding:0}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .ficha .mini{display:block;width:76%;margin:0 auto 6px;aspect-ratio:600/437;background:url(./ui/amanda/livro_moldura.png) center/100% 100% no-repeat;display:flex;align-items:center;justify-content:center}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .ficha .mini img{width:62%;height:78%;object-fit:contain;image-rendering:auto;filter:drop-shadow(0 3px 4px #0003)}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .ficha h3{font-size:14px;color:#4a3320;text-align:center;margin:2px 0 4px}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .ficha h3 small{color:#8a6a48!important}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .ficha .hp{background:#e8d6b6}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] table.stats{font-size:11.5px;margin-top:4px}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] table.stats tr{background:url(./ui/amanda/livro_linha.png) center bottom/100% 3px no-repeat}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] table.stats td{border:0;padding:3px 4px 5px;color:#4a3320}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] table.stats td.iv{color:#8a6a48}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .ficha .k{color:#8a6a48!important}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .ficha .lista{gap:5px}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .ficha .lista .linha{position:relative;border:0;border-radius:0;background:url(./ui/amanda/livro_golpe.png) center/100% 100% no-repeat;padding:6px 6px 6px 21%;min-height:36px;gap:6px}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .ficha .lista .linha .tipo{position:absolute;left:1.5%;top:50%;transform:translateY(-50%);width:15%;text-align:center;margin:0;padding:2px 0;font-size:9px}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .ficha .lista .linha .nome b{font-size:12px;color:#4a3320}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .ficha .lista .linha .nome small{color:#8a6a48;font-size:10px}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .evo-linha{background:url(./ui/amanda/livro_alerta.png) center/100% 100% no-repeat;border:0;padding:8px 12% 10px;color:#7a1f2e;margin-top:6px}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .evo-linha b,body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .evo-linha small{color:#7a1f2e}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .ficha .ok{color:#2e7d46}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .ficha .falta{color:#a0132f}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .acoes .btn{padding:4px 9px;border:1px solid #b98a5a;border-radius:6px;background:#fbf3e2;color:#4a3320;font-size:11px}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .acoes .btn.ouro{background:#f0d9a8;border-color:#8a5a2b;color:#4a3320}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .acoes .btn.perigo{background:#f6c9c9;border-color:#a0132f;color:#7a1f2e}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .vazio{color:#8a6a48;position:absolute;left:15%;top:40%;width:36%}
+/* abas da lombada (desenhadas no fundo): botões invisíveis por cima, a ativa ganha um brilho */
+.livro-abas{display:none}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokemon] .livro-abas{display:block;position:absolute;inset:0;pointer-events:none;z-index:3}
+.livro-abas button{position:absolute;width:6%;height:10.8%;border:0;background:none;cursor:pointer;pointer-events:auto;border-radius:10px;-webkit-tap-highlight-color:transparent}
+.livro-abas button.on{box-shadow:inset 0 0 0 2px #ffd23a,0 0 10px #ffd23a88}
+.livro-abas button[data-lado=esq]{left:0}.livro-abas button[data-lado=dir]{right:0}
+.livro-abas button[data-pos="0"]{top:8.4%}.livro-abas button[data-pos="1"]{top:21.5%}.livro-abas button[data-pos="2"]{top:34.6%}.livro-abas button[data-pos="3"]{top:47.7%}.livro-abas button[data-pos="4"]{top:60.8%}
+.janela .linha.vazia{display:none}
+.janela .ficha .mini{display:none}
+/* ===== Pele da Amanda — o LIVRO em TODAS as janelas (PC). Variáveis trocadas pra marrom/pergaminho: os
+   estilos inline (var(--muted), var(--line)…) seguem junto sem mexer no JS. */
+body.pele-amanda:not(.mobile) .janela{width:min(920px,96vw,126vh);aspect-ratio:1800/1308;max-height:none;border:0;border-radius:0;background:url(./ui/amanda/livro.png) center/100% 100% no-repeat;box-shadow:none;color:#4a3320;overflow:visible;--muted:#8a6a48;--line:#c9a878;--panel:#fbf3e2;--text:#4a3320}
+body.pele-amanda:not(.mobile) .janela.larga{width:min(920px,96vw,126vh)}
+body.pele-amanda:not(.mobile) .janela>header{position:absolute;left:0;right:0;top:4.5%;padding:0 4.5% 0 15.5%;border:0;background:none;gap:8px;z-index:2;flex-wrap:wrap;align-items:center}
+body.pele-amanda:not(.mobile) .janela>header h2{flex:0 0 auto;font-size:13px;color:#6b4a2b}
+body.pele-amanda:not(.mobile) .janela>header h2 .ic{display:none!important}
+body.pele-amanda:not(.mobile) .janela>header .abas{flex-wrap:wrap;gap:4px;max-width:60%}
+body.pele-amanda:not(.mobile) .janela>header .abas button{padding:3px 9px;border:1px solid #b98a5a;border-radius:6px;background:#fbf3e2;color:#6b4a2b;font-size:11px}
+body.pele-amanda:not(.mobile) .janela>header .abas button.on{background:#f0d9a8;border-color:#8a5a2b;color:#4a3320}
+body.pele-amanda:not(.mobile) .janela>header .x{margin-left:auto;width:30px;height:30px;border-color:#8a5a2b;background:#fbf3e2;color:#a0132f}
+body.pele-amanda:not(.mobile) .janela>.corpo{position:absolute;left:15.5%;top:13.5%;width:71%;height:75%;padding:0;overflow:auto;min-height:0;scrollbar-width:thin}
+body.pele-amanda:not(.mobile) .janela .paginas{column-count:2;column-gap:6%;column-fill:balance}
+body.pele-amanda:not(.mobile) .janela .paginas:has(> .dois),body.pele-amanda:not(.mobile) .janela[data-janela=mapa] .paginas{column-count:auto}
+body.pele-amanda:not(.mobile) .janela .paginas :is(.linha,.item,.config label,.missao-atual,.dex,.evo-linha,summary,.dex-secao,.vazio,.chat-janela){break-inside:avoid}
+body.pele-amanda:not(.mobile) .janela .dois{gap:6%}
+body.pele-amanda:not(.mobile) .janela .vazio{color:#8a6a48;padding:18% 8% 0;font-size:13px}
+/* peças dela por toda parte */
+body.pele-amanda:not(.mobile) .janela .lista .linha{border:0;border-radius:0;background:url(./ui/amanda/livro_lista.png) center/100% 100% no-repeat;padding:8px 6% 8px 7%;min-height:44px}
+body.pele-amanda:not(.mobile) .janela .lista .linha.on{filter:drop-shadow(0 0 5px #e0a840) brightness(1.04)}
+body.pele-amanda:not(.mobile) .janela .lista .linha .nome b{color:#4a3320}
+body.pele-amanda:not(.mobile) .janela .lista .linha .nome small{color:#8a6a48}
+body.pele-amanda:not(.mobile) .janela .hp{background:#e8d6b6}
+body.pele-amanda:not(.mobile) .janela .ficha{border:0;border-radius:0;background:none;padding:0}
+body.pele-amanda:not(.mobile) .janela .ficha h3,body.pele-amanda:not(.mobile) .janela h3,body.pele-amanda:not(.mobile) .janela h4,body.pele-amanda:not(.mobile) .janela summary{color:#6b4a2b}
+body.pele-amanda:not(.mobile) .janela table.stats tr{background:url(./ui/amanda/livro_linha.png) center bottom/100% 3px no-repeat}
+body.pele-amanda:not(.mobile) .janela table.stats td{border:0;padding:3px 4px 5px;color:#4a3320}
+body.pele-amanda:not(.mobile) .janela .btn{padding:4px 9px;border:1px solid #b98a5a;border-radius:6px;background:#fbf3e2;color:#4a3320;font-size:11px}
+body.pele-amanda:not(.mobile) .janela .btn.ouro{background:#f0d9a8;border-color:#8a5a2b;color:#4a3320}
+body.pele-amanda:not(.mobile) .janela .btn.perigo{background:#f6c9c9;border-color:#a0132f;color:#7a1f2e}
+body.pele-amanda:not(.mobile) .janela input,body.pele-amanda:not(.mobile) .janela select,body.pele-amanda:not(.mobile) .janela input[type=text]{background:#fbf3e2!important;border:1px solid #b98a5a;color:#4a3320!important;border-radius:6px}
+body.pele-amanda:not(.mobile) .janela .evo-linha,body.pele-amanda:not(.mobile) .janela .alerta{background:url(./ui/amanda/livro_alerta.png) center/100% 100% no-repeat;border:0;padding:8px 12% 10px;color:#7a1f2e}
+/* mochila / loja / atalho: cartões de item na moldura creme */
+body.pele-amanda:not(.mobile) .janela .grade-itens{display:block}   /* bloco: os cartões quebram entre as duas páginas (grid é monolítico no multicol) */
+body.pele-amanda:not(.mobile) .janela .item{display:grid;grid-template-columns:56px 1fr;border:0;border-radius:0;background:url(./ui/amanda/livro_lista.png) center/100% 100% no-repeat;padding:12px 8% 12px 7%;margin-bottom:10px;min-height:96px;color:#4a3320;box-sizing:border-box}
+body.pele-amanda:not(.mobile) .janela .item .ic-item{background-color:#f6ead2;border-color:#c9a878}
+body.pele-amanda:not(.mobile) .janela .item b{color:#4a3320}
+body.pele-amanda:not(.mobile) .janela .item small{color:#8a6a48}
+body.pele-amanda:not(.mobile) .janela .item .n{background:#a0132f;color:#fff;border:0}
+/* missões: a missão atual num painel de moldura; capítulos em marrom */
+body.pele-amanda:not(.mobile) .janela .missao-atual{background:url(./ui/amanda/livro_moldura.png) center/100% 100% no-repeat;border:0;border-radius:0;padding:7% 9% 8%;color:#4a3320}
+body.pele-amanda:not(.mobile) .janela .missao-atual b{color:#6b4a2b}
+body.pele-amanda:not(.mobile) .janela details summary{color:#6b4a2b!important}
+/* Pokédex: lista na página esquerda (rola sozinha), ficha na direita com o visor na moldura */
+body.pele-amanda:not(.mobile) .janela[data-janela=pokedex]>.corpo{overflow:hidden}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokedex] .paginas,body.pele-amanda:not(.mobile) .janela[data-janela=pokedex] .dex-dois{height:100%}
+body.pele-amanda:not(.mobile) .janela[data-janela=pokedex] .dex-dois>div{height:100%;overflow:auto;scrollbar-width:thin;min-width:0}
+body.pele-amanda:not(.mobile) .janela .dex-dois{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)}   /* a ficha tinha 640px fixos e engolia a lista */
+body.pele-amanda:not(.mobile) .janela .dex-lista{max-height:none}
+body.pele-amanda:not(.mobile) .janela .dex-ficha{position:static}
+body.pele-amanda:not(.mobile) .janela .dex{border:0;border-radius:0;background:url(./ui/amanda/livro_lista.png) center/100% 100% no-repeat;padding:6px 7%;color:#4a3320}
+body.pele-amanda:not(.mobile) .janela .dex.on{filter:drop-shadow(0 0 5px #e0a840)}
+body.pele-amanda:not(.mobile) .janela .dex .num,body.pele-amanda:not(.mobile) .janela .dex small{color:#8a6a48}
+body.pele-amanda:not(.mobile) .janela .dex-visor{background:url(./ui/amanda/livro_moldura.png) center/100% 100% no-repeat;padding:6%;box-sizing:border-box}
+body.pele-amanda:not(.mobile) .janela .dex-visor canvas{border-radius:10px}
+body.pele-amanda:not(.mobile) .janela .dex-secao{color:#6b4a2b;border:0;background:url(./ui/amanda/livro_linha.png) center bottom/100% 3px no-repeat;padding-bottom:4px}
+body.pele-amanda:not(.mobile) .janela .dex-stats span{background:#fbf3e2;border:1px solid #c9a878;color:#4a3320}
+body.pele-amanda:not(.mobile) .janela .dex-stats small{color:#8a6a48}
+body.pele-amanda:not(.mobile) .janela .dex-cadeia span{background:#fbf3e2;border:1px solid #c9a878;color:#4a3320}
+body.pele-amanda:not(.mobile) .janela .dex-cadeia span.on{background:#f0d9a8;border-color:#8a5a2b}
+body.pele-amanda:not(.mobile) .janela .dex-golpes div{background:url(./ui/amanda/livro_linha.png) center bottom/100% 3px no-repeat;border:0}
+body.pele-amanda:not(.mobile) .janela .dex-des{color:#4a3320}
+body.pele-amanda:not(.mobile) .janela .dex-topo input{width:100%}
+/* mapa: a folha inteira é o mapa */
+body.pele-amanda:not(.mobile) .janela[data-janela=mapa] canvas.mapa{border:6px solid #e8d6b6;box-sizing:border-box}
+body.pele-amanda:not(.mobile) .janela[data-janela=mapa] #m-legenda{max-width:44%}   /* legenda na página esquerda, cartão na direita: nada cruza a lombada */
+body.pele-amanda:not(.mobile) .janela[data-janela=mapa] #m-card{max-width:44%;margin-left:56%;flex:1 1 100%}
+/* social: chat em caixa pergaminho */
+body.pele-amanda:not(.mobile) .janela .chat-janela .chat-caixa,body.pele-amanda:not(.mobile) .janela .chat .msgs{background:#fbf3e2;border:1px solid #c9a878;color:#4a3320}
+/* config */
+body.pele-amanda:not(.mobile) .janela .config label{color:#4a3320;border-bottom:0;background:url(./ui/amanda/livro_linha.png) center bottom/100% 3px no-repeat;padding-bottom:10px}
+body.pele-amanda:not(.mobile) .janela .config label span{color:#8a6a48}
+/* treinador: insígnias */
+body.pele-amanda:not(.mobile) .janela .insignia{border-color:#c9a878;background:#fbf3e2}
+/* abas da lombada em toda janela */
+body.pele-amanda:not(.mobile) .janela .livro-abas{display:block;position:absolute;inset:0;pointer-events:none;z-index:3}
+
+/* Pokédex de conhecimento (01/09) */
+.dex-nivel{margin:2px 0 6px;font-size:12px}.dex-nivel .pts{letter-spacing:1px;color:var(--gold,#f4aa35)}.dex-nivel small{color:var(--muted)}
+.dex-falta{margin-top:3px;font-size:11px;color:var(--muted)}
+.dex-colec{margin:4px 0 6px;font-size:11px;color:var(--muted);line-height:1.5}.dex-colec b{color:var(--text,#d6e2ff)}
+.oculto{color:var(--muted)!important;font-style:italic}
+.dex .pego-ic{letter-spacing:1px;font-size:9px;color:var(--gold,#f4aa35)}
+.titulos{display:flex;flex-direction:column;gap:3px;margin-top:6px}.titulo{padding:3px 6px;border:1px solid var(--line,#314361);border-radius:6px;font-size:12px;color:var(--muted)}.titulo.tem{color:var(--gold,#f4aa35);border-color:var(--gold,#f4aa35)}.titulo small{color:var(--muted);margin-left:4px}
+.sexo{font-weight:700}.sexo.m{color:#6ea8ff}.sexo.f{color:#ff8ad0}
+
+/* Modo prévia do adm (18/09, rodada 30): paleta com um botão por pop-up da maquete v2 (menus.mjs previa) */
+#previa{position:fixed;left:12px;top:50%;transform:translateY(-50%);z-index:50;width:220px;max-height:82vh;overflow:auto;padding:8px 10px 6px;border:1px solid #3c6fb3;border-radius:10px;background:rgba(8,18,40,.93);color:#d6e2ff;font:12px/1.4 system-ui,sans-serif;box-shadow:0 6px 24px rgba(0,0,0,.45)}
+#previa b{display:block;font-size:13px;margin:0 18px 2px 0}
+#previa .fecha{position:absolute;right:8px;top:3px;cursor:pointer;font-size:17px;line-height:1;color:#9fb6dc}
+#previa .sec{margin:8px 0 3px;font-size:10px;letter-spacing:.5px;text-transform:uppercase;color:#7f97bf}
+#previa .bts{display:flex;flex-wrap:wrap;gap:4px}
+#previa button{font:12px system-ui,sans-serif;padding:3px 7px;border:1px solid #3c6fb3;border-radius:6px;background:#122a52;color:#e8f0ff;cursor:pointer}
+#previa button:hover{background:#1c3f78}
+#previa small{display:block;margin-top:8px;color:#7f97bf}
+body.mobile #previa{left:6px;top:auto;bottom:8px;transform:none;width:180px;max-height:62vh;font-size:11px}

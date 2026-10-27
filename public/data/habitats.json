@@ -1,0 +1,3344 @@
+{
+ "mapa": "kanto",
+ "areas": {
+  "1102": [
+   {
+    "dex": 60,
+    "glb": "pm0060_00.glb",
+    "nome": "Poliwag",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 118,
+    "glb": "pm0118_00.glb",
+    "nome": "Goldeen",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 129,
+    "glb": "pm0129_00.glb",
+    "nome": "Magikarp",
+    "fonte": "jogo",
+    "agua": 1
+   }
+  ],
+  "1105": [
+   {
+    "dex": 90,
+    "glb": "pm0090_00.glb",
+    "nome": "Shellder",
+    "fonte": "jogo",
+    "agua": 1
+   }
+  ],
+  "1191": [
+   {
+    "dex": 1,
+    "glb": "pm0001_00.glb",
+    "nome": "Bulbasaur",
+    "fonte": "jogo",
+    "peso": 875
+   },
+   {
+    "dex": 10,
+    "glb": "pm0010_00.glb",
+    "nome": "Caterpie",
+    "fonte": "jogo",
+    "peso": 7000
+   },
+   {
+    "dex": 11,
+    "glb": "pm0011_00.glb",
+    "nome": "Metapod",
+    "fonte": "jogo",
+    "peso": 4200
+   },
+   {
+    "dex": 12,
+    "glb": "pm0012_00.glb",
+    "nome": "Butterfree",
+    "fonte": "jogo",
+    "peso": 112
+   },
+   {
+    "dex": 13,
+    "glb": "pm0013_00.glb",
+    "nome": "Weedle",
+    "fonte": "jogo",
+    "peso": 7000
+   },
+   {
+    "dex": 14,
+    "glb": "pm0014_00.glb",
+    "nome": "Kakuna",
+    "fonte": "jogo",
+    "peso": 4200
+   },
+   {
+    "dex": 15,
+    "glb": "pm0015_00.glb",
+    "nome": "Beedrill",
+    "fonte": "jogo",
+    "peso": 112
+   },
+   {
+    "dex": 25,
+    "glb": "pm0025_00.glb",
+    "nome": "Pikachu",
+    "fonte": "jogo",
+    "peso": 1750
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "classico"
+   }
+  ],
+  "1192": [
+   {
+    "dex": 18,
+    "glb": "pm0018_00.glb",
+    "nome": "Pidgeot",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 28,
+    "glb": "pm0028_00.glb",
+    "nome": "Sandslash",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 31,
+    "glb": "pm0031_00.glb",
+    "nome": "Nidoqueen",
+    "fonte": "jogo",
+    "peso": 240
+   },
+   {
+    "dex": 34,
+    "glb": "pm0034_00.glb",
+    "nome": "Nidoking",
+    "fonte": "jogo",
+    "peso": 240
+   },
+   {
+    "dex": 36,
+    "glb": "pm0036_00.glb",
+    "nome": "Clefable",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 38,
+    "glb": "pm0038_00.glb",
+    "nome": "Ninetales",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 45,
+    "glb": "pm0045_00.glb",
+    "nome": "Vileplume",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 47,
+    "glb": "pm0047_00.glb",
+    "nome": "Parasect",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 55,
+    "glb": "pm0055_00.glb",
+    "nome": "Golduck",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 59,
+    "glb": "pm0059_00.glb",
+    "nome": "Arcanine",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 62,
+    "glb": "pm0062_00.glb",
+    "nome": "Poliwrath",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 68,
+    "glb": "pm0068_00.glb",
+    "nome": "Machamp",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 71,
+    "glb": "pm0071_00.glb",
+    "nome": "Victreebel",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 78,
+    "glb": "pm0078_00.glb",
+    "nome": "Rapidash",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 84,
+    "glb": "pm0084_00.glb",
+    "nome": "Doduo",
+    "fonte": "jogo",
+    "peso": 3750
+   },
+   {
+    "dex": 85,
+    "glb": "pm0085_00.glb",
+    "nome": "Dodrio",
+    "fonte": "jogo",
+    "peso": 240
+   },
+   {
+    "dex": 89,
+    "glb": "pm0089_00.glb",
+    "nome": "Muk",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 91,
+    "glb": "pm0091_00.glb",
+    "nome": "Cloyster",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 94,
+    "glb": "pm0094_00.glb",
+    "nome": "Gengar",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 95,
+    "glb": "pm0095_00.glb",
+    "nome": "Onix",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 97,
+    "glb": "pm0097_00.glb",
+    "nome": "Hypno",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 99,
+    "glb": "pm0099_00.glb",
+    "nome": "Kingler",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 101,
+    "glb": "pm0101_00.glb",
+    "nome": "Electrode",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 103,
+    "glb": "pm0103_00.glb",
+    "nome": "Exeggutor",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 105,
+    "glb": "pm0105_00.glb",
+    "nome": "Marowak",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 110,
+    "glb": "pm0110_00.glb",
+    "nome": "Weezing",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 113,
+    "glb": "pm0113_00.glb",
+    "nome": "Chansey",
+    "fonte": "jogo",
+    "peso": 960
+   },
+   {
+    "dex": 115,
+    "glb": "pm0115_00.glb",
+    "nome": "Kangaskhan",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 119,
+    "glb": "pm0119_00.glb",
+    "nome": "Seaking",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 123,
+    "glb": "pm0123_00.glb",
+    "nome": "Scyther",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 125,
+    "glb": "pm0125_00.glb",
+    "nome": "Electabuzz",
+    "fonte": "jogo",
+    "peso": 960
+   },
+   {
+    "dex": 126,
+    "glb": "pm0126_00.glb",
+    "nome": "Magmar",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 127,
+    "glb": "pm0127_00.glb",
+    "nome": "Pinsir",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 128,
+    "glb": "pm0128_00.glb",
+    "nome": "Tauros",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 130,
+    "glb": "pm0130_00.glb",
+    "nome": "Gyarados",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 131,
+    "glb": "pm0131_00.glb",
+    "nome": "Lapras",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 134,
+    "glb": "pm0134_00.glb",
+    "nome": "Vaporeon",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 376,
+    "glb": "pm0376_00.glb",
+    "nome": "Metagross",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 29,
+    "glb": "pm0029_00.glb",
+    "nome": "Nidoran",
+    "fonte": "classico",
+    "peso": 15000
+   },
+   {
+    "dex": 30,
+    "glb": "pm0030_00.glb",
+    "nome": "Nidorina",
+    "fonte": "classico"
+   },
+   {
+    "dex": 32,
+    "glb": "pm0032_00.glb",
+    "nome": "Nidoran",
+    "fonte": "classico",
+    "peso": 15000
+   },
+   {
+    "dex": 33,
+    "glb": "pm0033_00.glb",
+    "nome": "Nidorino",
+    "fonte": "classico"
+   },
+   {
+    "dex": 102,
+    "glb": "pm0102_00.glb",
+    "nome": "Exeggcute",
+    "fonte": "classico"
+   },
+   {
+    "dex": 111,
+    "glb": "pm0111_00.glb",
+    "nome": "Rhyhorn",
+    "fonte": "classico"
+   },
+   {
+    "dex": 46,
+    "glb": "pm0046_00.glb",
+    "nome": "Paras",
+    "fonte": "classico"
+   },
+   {
+    "dex": 48,
+    "glb": "pm0048_00.glb",
+    "nome": "Venonat",
+    "fonte": "classico"
+   },
+   {
+    "dex": 49,
+    "glb": "pm0049_00.glb",
+    "nome": "Venomoth",
+    "fonte": "classico"
+   },
+   {
+    "dex": 108,
+    "glb": "pm0108_00.glb",
+    "nome": "Lickitung",
+    "fonte": "classico"
+   },
+   {
+    "dex": 114,
+    "glb": "pm0114_00.glb",
+    "nome": "Tangela",
+    "fonte": "classico"
+   },
+   {
+    "dex": 54,
+    "glb": "pm0054.glb",
+    "nome": "Psyduck",
+    "fonte": "classico"
+   },
+   {
+    "dex": 118,
+    "glb": "pm0118_00.glb",
+    "nome": "Goldeen",
+    "fonte": "classico",
+    "agua": 1
+   },
+   {
+    "dex": 79,
+    "glb": "pm0079_00.glb",
+    "nome": "Slowpoke",
+    "fonte": "classico"
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "campo",
+    "peso": 15000
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "campo",
+    "peso": 15000
+   },
+   {
+    "dex": 17,
+    "glb": "pm0017_00.glb",
+    "nome": "Pidgeotto",
+    "fonte": "campo",
+    "peso": 3750
+   },
+   {
+    "dex": 20,
+    "glb": "pm0020_00.glb",
+    "nome": "Raticate",
+    "fonte": "campo",
+    "peso": 960
+   }
+  ],
+  "1201": [
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "jogo",
+    "peso": 6000
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "jogo",
+    "peso": 6000
+   }
+  ],
+  "1202": [
+   {
+    "dex": 10,
+    "glb": "pm0010_00.glb",
+    "nome": "Caterpie",
+    "fonte": "jogo",
+    "peso": 2000
+   },
+   {
+    "dex": 11,
+    "glb": "pm0011_00.glb",
+    "nome": "Metapod",
+    "fonte": "jogo",
+    "peso": 500
+   },
+   {
+    "dex": 13,
+    "glb": "pm0013_00.glb",
+    "nome": "Weedle",
+    "fonte": "jogo",
+    "peso": 2000
+   },
+   {
+    "dex": 14,
+    "glb": "pm0014_00.glb",
+    "nome": "Kakuna",
+    "fonte": "jogo",
+    "peso": 500
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "classico",
+    "peso": 2000
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "classico",
+    "peso": 2000
+   },
+   {
+    "dex": 29,
+    "glb": "pm0029_00.glb",
+    "nome": "Nidoran",
+    "fonte": "classico"
+   },
+   {
+    "dex": 32,
+    "glb": "pm0032_00.glb",
+    "nome": "Nidoran",
+    "fonte": "classico"
+   }
+  ],
+  "1203": [
+   {
+    "dex": 21,
+    "glb": "pm0021_00.glb",
+    "nome": "Spearow",
+    "fonte": "jogo",
+    "peso": 2000
+   },
+   {
+    "dex": 23,
+    "glb": "pm0023_00.glb",
+    "nome": "Ekans",
+    "fonte": "jogo",
+    "peso": 500
+   },
+   {
+    "dex": 39,
+    "glb": "pm0039_00.glb",
+    "nome": "Jigglypuff",
+    "fonte": "jogo",
+    "peso": 500
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "classico",
+    "peso": 2000
+   },
+   {
+    "dex": 29,
+    "glb": "pm0029_00.glb",
+    "nome": "Nidoran",
+    "fonte": "classico"
+   },
+   {
+    "dex": 32,
+    "glb": "pm0032_00.glb",
+    "nome": "Nidoran",
+    "fonte": "classico"
+   },
+   {
+    "dex": 56,
+    "glb": "pm0056_00.glb",
+    "nome": "Mankey",
+    "fonte": "classico"
+   },
+   {
+    "dex": 27,
+    "glb": "pm0027_00.glb",
+    "nome": "Sandshrew",
+    "fonte": "classico"
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "campo",
+    "peso": 2000
+   }
+  ],
+  "1204": [
+   {
+    "dex": 20,
+    "glb": "pm0020_00.glb",
+    "nome": "Raticate",
+    "fonte": "jogo",
+    "peso": 64
+   },
+   {
+    "dex": 22,
+    "glb": "pm0022_00.glb",
+    "nome": "Fearow",
+    "fonte": "jogo",
+    "peso": 64
+   },
+   {
+    "dex": 29,
+    "glb": "pm0029_00.glb",
+    "nome": "Nidoran",
+    "fonte": "jogo",
+    "peso": 1000
+   },
+   {
+    "dex": 32,
+    "glb": "pm0032_00.glb",
+    "nome": "Nidoran",
+    "fonte": "jogo",
+    "peso": 1000
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "classico",
+    "peso": 1000
+   },
+   {
+    "dex": 21,
+    "glb": "pm0021_00.glb",
+    "nome": "Spearow",
+    "fonte": "classico",
+    "peso": 1000
+   },
+   {
+    "dex": 23,
+    "glb": "pm0023_00.glb",
+    "nome": "Ekans",
+    "fonte": "classico",
+    "peso": 250
+   },
+   {
+    "dex": 27,
+    "glb": "pm0027_00.glb",
+    "nome": "Sandshrew",
+    "fonte": "classico"
+   },
+   {
+    "dex": 56,
+    "glb": "pm0056_00.glb",
+    "nome": "Mankey",
+    "fonte": "classico"
+   }
+  ],
+  "1205": [
+   {
+    "dex": 2,
+    "glb": "pm0002_00.glb",
+    "nome": "Ivysaur",
+    "fonte": "jogo",
+    "peso": 96
+   },
+   {
+    "dex": 18,
+    "glb": "pm0018_00.glb",
+    "nome": "Pidgeot",
+    "fonte": "jogo",
+    "peso": 48
+   },
+   {
+    "dex": 27,
+    "glb": "pm0027_00.glb",
+    "nome": "Sandshrew",
+    "fonte": "jogo",
+    "peso": 1500
+   },
+   {
+    "dex": 28,
+    "glb": "pm0028_00.glb",
+    "nome": "Sandslash",
+    "fonte": "jogo",
+    "peso": 192
+   },
+   {
+    "dex": 37,
+    "glb": "pm0037_00.glb",
+    "nome": "Vulpix",
+    "fonte": "jogo",
+    "peso": 750
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "classico"
+   },
+   {
+    "dex": 43,
+    "glb": "pm0043_00.glb",
+    "nome": "Oddish",
+    "fonte": "classico"
+   },
+   {
+    "dex": 69,
+    "glb": "pm0069_00.glb",
+    "nome": "Bellsprout",
+    "fonte": "classico"
+   },
+   {
+    "dex": 52,
+    "glb": "pm0052_00.glb",
+    "nome": "Meowth",
+    "fonte": "classico"
+   },
+   {
+    "dex": 56,
+    "glb": "pm0056_00.glb",
+    "nome": "Mankey",
+    "fonte": "classico"
+   },
+   {
+    "dex": 39,
+    "glb": "pm0039_00.glb",
+    "nome": "Jigglypuff",
+    "fonte": "classico",
+    "peso": 3000
+   },
+   {
+    "dex": 63,
+    "glb": "pm0063_00.glb",
+    "nome": "Abra",
+    "fonte": "classico"
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "campo",
+    "peso": 3000
+   },
+   {
+    "dex": 17,
+    "glb": "pm0017_00.glb",
+    "nome": "Pidgeotto",
+    "fonte": "campo",
+    "peso": 750
+   }
+  ],
+  "1206": [
+   {
+    "dex": 24,
+    "glb": "pm0024_00.glb",
+    "nome": "Arbok",
+    "fonte": "jogo",
+    "peso": 192
+   },
+   {
+    "dex": 52,
+    "glb": "pm0052_00.glb",
+    "nome": "Meowth",
+    "fonte": "jogo",
+    "peso": 1500
+   },
+   {
+    "dex": 70,
+    "glb": "pm0070_00.glb",
+    "nome": "Weepinbell",
+    "fonte": "jogo",
+    "peso": 192
+   },
+   {
+    "dex": 71,
+    "glb": "pm0071_00.glb",
+    "nome": "Victreebel",
+    "fonte": "jogo",
+    "peso": 48
+   },
+   {
+    "dex": 96,
+    "glb": "pm0096_00.glb",
+    "nome": "Drowzee",
+    "fonte": "jogo",
+    "peso": 1500
+   },
+   {
+    "dex": 97,
+    "glb": "pm0097_00.glb",
+    "nome": "Hypno",
+    "fonte": "jogo",
+    "peso": 48
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "classico"
+   },
+   {
+    "dex": 43,
+    "glb": "pm0043_00.glb",
+    "nome": "Oddish",
+    "fonte": "classico"
+   },
+   {
+    "dex": 69,
+    "glb": "pm0069_00.glb",
+    "nome": "Bellsprout",
+    "fonte": "classico",
+    "peso": 1500
+   },
+   {
+    "dex": 56,
+    "glb": "pm0056_00.glb",
+    "nome": "Mankey",
+    "fonte": "classico"
+   },
+   {
+    "dex": 39,
+    "glb": "pm0039_00.glb",
+    "nome": "Jigglypuff",
+    "fonte": "classico"
+   },
+   {
+    "dex": 63,
+    "glb": "pm0063_00.glb",
+    "nome": "Abra",
+    "fonte": "classico"
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "campo",
+    "peso": 3000
+   },
+   {
+    "dex": 23,
+    "glb": "pm0023_00.glb",
+    "nome": "Ekans",
+    "fonte": "campo",
+    "peso": 1500
+   },
+   {
+    "dex": 20,
+    "glb": "pm0020_00.glb",
+    "nome": "Raticate",
+    "fonte": "campo",
+    "peso": 192
+   }
+  ],
+  "1207": [
+   {
+    "dex": 38,
+    "glb": "pm0038_00.glb",
+    "nome": "Ninetales",
+    "fonte": "jogo",
+    "peso": 16
+   },
+   {
+    "dex": 53,
+    "glb": "pm0053_00.glb",
+    "nome": "Persian",
+    "fonte": "jogo",
+    "peso": 64
+   },
+   {
+    "dex": 59,
+    "glb": "pm0059_00.glb",
+    "nome": "Arcanine",
+    "fonte": "jogo",
+    "peso": 16
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "classico",
+    "peso": 1000
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "classico",
+    "peso": 1000
+   },
+   {
+    "dex": 37,
+    "glb": "pm0037_00.glb",
+    "nome": "Vulpix",
+    "fonte": "classico",
+    "peso": 250
+   },
+   {
+    "dex": 58,
+    "glb": "pm0058_00.glb",
+    "nome": "Growlithe",
+    "fonte": "classico",
+    "peso": 250
+   },
+   {
+    "dex": 43,
+    "glb": "pm0043_00.glb",
+    "nome": "Oddish",
+    "fonte": "classico"
+   },
+   {
+    "dex": 69,
+    "glb": "pm0069_00.glb",
+    "nome": "Bellsprout",
+    "fonte": "classico"
+   },
+   {
+    "dex": 52,
+    "glb": "pm0052_00.glb",
+    "nome": "Meowth",
+    "fonte": "classico",
+    "peso": 250
+   },
+   {
+    "dex": 56,
+    "glb": "pm0056_00.glb",
+    "nome": "Mankey",
+    "fonte": "classico"
+   },
+   {
+    "dex": 63,
+    "glb": "pm0063_00.glb",
+    "nome": "Abra",
+    "fonte": "classico"
+   },
+   {
+    "dex": 17,
+    "glb": "pm0017_00.glb",
+    "nome": "Pidgeotto",
+    "fonte": "campo",
+    "peso": 250
+   }
+  ],
+  "1208": [
+   {
+    "dex": 109,
+    "glb": "pm0109_00.glb",
+    "nome": "Koffing",
+    "fonte": "jogo",
+    "peso": 500
+   },
+   {
+    "dex": 137,
+    "glb": "pm0137_00.glb",
+    "nome": "Porygon",
+    "fonte": "jogo",
+    "peso": 64
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "classico"
+   },
+   {
+    "dex": 23,
+    "glb": "pm0023_00.glb",
+    "nome": "Ekans",
+    "fonte": "classico"
+   },
+   {
+    "dex": 27,
+    "glb": "pm0027_00.glb",
+    "nome": "Sandshrew",
+    "fonte": "classico"
+   },
+   {
+    "dex": 37,
+    "glb": "pm0037_00.glb",
+    "nome": "Vulpix",
+    "fonte": "classico"
+   },
+   {
+    "dex": 58,
+    "glb": "pm0058_00.glb",
+    "nome": "Growlithe",
+    "fonte": "classico"
+   },
+   {
+    "dex": 52,
+    "glb": "pm0052_00.glb",
+    "nome": "Meowth",
+    "fonte": "classico"
+   },
+   {
+    "dex": 56,
+    "glb": "pm0056_00.glb",
+    "nome": "Mankey",
+    "fonte": "classico"
+   },
+   {
+    "dex": 63,
+    "glb": "pm0063_00.glb",
+    "nome": "Abra",
+    "fonte": "classico"
+   },
+   {
+    "dex": 64,
+    "glb": "pm0064_00.glb",
+    "nome": "Kadabra",
+    "fonte": "classico"
+   },
+   {
+    "dex": 21,
+    "glb": "pm0021_00.glb",
+    "nome": "Spearow",
+    "fonte": "campo",
+    "peso": 1000
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "campo",
+    "peso": 1000
+   },
+   {
+    "dex": 22,
+    "glb": "pm0022_00.glb",
+    "nome": "Fearow",
+    "fonte": "campo",
+    "peso": 64
+   }
+  ],
+  "1209": [
+   {
+    "dex": 30,
+    "glb": "pm0030_00.glb",
+    "nome": "Nidorina",
+    "fonte": "jogo",
+    "peso": 500
+   },
+   {
+    "dex": 33,
+    "glb": "pm0033_00.glb",
+    "nome": "Nidorino",
+    "fonte": "jogo",
+    "peso": 500
+   },
+   {
+    "dex": 122,
+    "glb": "pm0122_00.glb",
+    "nome": "Mr. Mime",
+    "fonte": "jogo",
+    "peso": 128
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "classico"
+   },
+   {
+    "dex": 20,
+    "glb": "pm0020_00.glb",
+    "nome": "Raticate",
+    "fonte": "classico"
+   },
+   {
+    "dex": 21,
+    "glb": "pm0021_00.glb",
+    "nome": "Spearow",
+    "fonte": "classico"
+   },
+   {
+    "dex": 22,
+    "glb": "pm0022_00.glb",
+    "nome": "Fearow",
+    "fonte": "classico"
+   },
+   {
+    "dex": 23,
+    "glb": "pm0023_00.glb",
+    "nome": "Ekans",
+    "fonte": "classico"
+   },
+   {
+    "dex": 27,
+    "glb": "pm0027_00.glb",
+    "nome": "Sandshrew",
+    "fonte": "classico"
+   },
+   {
+    "dex": 29,
+    "glb": "pm0029_00.glb",
+    "nome": "Nidoran",
+    "fonte": "classico",
+    "peso": 2000
+   },
+   {
+    "dex": 32,
+    "glb": "pm0032_00.glb",
+    "nome": "Nidoran",
+    "fonte": "classico",
+    "peso": 2000
+   }
+  ],
+  "1210": [
+   {
+    "dex": 60,
+    "glb": "pm0060_00.glb",
+    "nome": "Poliwag",
+    "fonte": "jogo",
+    "peso": 250,
+    "agua": 1
+   },
+   {
+    "dex": 118,
+    "glb": "pm0118_00.glb",
+    "nome": "Goldeen",
+    "fonte": "jogo",
+    "peso": 250,
+    "agua": 1
+   },
+   {
+    "dex": 127,
+    "glb": "pm0127_00.glb",
+    "nome": "Pinsir",
+    "fonte": "jogo",
+    "peso": 8
+   },
+   {
+    "dex": 129,
+    "glb": "pm0129_00.glb",
+    "nome": "Magikarp",
+    "fonte": "jogo",
+    "peso": 1000,
+    "agua": 1
+   },
+   {
+    "dex": 21,
+    "glb": "pm0021_00.glb",
+    "nome": "Spearow",
+    "fonte": "classico"
+   },
+   {
+    "dex": 23,
+    "glb": "pm0023_00.glb",
+    "nome": "Ekans",
+    "fonte": "classico",
+    "peso": 250
+   },
+   {
+    "dex": 27,
+    "glb": "pm0027_00.glb",
+    "nome": "Sandshrew",
+    "fonte": "classico"
+   },
+   {
+    "dex": 29,
+    "glb": "pm0029_00.glb",
+    "nome": "Nidoran",
+    "fonte": "classico"
+   },
+   {
+    "dex": 32,
+    "glb": "pm0032_00.glb",
+    "nome": "Nidoran",
+    "fonte": "classico"
+   },
+   {
+    "dex": 100,
+    "glb": "pm0100_00.glb",
+    "nome": "Voltorb",
+    "fonte": "classico"
+   },
+   {
+    "dex": 81,
+    "glb": "pm0081_00.glb",
+    "nome": "Magnemite",
+    "fonte": "classico"
+   },
+   {
+    "dex": 66,
+    "glb": "pm0066_00.glb",
+    "nome": "Machop",
+    "fonte": "classico"
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "campo",
+    "peso": 1000
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "campo",
+    "peso": 1000
+   },
+   {
+    "dex": 24,
+    "glb": "pm0024_00.glb",
+    "nome": "Arbok",
+    "fonte": "campo",
+    "peso": 64
+   }
+  ],
+  "1211": [
+   {
+    "dex": 58,
+    "glb": "pm0058_00.glb",
+    "nome": "Growlithe",
+    "fonte": "jogo",
+    "peso": 2400
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "classico"
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "classico"
+   },
+   {
+    "dex": 21,
+    "glb": "pm0021_00.glb",
+    "nome": "Spearow",
+    "fonte": "classico",
+    "peso": 6000
+   },
+   {
+    "dex": 23,
+    "glb": "pm0023_00.glb",
+    "nome": "Ekans",
+    "fonte": "classico",
+    "peso": 2400
+   },
+   {
+    "dex": 27,
+    "glb": "pm0027_00.glb",
+    "nome": "Sandshrew",
+    "fonte": "classico",
+    "peso": 1500
+   },
+   {
+    "dex": 96,
+    "glb": "pm0096_00.glb",
+    "nome": "Drowzee",
+    "fonte": "classico"
+   },
+   {
+    "dex": 22,
+    "glb": "pm0022_00.glb",
+    "nome": "Fearow",
+    "fonte": "campo",
+    "peso": 384
+   },
+   {
+    "dex": 28,
+    "glb": "pm0028_00.glb",
+    "nome": "Sandslash",
+    "fonte": "campo",
+    "peso": 384
+   }
+  ],
+  "1212": [
+   {
+    "dex": 83,
+    "glb": "pm0083_00.glb",
+    "nome": "Farfetch’d",
+    "fonte": "jogo",
+    "peso": 250
+   },
+   {
+    "dex": 98,
+    "glb": "pm0098_00.glb",
+    "nome": "Krabby",
+    "fonte": "jogo",
+    "peso": 250,
+    "agua": 1
+   },
+   {
+    "dex": 99,
+    "glb": "pm0099_00.glb",
+    "nome": "Kingler",
+    "fonte": "jogo",
+    "peso": 64,
+    "agua": 1
+   },
+   {
+    "dex": 119,
+    "glb": "pm0119_00.glb",
+    "nome": "Seaking",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "classico",
+    "peso": 1000
+   },
+   {
+    "dex": 17,
+    "glb": "pm0017_00.glb",
+    "nome": "Pidgeotto",
+    "fonte": "classico",
+    "peso": 250
+   },
+   {
+    "dex": 43,
+    "glb": "pm0043_00.glb",
+    "nome": "Oddish",
+    "fonte": "classico",
+    "peso": 250
+   },
+   {
+    "dex": 69,
+    "glb": "pm0069_00.glb",
+    "nome": "Bellsprout",
+    "fonte": "classico"
+   },
+   {
+    "dex": 44,
+    "glb": "pm0044_00.glb",
+    "nome": "Gloom",
+    "fonte": "classico",
+    "peso": 64
+   },
+   {
+    "dex": 70,
+    "glb": "pm0070_00.glb",
+    "nome": "Weepinbell",
+    "fonte": "classico"
+   },
+   {
+    "dex": 48,
+    "glb": "pm0048_00.glb",
+    "nome": "Venonat",
+    "fonte": "classico"
+   },
+   {
+    "dex": 132,
+    "glb": "pm0132_00.glb",
+    "nome": "Ditto",
+    "fonte": "classico"
+   }
+  ],
+  "1213": [
+   {
+    "dex": 46,
+    "glb": "pm0046_00.glb",
+    "nome": "Paras",
+    "fonte": "jogo",
+    "peso": 250
+   },
+   {
+    "dex": 47,
+    "glb": "pm0047_00.glb",
+    "nome": "Parasect",
+    "fonte": "jogo",
+    "peso": 64
+   },
+   {
+    "dex": 48,
+    "glb": "pm0048_00.glb",
+    "nome": "Venonat",
+    "fonte": "jogo",
+    "peso": 250
+   },
+   {
+    "dex": 49,
+    "glb": "pm0049_00.glb",
+    "nome": "Venomoth",
+    "fonte": "jogo",
+    "peso": 64
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "classico",
+    "peso": 1000
+   },
+   {
+    "dex": 17,
+    "glb": "pm0017_00.glb",
+    "nome": "Pidgeotto",
+    "fonte": "classico",
+    "peso": 250
+   },
+   {
+    "dex": 43,
+    "glb": "pm0043_00.glb",
+    "nome": "Oddish",
+    "fonte": "classico"
+   },
+   {
+    "dex": 69,
+    "glb": "pm0069_00.glb",
+    "nome": "Bellsprout",
+    "fonte": "classico"
+   },
+   {
+    "dex": 44,
+    "glb": "pm0044_00.glb",
+    "nome": "Gloom",
+    "fonte": "classico"
+   },
+   {
+    "dex": 70,
+    "glb": "pm0070_00.glb",
+    "nome": "Weepinbell",
+    "fonte": "classico"
+   },
+   {
+    "dex": 132,
+    "glb": "pm0132_00.glb",
+    "nome": "Ditto",
+    "fonte": "classico"
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "campo",
+    "peso": 1000
+   },
+   {
+    "dex": 20,
+    "glb": "pm0020_00.glb",
+    "nome": "Raticate",
+    "fonte": "campo",
+    "peso": 1000
+   }
+  ],
+  "1214": [
+   {
+    "dex": 48,
+    "glb": "pm0048_00.glb",
+    "nome": "Venonat",
+    "fonte": "jogo",
+    "peso": 250
+   },
+   {
+    "dex": 123,
+    "glb": "pm0123_00.glb",
+    "nome": "Scyther",
+    "fonte": "jogo",
+    "peso": 16
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "classico"
+   },
+   {
+    "dex": 17,
+    "glb": "pm0017_00.glb",
+    "nome": "Pidgeotto",
+    "fonte": "classico"
+   },
+   {
+    "dex": 43,
+    "glb": "pm0043_00.glb",
+    "nome": "Oddish",
+    "fonte": "classico"
+   },
+   {
+    "dex": 69,
+    "glb": "pm0069_00.glb",
+    "nome": "Bellsprout",
+    "fonte": "classico"
+   },
+   {
+    "dex": 44,
+    "glb": "pm0044_00.glb",
+    "nome": "Gloom",
+    "fonte": "classico"
+   },
+   {
+    "dex": 70,
+    "glb": "pm0070_00.glb",
+    "nome": "Weepinbell",
+    "fonte": "classico"
+   },
+   {
+    "dex": 49,
+    "glb": "pm0049_00.glb",
+    "nome": "Venomoth",
+    "fonte": "classico",
+    "peso": 64
+   },
+   {
+    "dex": 132,
+    "glb": "pm0132_00.glb",
+    "nome": "Ditto",
+    "fonte": "classico"
+   },
+   {
+    "dex": 21,
+    "glb": "pm0021_00.glb",
+    "nome": "Spearow",
+    "fonte": "campo",
+    "peso": 1000
+   },
+   {
+    "dex": 23,
+    "glb": "pm0023_00.glb",
+    "nome": "Ekans",
+    "fonte": "campo",
+    "peso": 250
+   }
+  ],
+  "1215": [
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "classico",
+    "peso": 4000
+   },
+   {
+    "dex": 17,
+    "glb": "pm0017_00.glb",
+    "nome": "Pidgeotto",
+    "fonte": "classico",
+    "peso": 2000
+   },
+   {
+    "dex": 43,
+    "glb": "pm0043_00.glb",
+    "nome": "Oddish",
+    "fonte": "classico"
+   },
+   {
+    "dex": 69,
+    "glb": "pm0069_00.glb",
+    "nome": "Bellsprout",
+    "fonte": "classico",
+    "peso": 2000
+   },
+   {
+    "dex": 44,
+    "glb": "pm0044_00.glb",
+    "nome": "Gloom",
+    "fonte": "classico"
+   },
+   {
+    "dex": 70,
+    "glb": "pm0070_00.glb",
+    "nome": "Weepinbell",
+    "fonte": "classico",
+    "peso": 256
+   },
+   {
+    "dex": 48,
+    "glb": "pm0048_00.glb",
+    "nome": "Venonat",
+    "fonte": "classico"
+   },
+   {
+    "dex": 49,
+    "glb": "pm0049_00.glb",
+    "nome": "Venomoth",
+    "fonte": "classico"
+   },
+   {
+    "dex": 132,
+    "glb": "pm0132_00.glb",
+    "nome": "Ditto",
+    "fonte": "classico"
+   },
+   {
+    "dex": 102,
+    "glb": "pm0102_00.glb",
+    "nome": "Exeggcute",
+    "fonte": "campo",
+    "peso": 1000
+   },
+   {
+    "dex": 103,
+    "glb": "pm0103_00.glb",
+    "nome": "Exeggutor",
+    "fonte": "campo",
+    "peso": 64
+   }
+  ],
+  "1216": [
+   {
+    "dex": 102,
+    "glb": "pm0102_00.glb",
+    "nome": "Exeggcute",
+    "fonte": "jogo",
+    "peso": 400
+   },
+   {
+    "dex": 103,
+    "glb": "pm0103_00.glb",
+    "nome": "Exeggutor",
+    "fonte": "jogo",
+    "peso": 16
+   },
+   {
+    "dex": 126,
+    "glb": "pm0126_00.glb",
+    "nome": "Magmar",
+    "fonte": "jogo",
+    "peso": 16
+   },
+   {
+    "dex": 133,
+    "glb": "pm0133_00.glb",
+    "nome": "Eevee",
+    "fonte": "jogo",
+    "peso": 250
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "classico",
+    "peso": 1000
+   },
+   {
+    "dex": 20,
+    "glb": "pm0020_00.glb",
+    "nome": "Raticate",
+    "fonte": "classico"
+   },
+   {
+    "dex": 21,
+    "glb": "pm0021_00.glb",
+    "nome": "Spearow",
+    "fonte": "classico"
+   },
+   {
+    "dex": 22,
+    "glb": "pm0022_00.glb",
+    "nome": "Fearow",
+    "fonte": "classico"
+   },
+   {
+    "dex": 84,
+    "glb": "pm0084_00.glb",
+    "nome": "Doduo",
+    "fonte": "classico"
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "campo",
+    "peso": 1000
+   },
+   {
+    "dex": 17,
+    "glb": "pm0017_00.glb",
+    "nome": "Pidgeotto",
+    "fonte": "campo",
+    "peso": 400
+   }
+  ],
+  "1217": [
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "classico",
+    "peso": 1000
+   },
+   {
+    "dex": 20,
+    "glb": "pm0020_00.glb",
+    "nome": "Raticate",
+    "fonte": "classico",
+    "peso": 64
+   },
+   {
+    "dex": 21,
+    "glb": "pm0021_00.glb",
+    "nome": "Spearow",
+    "fonte": "classico",
+    "peso": 1000
+   },
+   {
+    "dex": 22,
+    "glb": "pm0022_00.glb",
+    "nome": "Fearow",
+    "fonte": "classico",
+    "peso": 64
+   },
+   {
+    "dex": 84,
+    "glb": "pm0084_00.glb",
+    "nome": "Doduo",
+    "fonte": "classico"
+   },
+   {
+    "dex": 77,
+    "glb": "pm0077_00.glb",
+    "nome": "Ponyta",
+    "fonte": "classico"
+   },
+   {
+    "dex": 43,
+    "glb": "pm0043_00.glb",
+    "nome": "Oddish",
+    "fonte": "campo",
+    "peso": 400
+   }
+  ],
+  "1218": [
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "classico",
+    "peso": 1000
+   },
+   {
+    "dex": 20,
+    "glb": "pm0020_00.glb",
+    "nome": "Raticate",
+    "fonte": "classico",
+    "peso": 64
+   },
+   {
+    "dex": 21,
+    "glb": "pm0021_00.glb",
+    "nome": "Spearow",
+    "fonte": "classico",
+    "peso": 1000
+   },
+   {
+    "dex": 22,
+    "glb": "pm0022_00.glb",
+    "nome": "Fearow",
+    "fonte": "classico",
+    "peso": 64
+   },
+   {
+    "dex": 84,
+    "glb": "pm0084_00.glb",
+    "nome": "Doduo",
+    "fonte": "classico"
+   },
+   {
+    "dex": 108,
+    "glb": "pm0108_00.glb",
+    "nome": "Lickitung",
+    "fonte": "campo",
+    "peso": 64
+   },
+   {
+    "dex": 128,
+    "glb": "pm0128_00.glb",
+    "nome": "Tauros",
+    "fonte": "campo",
+    "peso": 16
+   }
+  ],
+  "1219": [
+   {
+    "dex": 119,
+    "glb": "pm0119_00.glb",
+    "nome": "Seaking",
+    "fonte": "jogo",
+    "peso": 64,
+    "agua": 1
+   },
+   {
+    "dex": 72,
+    "glb": "pm0072_00.glb",
+    "nome": "Tentacool",
+    "fonte": "classico",
+    "peso": 250,
+    "agua": 1
+   },
+   {
+    "dex": 73,
+    "glb": "pm0073_00.glb",
+    "nome": "Tentacruel",
+    "fonte": "classico",
+    "peso": 16,
+    "agua": 1
+   },
+   {
+    "dex": 118,
+    "glb": "pm0118_00.glb",
+    "nome": "Goldeen",
+    "fonte": "classico",
+    "peso": 250,
+    "agua": 1
+   },
+   {
+    "dex": 120,
+    "glb": "pm0120_00.glb",
+    "nome": "Staryu",
+    "fonte": "classico",
+    "agua": 1
+   },
+   {
+    "dex": 116,
+    "glb": "pm0116_00.glb",
+    "nome": "Horsea",
+    "fonte": "classico",
+    "agua": 1
+   },
+   {
+    "dex": 129,
+    "glb": "pm0129_00.glb",
+    "nome": "Magikarp",
+    "fonte": "campo",
+    "peso": 1000,
+    "agua": 1
+   }
+  ],
+  "1220": [
+   {
+    "dex": 120,
+    "glb": "pm0120_00.glb",
+    "nome": "Staryu",
+    "fonte": "jogo",
+    "peso": 250,
+    "agua": 1
+   },
+   {
+    "dex": 72,
+    "glb": "pm0072_00.glb",
+    "nome": "Tentacool",
+    "fonte": "classico",
+    "agua": 1
+   },
+   {
+    "dex": 73,
+    "glb": "pm0073_00.glb",
+    "nome": "Tentacruel",
+    "fonte": "classico",
+    "agua": 1
+   },
+   {
+    "dex": 116,
+    "glb": "pm0116_00.glb",
+    "nome": "Horsea",
+    "fonte": "classico",
+    "agua": 1
+   },
+   {
+    "dex": 90,
+    "glb": "pm0090_00.glb",
+    "nome": "Shellder",
+    "fonte": "classico",
+    "agua": 1
+   },
+   {
+    "dex": 129,
+    "glb": "pm0129_00.glb",
+    "nome": "Magikarp",
+    "fonte": "campo",
+    "peso": 1000,
+    "agua": 1
+   },
+   {
+    "dex": 118,
+    "glb": "pm0118_00.glb",
+    "nome": "Goldeen",
+    "fonte": "campo",
+    "peso": 250,
+    "agua": 1
+   },
+   {
+    "dex": 119,
+    "glb": "pm0119_00.glb",
+    "nome": "Seaking",
+    "fonte": "campo",
+    "peso": 64,
+    "agua": 1
+   }
+  ],
+  "1221": [
+   {
+    "dex": 121,
+    "glb": "pm0121_00.glb",
+    "nome": "Starmie",
+    "fonte": "jogo",
+    "peso": 16,
+    "agua": 1
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "classico",
+    "peso": 1000
+   },
+   {
+    "dex": 20,
+    "glb": "pm0020_00.glb",
+    "nome": "Raticate",
+    "fonte": "classico"
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "classico",
+    "peso": 1000
+   },
+   {
+    "dex": 17,
+    "glb": "pm0017_00.glb",
+    "nome": "Pidgeotto",
+    "fonte": "classico",
+    "peso": 500
+   },
+   {
+    "dex": 114,
+    "glb": "pm0114_00.glb",
+    "nome": "Tangela",
+    "fonte": "classico"
+   },
+   {
+    "dex": 72,
+    "glb": "pm0072_00.glb",
+    "nome": "Tentacool",
+    "fonte": "classico",
+    "agua": 1
+   },
+   {
+    "dex": 129,
+    "glb": "pm0129_00.glb",
+    "nome": "Magikarp",
+    "fonte": "campo",
+    "peso": 1000,
+    "agua": 1
+   },
+   {
+    "dex": 118,
+    "glb": "pm0118_00.glb",
+    "nome": "Goldeen",
+    "fonte": "campo",
+    "peso": 250,
+    "agua": 1
+   },
+   {
+    "dex": 119,
+    "glb": "pm0119_00.glb",
+    "nome": "Seaking",
+    "fonte": "campo",
+    "peso": 64,
+    "agua": 1
+   }
+  ],
+  "1222": [
+   {
+    "dex": 56,
+    "glb": "pm0056_00.glb",
+    "nome": "Mankey",
+    "fonte": "jogo",
+    "peso": 500
+   },
+   {
+    "dex": 57,
+    "glb": "pm0057_00.glb",
+    "nome": "Primeape",
+    "fonte": "jogo",
+    "peso": 128
+   },
+   {
+    "dex": 77,
+    "glb": "pm0077_00.glb",
+    "nome": "Ponyta",
+    "fonte": "jogo",
+    "peso": 128
+   },
+   {
+    "dex": 78,
+    "glb": "pm0078_00.glb",
+    "nome": "Rapidash",
+    "fonte": "jogo",
+    "peso": 32
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "classico"
+   },
+   {
+    "dex": 21,
+    "glb": "pm0021_00.glb",
+    "nome": "Spearow",
+    "fonte": "classico"
+   },
+   {
+    "dex": 29,
+    "glb": "pm0029_00.glb",
+    "nome": "Nidoran",
+    "fonte": "classico"
+   },
+   {
+    "dex": 32,
+    "glb": "pm0032_00.glb",
+    "nome": "Nidoran",
+    "fonte": "classico"
+   },
+   {
+    "dex": 10,
+    "glb": "pm0010_00.glb",
+    "nome": "Caterpie",
+    "fonte": "campo",
+    "peso": 2000
+   },
+   {
+    "dex": 13,
+    "glb": "pm0013_00.glb",
+    "nome": "Weedle",
+    "fonte": "campo",
+    "peso": 2000
+   },
+   {
+    "dex": 11,
+    "glb": "pm0011_00.glb",
+    "nome": "Metapod",
+    "fonte": "campo",
+    "peso": 2000
+   },
+   {
+    "dex": 14,
+    "glb": "pm0014_00.glb",
+    "nome": "Kakuna",
+    "fonte": "campo",
+    "peso": 2000
+   }
+  ],
+  "1223": [
+   {
+    "dex": 21,
+    "glb": "pm0021_00.glb",
+    "nome": "Spearow",
+    "fonte": "classico"
+   },
+   {
+    "dex": 22,
+    "glb": "pm0022_00.glb",
+    "nome": "Fearow",
+    "fonte": "classico"
+   },
+   {
+    "dex": 23,
+    "glb": "pm0023_00.glb",
+    "nome": "Ekans",
+    "fonte": "classico"
+   },
+   {
+    "dex": 24,
+    "glb": "pm0024_00.glb",
+    "nome": "Arbok",
+    "fonte": "classico"
+   },
+   {
+    "dex": 27,
+    "glb": "pm0027_00.glb",
+    "nome": "Sandshrew",
+    "fonte": "classico"
+   },
+   {
+    "dex": 28,
+    "glb": "pm0028_00.glb",
+    "nome": "Sandslash",
+    "fonte": "classico"
+   },
+   {
+    "dex": 30,
+    "glb": "pm0030_00.glb",
+    "nome": "Nidorina",
+    "fonte": "classico"
+   },
+   {
+    "dex": 33,
+    "glb": "pm0033_00.glb",
+    "nome": "Nidorino",
+    "fonte": "classico"
+   },
+   {
+    "dex": 132,
+    "glb": "pm0132_00.glb",
+    "nome": "Ditto",
+    "fonte": "classico"
+   },
+   {
+    "dex": 56,
+    "glb": "pm0056_00.glb",
+    "nome": "Mankey",
+    "fonte": "classico"
+   },
+   {
+    "dex": 57,
+    "glb": "pm0057_00.glb",
+    "nome": "Primeape",
+    "fonte": "classico"
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "campo",
+    "peso": 5000
+   },
+   {
+    "dex": 19,
+    "glb": "pm0019_00.glb",
+    "nome": "Rattata",
+    "fonte": "campo",
+    "peso": 5000
+   },
+   {
+    "dex": 17,
+    "glb": "pm0017_00.glb",
+    "nome": "Pidgeotto",
+    "fonte": "campo",
+    "peso": 1250
+   },
+   {
+    "dex": 43,
+    "glb": "pm0043_00.glb",
+    "nome": "Oddish",
+    "fonte": "campo",
+    "peso": 1250
+   },
+   {
+    "dex": 129,
+    "glb": "pm0129_00.glb",
+    "nome": "Magikarp",
+    "fonte": "campo",
+    "peso": 1000,
+    "agua": 1
+   },
+   {
+    "dex": 60,
+    "glb": "pm0060_00.glb",
+    "nome": "Poliwag",
+    "fonte": "campo",
+    "peso": 250,
+    "agua": 1
+   },
+   {
+    "dex": 118,
+    "glb": "pm0118_00.glb",
+    "nome": "Goldeen",
+    "fonte": "campo",
+    "peso": 250,
+    "agua": 1
+   }
+  ],
+  "1224": [
+   {
+    "dex": 17,
+    "glb": "pm0017_00.glb",
+    "nome": "Pidgeotto",
+    "fonte": "jogo",
+    "peso": 800
+   },
+   {
+    "dex": 43,
+    "glb": "pm0043_00.glb",
+    "nome": "Oddish",
+    "fonte": "jogo",
+    "peso": 800
+   },
+   {
+    "dex": 44,
+    "glb": "pm0044_00.glb",
+    "nome": "Gloom",
+    "fonte": "jogo",
+    "peso": 128
+   },
+   {
+    "dex": 45,
+    "glb": "pm0045_00.glb",
+    "nome": "Vileplume",
+    "fonte": "jogo",
+    "peso": 32
+   },
+   {
+    "dex": 48,
+    "glb": "pm0048_00.glb",
+    "nome": "Venonat",
+    "fonte": "jogo",
+    "peso": 800
+   },
+   {
+    "dex": 69,
+    "glb": "pm0069_00.glb",
+    "nome": "Bellsprout",
+    "fonte": "jogo",
+    "peso": 800
+   },
+   {
+    "dex": 108,
+    "glb": "pm0108_00.glb",
+    "nome": "Lickitung",
+    "fonte": "jogo",
+    "peso": 128
+   },
+   {
+    "dex": 114,
+    "glb": "pm0114_00.glb",
+    "nome": "Tangela",
+    "fonte": "jogo",
+    "peso": 128
+   },
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "classico",
+    "peso": 2000
+   },
+   {
+    "dex": 63,
+    "glb": "pm0063_00.glb",
+    "nome": "Abra",
+    "fonte": "classico"
+   },
+   {
+    "dex": 10,
+    "glb": "pm0010_00.glb",
+    "nome": "Caterpie",
+    "fonte": "classico"
+   },
+   {
+    "dex": 13,
+    "glb": "pm0013_00.glb",
+    "nome": "Weedle",
+    "fonte": "classico"
+   },
+   {
+    "dex": 11,
+    "glb": "pm0011_00.glb",
+    "nome": "Metapod",
+    "fonte": "classico"
+   },
+   {
+    "dex": 14,
+    "glb": "pm0014_00.glb",
+    "nome": "Kakuna",
+    "fonte": "classico"
+   },
+   {
+    "dex": 129,
+    "glb": "pm0129_00.glb",
+    "nome": "Magikarp",
+    "fonte": "campo",
+    "peso": 1000,
+    "agua": 1
+   },
+   {
+    "dex": 60,
+    "glb": "pm0060_00.glb",
+    "nome": "Poliwag",
+    "fonte": "campo",
+    "peso": 250,
+    "agua": 1
+   },
+   {
+    "dex": 118,
+    "glb": "pm0118_00.glb",
+    "nome": "Goldeen",
+    "fonte": "campo",
+    "peso": 250,
+    "agua": 1
+   }
+  ],
+  "1225": [
+   {
+    "dex": 16,
+    "glb": "pm0016_00.glb",
+    "nome": "Pidgey",
+    "fonte": "classico"
+   },
+   {
+    "dex": 17,
+    "glb": "pm0017_00.glb",
+    "nome": "Pidgeotto",
+    "fonte": "classico"
+   },
+   {
+    "dex": 43,
+    "glb": "pm0043_00.glb",
+    "nome": "Oddish",
+    "fonte": "classico"
+   },
+   {
+    "dex": 69,
+    "glb": "pm0069_00.glb",
+    "nome": "Bellsprout",
+    "fonte": "classico"
+   },
+   {
+    "dex": 63,
+    "glb": "pm0063_00.glb",
+    "nome": "Abra",
+    "fonte": "classico"
+   },
+   {
+    "dex": 10,
+    "glb": "pm0010_00.glb",
+    "nome": "Caterpie",
+    "fonte": "classico"
+   },
+   {
+    "dex": 13,
+    "glb": "pm0013_00.glb",
+    "nome": "Weedle",
+    "fonte": "classico"
+   },
+   {
+    "dex": 11,
+    "glb": "pm0011_00.glb",
+    "nome": "Metapod",
+    "fonte": "classico"
+   },
+   {
+    "dex": 14,
+    "glb": "pm0014_00.glb",
+    "nome": "Kakuna",
+    "fonte": "classico"
+   },
+   {
+    "dex": 48,
+    "glb": "pm0048_00.glb",
+    "nome": "Venonat",
+    "fonte": "classico"
+   }
+  ],
+  "1299": [
+   {
+    "dex": 7,
+    "glb": "pm0007_00.glb",
+    "nome": "Squirtle",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 54,
+    "glb": "pm0054.glb",
+    "nome": "Psyduck",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 55,
+    "glb": "pm0055_00.glb",
+    "nome": "Golduck",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 79,
+    "glb": "pm0079_00.glb",
+    "nome": "Slowpoke",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 80,
+    "glb": "pm0080_00.glb",
+    "nome": "Slowbro",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 86,
+    "glb": "pm0086_00.glb",
+    "nome": "Seel",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 87,
+    "glb": "pm0087_00.glb",
+    "nome": "Dewgong",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 116,
+    "glb": "pm0116_00.glb",
+    "nome": "Horsea",
+    "fonte": "jogo",
+    "agua": 1
+   },
+   {
+    "dex": 124,
+    "glb": "pm0124_00.glb",
+    "nome": "Jynx",
+    "fonte": "jogo"
+   },
+   {
+    "dex": 41,
+    "glb": "pm0041_00.glb",
+    "nome": "Zubat",
+    "fonte": "classico"
+   },
+   {
+    "dex": 42,
+    "glb": "pm0042_00.glb",
+    "nome": "Golbat",
+    "fonte": "classico"
+   },
+   {
+    "dex": 117,
+    "glb": "pm0117_00.glb",
+    "nome": "Seadra",
+    "fonte": "classico",
+    "agua": 1
+   },
+   {
+    "dex": 90,
+    "glb": "pm0090_00.glb",
+    "nome": "Shellder",
+    "fonte": "classico",
+    "agua": 1
+   },
+   {
+    "dex": 120,
+    "glb": "pm0120_00.glb",
+    "nome": "Staryu",
+    "fonte": "classico",
+    "agua": 1
+   },
+   {
+    "dex": 98,
+    "glb": "pm0098_00.glb",
+    "nome": "Krabby",
+    "fonte": "classico",
+    "agua": 1
+   },
+   {
+    "dex": 99,
+    "glb": "pm0099_00.glb",
+    "nome": "Kingler",
+    "fonte": "classico",
+    "agua": 1
+   }
+  ],
+  "1302": [
+   {
+    "dex": 92,
+    "glb": "pm0092_00.glb",
+    "nome": "Gastly",
+    "fonte": "classico",
+    "peso": 8500
+   },
+   {
+    "dex": 104,
+    "glb": "pm0104_00.glb",
+    "nome": "Cubone",
+    "fonte": "classico",
+    "peso": 1500
+   }
+  ],
+  "1303": [
+   {
+    "dex": 92,
+    "glb": "pm0092_00.glb",
+    "nome": "Gastly",
+    "fonte": "classico",
+    "peso": 8000
+   },
+   {
+    "dex": 104,
+    "glb": "pm0104_00.glb",
+    "nome": "Cubone",
+    "fonte": "classico",
+    "peso": 1500
+   },
+   {
+    "dex": 93,
+    "glb": "pm0093_00.glb",
+    "nome": "Haunter",
+    "fonte": "classico",
+    "peso": 500
+   }
+  ],
+  "1304": [
+   {
+    "dex": 92,
+    "glb": "pm0092_00.glb",
+    "nome": "Gastly",
+    "fonte": "classico",
+    "peso": 7500
+   },
+   {
+    "dex": 104,
+    "glb": "pm0104_00.glb",
+    "nome": "Cubone",
+    "fonte": "classico",
+    "peso": 1500
+   },
+   {
+    "dex": 93,
+    "glb": "pm0093_00.glb",
+    "nome": "Haunter",
+    "fonte": "classico",
+    "peso": 1000
+   }
+  ],
+  "1305": [
+   {
+    "dex": 92,
+    "glb": "pm0092_00.glb",
+    "nome": "Gastly",
+    "fonte": "classico",
+    "peso": 7000
+   },
+   {
+    "dex": 104,
+    "glb": "pm0104_00.glb",
+    "nome": "Cubone",
+    "fonte": "classico",
+    "peso": 1500
+   },
+   {
+    "dex": 93,
+    "glb": "pm0093_00.glb",
+    "nome": "Haunter",
+    "fonte": "classico",
+    "peso": 1500
+   }
+  ],
+  "1306": [
+   {
+    "dex": 92,
+    "glb": "pm0092_00.glb",
+    "nome": "Gastly",
+    "fonte": "classico",
+    "peso": 6000
+   },
+   {
+    "dex": 104,
+    "glb": "pm0104_00.glb",
+    "nome": "Cubone",
+    "fonte": "classico",
+    "peso": 1500
+   },
+   {
+    "dex": 93,
+    "glb": "pm0093_00.glb",
+    "nome": "Haunter",
+    "fonte": "classico",
+    "peso": 2500
+   }
+  ],
+  "1310": [
+   {
+    "dex": 41,
+    "glb": "pm0041_00.glb",
+    "nome": "Zubat",
+    "fonte": "classico",
+    "peso": 900
+   },
+   {
+    "dex": 54,
+    "glb": "pm0054.glb",
+    "nome": "Psyduck",
+    "fonte": "classico",
+    "peso": 600
+   },
+   {
+    "dex": 79,
+    "glb": "pm0079_00.glb",
+    "nome": "Slowpoke",
+    "fonte": "classico",
+    "peso": 500
+   },
+   {
+    "dex": 86,
+    "glb": "pm0086_00.glb",
+    "nome": "Seel",
+    "fonte": "classico",
+    "peso": 400
+   },
+   {
+    "dex": 42,
+    "glb": "pm0042_00.glb",
+    "nome": "Golbat",
+    "fonte": "classico",
+    "peso": 250
+   }
+  ],
+  "1311": [
+   {
+    "dex": 41,
+    "glb": "pm0041_00.glb",
+    "nome": "Zubat",
+    "fonte": "classico",
+    "peso": 800
+   },
+   {
+    "dex": 54,
+    "glb": "pm0054.glb",
+    "nome": "Psyduck",
+    "fonte": "classico",
+    "peso": 450
+   },
+   {
+    "dex": 79,
+    "glb": "pm0079_00.glb",
+    "nome": "Slowpoke",
+    "fonte": "classico",
+    "peso": 450
+   },
+   {
+    "dex": 86,
+    "glb": "pm0086_00.glb",
+    "nome": "Seel",
+    "fonte": "classico",
+    "peso": 450
+   },
+   {
+    "dex": 42,
+    "glb": "pm0042_00.glb",
+    "nome": "Golbat",
+    "fonte": "classico",
+    "peso": 350
+   },
+   {
+    "dex": 55,
+    "glb": "pm0055_00.glb",
+    "nome": "Golduck",
+    "fonte": "classico",
+    "peso": 120
+   }
+  ],
+  "1312": [
+   {
+    "dex": 42,
+    "glb": "pm0042_00.glb",
+    "nome": "Golbat",
+    "fonte": "classico",
+    "peso": 500
+   },
+   {
+    "dex": 41,
+    "glb": "pm0041_00.glb",
+    "nome": "Zubat",
+    "fonte": "classico",
+    "peso": 500
+   },
+   {
+    "dex": 86,
+    "glb": "pm0086_00.glb",
+    "nome": "Seel",
+    "fonte": "classico",
+    "peso": 500
+   },
+   {
+    "dex": 80,
+    "glb": "pm0080_00.glb",
+    "nome": "Slowbro",
+    "fonte": "classico",
+    "peso": 120
+   },
+   {
+    "dex": 87,
+    "glb": "pm0087_00.glb",
+    "nome": "Dewgong",
+    "fonte": "classico",
+    "peso": 100
+   }
+  ],
+  "1313": [
+   {
+    "dex": 42,
+    "glb": "pm0042_00.glb",
+    "nome": "Golbat",
+    "fonte": "classico",
+    "peso": 600
+   },
+   {
+    "dex": 86,
+    "glb": "pm0086_00.glb",
+    "nome": "Seel",
+    "fonte": "classico",
+    "peso": 450
+   },
+   {
+    "dex": 90,
+    "glb": "pm0090_00.glb",
+    "nome": "Shellder",
+    "fonte": "classico",
+    "peso": 300,
+    "agua": 1
+   },
+   {
+    "dex": 116,
+    "glb": "pm0116_00.glb",
+    "nome": "Horsea",
+    "fonte": "classico",
+    "peso": 250,
+    "agua": 1
+   },
+   {
+    "dex": 87,
+    "glb": "pm0087_00.glb",
+    "nome": "Dewgong",
+    "fonte": "classico",
+    "peso": 150
+   },
+   {
+    "dex": 80,
+    "glb": "pm0080_00.glb",
+    "nome": "Slowbro",
+    "fonte": "classico",
+    "peso": 150
+   },
+   {
+    "dex": 91,
+    "glb": "pm0091_00.glb",
+    "nome": "Cloyster",
+    "fonte": "classico",
+    "peso": 80,
+    "agua": 1
+   }
+  ],
+  "1314": [
+   {
+    "dex": 42,
+    "glb": "pm0042_00.glb",
+    "nome": "Golbat",
+    "fonte": "classico",
+    "peso": 600
+   },
+   {
+    "dex": 120,
+    "glb": "pm0120_00.glb",
+    "nome": "Staryu",
+    "fonte": "classico",
+    "peso": 250,
+    "agua": 1
+   },
+   {
+    "dex": 87,
+    "glb": "pm0087_00.glb",
+    "nome": "Dewgong",
+    "fonte": "classico",
+    "peso": 250
+   },
+   {
+    "dex": 80,
+    "glb": "pm0080_00.glb",
+    "nome": "Slowbro",
+    "fonte": "classico",
+    "peso": 200
+   },
+   {
+    "dex": 91,
+    "glb": "pm0091_00.glb",
+    "nome": "Cloyster",
+    "fonte": "classico",
+    "peso": 120
+   },
+   {
+    "dex": 117,
+    "glb": "pm0117_00.glb",
+    "nome": "Seadra",
+    "fonte": "classico",
+    "peso": 100,
+    "agua": 1
+   },
+   {
+    "dex": 121,
+    "glb": "pm0121_00.glb",
+    "nome": "Starmie",
+    "fonte": "classico",
+    "peso": 60,
+    "agua": 1
+   }
+  ],
+  "1315": [
+   {
+    "dex": 74,
+    "glb": "pm0074_00.glb",
+    "nome": "Geodude",
+    "fonte": "classico",
+    "peso": 700
+   },
+   {
+    "dex": 41,
+    "glb": "pm0041_00.glb",
+    "nome": "Zubat",
+    "fonte": "classico",
+    "peso": 700
+   },
+   {
+    "dex": 66,
+    "glb": "pm0066_00.glb",
+    "nome": "Machop",
+    "fonte": "classico",
+    "peso": 500
+   },
+   {
+    "dex": 42,
+    "glb": "pm0042_00.glb",
+    "nome": "Golbat",
+    "fonte": "classico",
+    "peso": 300
+   },
+   {
+    "dex": 75,
+    "glb": "pm0075_00.glb",
+    "nome": "Graveler",
+    "fonte": "classico",
+    "peso": 250
+   },
+   {
+    "dex": 67,
+    "glb": "pm0067_00.glb",
+    "nome": "Machoke",
+    "fonte": "classico",
+    "peso": 200
+   },
+   {
+    "dex": 95,
+    "glb": "pm0095_00.glb",
+    "nome": "Onix",
+    "fonte": "classico",
+    "peso": 150
+   }
+  ],
+  "1316": [
+   {
+    "dex": 42,
+    "glb": "pm0042_00.glb",
+    "nome": "Golbat",
+    "fonte": "classico",
+    "peso": 500
+   },
+   {
+    "dex": 75,
+    "glb": "pm0075_00.glb",
+    "nome": "Graveler",
+    "fonte": "classico",
+    "peso": 400
+   },
+   {
+    "dex": 67,
+    "glb": "pm0067_00.glb",
+    "nome": "Machoke",
+    "fonte": "classico",
+    "peso": 350
+   },
+   {
+    "dex": 95,
+    "glb": "pm0095_00.glb",
+    "nome": "Onix",
+    "fonte": "classico",
+    "peso": 200
+   },
+   {
+    "dex": 105,
+    "glb": "pm0105_00.glb",
+    "nome": "Marowak",
+    "fonte": "classico",
+    "peso": 150
+   },
+   {
+    "dex": 24,
+    "glb": "pm0024_00.glb",
+    "nome": "Arbok",
+    "fonte": "classico",
+    "peso": 150
+   },
+   {
+    "dex": 49,
+    "glb": "pm0049_00.glb",
+    "nome": "Venomoth",
+    "fonte": "classico",
+    "peso": 120
+   }
+  ],
+  "1317": [
+   {
+    "dex": 42,
+    "glb": "pm0042_00.glb",
+    "nome": "Golbat",
+    "fonte": "classico",
+    "peso": 450
+   },
+   {
+    "dex": 67,
+    "glb": "pm0067_00.glb",
+    "nome": "Machoke",
+    "fonte": "classico",
+    "peso": 400
+   },
+   {
+    "dex": 75,
+    "glb": "pm0075_00.glb",
+    "nome": "Graveler",
+    "fonte": "classico",
+    "peso": 400
+   },
+   {
+    "dex": 95,
+    "glb": "pm0095_00.glb",
+    "nome": "Onix",
+    "fonte": "classico",
+    "peso": 200
+   },
+   {
+    "dex": 105,
+    "glb": "pm0105_00.glb",
+    "nome": "Marowak",
+    "fonte": "classico",
+    "peso": 200
+   },
+   {
+    "dex": 111,
+    "glb": "pm0111_00.glb",
+    "nome": "Rhyhorn",
+    "fonte": "classico",
+    "peso": 200
+   },
+   {
+    "dex": 57,
+    "glb": "pm0057_00.glb",
+    "nome": "Primeape",
+    "fonte": "classico",
+    "peso": 150
+   },
+   {
+    "dex": 28,
+    "glb": "pm0028_00.glb",
+    "nome": "Sandslash",
+    "fonte": "classico",
+    "peso": 150
+   }
+  ],
+  "1318": [
+   {
+    "dex": 42,
+    "glb": "pm0042_00.glb",
+    "nome": "Golbat",
+    "fonte": "classico",
+    "peso": 600
+   },
+   {
+    "dex": 67,
+    "glb": "pm0067_00.glb",
+    "nome": "Machoke",
+    "fonte": "classico",
+    "peso": 400
+   },
+   {
+    "dex": 64,
+    "glb": "pm0064_00.glb",
+    "nome": "Kadabra",
+    "fonte": "classico",
+    "peso": 350
+   },
+   {
+    "dex": 82,
+    "glb": "pm0082_00.glb",
+    "nome": "Magneton",
+    "fonte": "classico",
+    "peso": 250
+   },
+   {
+    "dex": 47,
+    "glb": "pm0047_00.glb",
+    "nome": "Parasect",
+    "fonte": "classico",
+    "peso": 250
+   },
+   {
+    "dex": 85,
+    "glb": "pm0085_00.glb",
+    "nome": "Dodrio",
+    "fonte": "classico",
+    "peso": 200
+   },
+   {
+    "dex": 26,
+    "glb": "pm0026_00.glb",
+    "nome": "Raichu",
+    "fonte": "classico",
+    "peso": 150
+   }
+  ],
+  "1319": [
+   {
+    "dex": 42,
+    "glb": "pm0042_00.glb",
+    "nome": "Golbat",
+    "fonte": "classico",
+    "peso": 450
+   },
+   {
+    "dex": 67,
+    "glb": "pm0067_00.glb",
+    "nome": "Machoke",
+    "fonte": "classico",
+    "peso": 350
+   },
+   {
+    "dex": 64,
+    "glb": "pm0064_00.glb",
+    "nome": "Kadabra",
+    "fonte": "classico",
+    "peso": 300
+   },
+   {
+    "dex": 82,
+    "glb": "pm0082_00.glb",
+    "nome": "Magneton",
+    "fonte": "classico",
+    "peso": 250
+   },
+   {
+    "dex": 24,
+    "glb": "pm0024_00.glb",
+    "nome": "Arbok",
+    "fonte": "classico",
+    "peso": 200
+   },
+   {
+    "dex": 97,
+    "glb": "pm0097_00.glb",
+    "nome": "Hypno",
+    "fonte": "classico",
+    "peso": 200
+   },
+   {
+    "dex": 101,
+    "glb": "pm0101_00.glb",
+    "nome": "Electrode",
+    "fonte": "classico",
+    "peso": 200
+   },
+   {
+    "dex": 112,
+    "glb": "pm0112_00.glb",
+    "nome": "Rhydon",
+    "fonte": "classico",
+    "peso": 150
+   },
+   {
+    "dex": 132,
+    "glb": "pm0132_00.glb",
+    "nome": "Ditto",
+    "fonte": "classico",
+    "peso": 80
+   }
+  ],
+  "1320": [
+   {
+    "dex": 42,
+    "glb": "pm0042_00.glb",
+    "nome": "Golbat",
+    "fonte": "classico",
+    "peso": 400
+   },
+   {
+    "dex": 67,
+    "glb": "pm0067_00.glb",
+    "nome": "Machoke",
+    "fonte": "classico",
+    "peso": 300
+   },
+   {
+    "dex": 112,
+    "glb": "pm0112_00.glb",
+    "nome": "Rhydon",
+    "fonte": "classico",
+    "peso": 250
+   },
+   {
+    "dex": 64,
+    "glb": "pm0064_00.glb",
+    "nome": "Kadabra",
+    "fonte": "classico",
+    "peso": 250
+   },
+   {
+    "dex": 97,
+    "glb": "pm0097_00.glb",
+    "nome": "Hypno",
+    "fonte": "classico",
+    "peso": 200
+   },
+   {
+    "dex": 85,
+    "glb": "pm0085_00.glb",
+    "nome": "Dodrio",
+    "fonte": "classico",
+    "peso": 200
+   },
+   {
+    "dex": 132,
+    "glb": "pm0132_00.glb",
+    "nome": "Ditto",
+    "fonte": "classico",
+    "peso": 120
+   },
+   {
+    "dex": 113,
+    "glb": "pm0113_00.glb",
+    "nome": "Chansey",
+    "fonte": "classico",
+    "peso": 25
+   }
+  ],
+  "1321": [
+   {
+    "dex": 50,
+    "glb": "pm0050_00.glb",
+    "nome": "Diglett",
+    "fonte": "jogo",
+    "peso": 5500
+   },
+   {
+    "dex": 51,
+    "glb": "pm0051_00.glb",
+    "nome": "Dugtrio",
+    "fonte": "jogo",
+    "peso": 400
+   }
+  ],
+  "1322": [
+   {
+    "dex": 41,
+    "glb": "pm0041_00.glb",
+    "nome": "Zubat",
+    "fonte": "jogo",
+    "peso": 5000
+   },
+   {
+    "dex": 74,
+    "glb": "pm0074_00.glb",
+    "nome": "Geodude",
+    "fonte": "jogo",
+    "peso": 3000
+   },
+   {
+    "dex": 46,
+    "glb": "pm0046_00.glb",
+    "nome": "Paras",
+    "fonte": "jogo",
+    "peso": 1200
+   },
+   {
+    "dex": 35,
+    "glb": "pm0035_00.glb",
+    "nome": "Clefairy",
+    "fonte": "jogo",
+    "peso": 250
+   }
+  ],
+  "1323": [
+   {
+    "dex": 41,
+    "glb": "pm0041_00.glb",
+    "nome": "Zubat",
+    "fonte": "jogo",
+    "peso": 5000
+   },
+   {
+    "dex": 74,
+    "glb": "pm0074_00.glb",
+    "nome": "Geodude",
+    "fonte": "jogo",
+    "peso": 3400
+   },
+   {
+    "dex": 46,
+    "glb": "pm0046_00.glb",
+    "nome": "Paras",
+    "fonte": "jogo",
+    "peso": 900
+   },
+   {
+    "dex": 35,
+    "glb": "pm0035_00.glb",
+    "nome": "Clefairy",
+    "fonte": "jogo",
+    "peso": 300
+   }
+  ],
+  "1324": [
+   {
+    "dex": 41,
+    "glb": "pm0041_00.glb",
+    "nome": "Zubat",
+    "fonte": "jogo",
+    "peso": 4600
+   },
+   {
+    "dex": 74,
+    "glb": "pm0074_00.glb",
+    "nome": "Geodude",
+    "fonte": "jogo",
+    "peso": 3800
+   },
+   {
+    "dex": 46,
+    "glb": "pm0046_00.glb",
+    "nome": "Paras",
+    "fonte": "jogo",
+    "peso": 800
+   },
+   {
+    "dex": 35,
+    "glb": "pm0035_00.glb",
+    "nome": "Clefairy",
+    "fonte": "jogo",
+    "peso": 400
+   }
+  ],
+  "1332": [
+   {
+    "dex": 81,
+    "glb": "pm0081_00.glb",
+    "nome": "Magnemite",
+    "fonte": "classico",
+    "peso": 3000
+   },
+   {
+    "dex": 100,
+    "glb": "pm0100_00.glb",
+    "nome": "Voltorb",
+    "fonte": "classico",
+    "peso": 3000
+   },
+   {
+    "dex": 25,
+    "glb": "pm0025_00.glb",
+    "nome": "Pikachu",
+    "fonte": "classico",
+    "peso": 2500
+   },
+   {
+    "dex": 82,
+    "glb": "pm0082_00.glb",
+    "nome": "Magneton",
+    "fonte": "classico",
+    "peso": 1000
+   },
+   {
+    "dex": 125,
+    "glb": "pm0125_00.glb",
+    "nome": "Electabuzz",
+    "fonte": "classico",
+    "peso": 500
+   },
+   {
+    "dex": 101,
+    "glb": "pm0101_00.glb",
+    "nome": "Electrode",
+    "fonte": "classico",
+    "peso": 300
+   }
+  ],
+  "1333": [
+   {
+    "dex": 41,
+    "glb": "pm0041_00.glb",
+    "nome": "Zubat",
+    "fonte": "jogo",
+    "peso": 4000
+   },
+   {
+    "dex": 74,
+    "glb": "pm0074_00.glb",
+    "nome": "Geodude",
+    "fonte": "jogo",
+    "peso": 4000
+   },
+   {
+    "dex": 66,
+    "glb": "pm0066_00.glb",
+    "nome": "Machop",
+    "fonte": "jogo",
+    "peso": 1500
+   },
+   {
+    "dex": 95,
+    "glb": "pm0095_00.glb",
+    "nome": "Onix",
+    "fonte": "jogo",
+    "peso": 800
+   }
+  ],
+  "1334": [
+   {
+    "dex": 41,
+    "glb": "pm0041_00.glb",
+    "nome": "Zubat",
+    "fonte": "jogo",
+    "peso": 3800
+   },
+   {
+    "dex": 74,
+    "glb": "pm0074_00.glb",
+    "nome": "Geodude",
+    "fonte": "jogo",
+    "peso": 3800
+   },
+   {
+    "dex": 66,
+    "glb": "pm0066_00.glb",
+    "nome": "Machop",
+    "fonte": "jogo",
+    "peso": 1800
+   },
+   {
+    "dex": 95,
+    "glb": "pm0095_00.glb",
+    "nome": "Onix",
+    "fonte": "jogo",
+    "peso": 1100
+   }
+  ]
+ },
+ "generico": [
+  {
+   "dex": 19,
+   "glb": "pm0019_00.glb",
+   "nome": "Rattata",
+   "fonte": "generico"
+  },
+  {
+   "dex": 16,
+   "glb": "pm0016_00.glb",
+   "nome": "Pidgey",
+   "fonte": "generico"
+  }
+ ]
+}

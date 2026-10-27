@@ -1,0 +1,394 @@
+/* =============================================
+   POKEMON 3D - UI ESTILO FAIRY TAMER
+   Colorido, vibrante, mobile-like
+   ============================================= */
+
+:root {
+  /* Cores Fairy Tamer */
+  --ft-gold: #ffd855;
+  --ft-gold-dark: #c9a227;
+  --ft-purple: #9b6dff;
+  --ft-purple-dark: #6b3fa0;
+  --ft-cyan: #5ce1e6;
+  --ft-orange: #ff8c42;
+  --ft-pink: #ff6b9d;
+
+  /* Backgrounds */
+  --ft-bg-dark: #1a1033;
+  --ft-bg-panel: linear-gradient(180deg, #2d1f5e 0%, #1a1033 100%);
+
+  /* HP Colors */
+  --ft-hp-high: #5dff5d;
+  --ft-hp-mid: #ffdd44;
+  --ft-hp-low: #ff5555;
+}
+
+/* ===== APLICAR NO HUD EXISTENTE ===== */
+#hud {
+  background: var(--ft-bg-panel) !important;
+  border: 3px solid var(--ft-purple) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 0 20px rgba(155, 109, 255, 0.3), inset 0 1px 0 rgba(255,255,255,0.1) !important;
+}
+
+#hud h1 {
+  color: var(--ft-gold) !important;
+  text-shadow: 0 2px 0 var(--ft-gold-dark), 0 4px 8px rgba(0,0,0,0.5) !important;
+  font-weight: 800 !important;
+}
+
+#hud .k { color: #a89ec9 !important; }
+#hud td:last-child { color: var(--ft-cyan) !important; }
+
+#hud .teclas {
+  border-color: rgba(155, 109, 255, 0.3) !important;
+  color: #a89ec9 !important;
+}
+
+#hud .teclas b {
+  background: var(--ft-gold) !important;
+  border-color: var(--ft-gold-dark) !important;
+  color: #5a4012 !important;
+  font-weight: 800 !important;
+}
+
+/* ===== BARRA DE BATALHA ===== */
+#barra {
+  background: var(--ft-bg-panel) !important;
+  border: 3px solid var(--ft-purple) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 0 25px rgba(155, 109, 255, 0.3), 0 10px 40px rgba(0,0,0,0.5) !important;
+}
+
+/* Ficha do Pokemon */
+.ficha {
+  background: rgba(0,0,0,0.2);
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 2px solid rgba(155, 109, 255, 0.3);
+}
+
+.ficha b {
+  color: var(--ft-gold) !important;
+  font-size: 14px !important;
+}
+
+/* HP Bar estilo Fairy Tamer */
+.ficha i {
+  height: 10px !important;
+  background: #1a0a2e !important;
+  border: 2px solid #3d2a6d !important;
+  border-radius: 5px !important;
+  margin-top: 6px !important;
+}
+
+.ficha i b {
+  background: linear-gradient(180deg, #7dff7d 0%, var(--ft-hp-high) 50%, #3db83d 100%) !important;
+  border-radius: 3px !important;
+  box-shadow: 0 0 10px var(--ft-hp-high) !important;
+}
+
+/* ===== BOTÕES DE SKILL ===== */
+#barra button {
+  background: linear-gradient(180deg, var(--ft-gold) 0%, var(--ft-gold-dark) 100%) !important;
+  border: 3px solid var(--ft-gold-dark) !important;
+  border-radius: 12px !important;
+  color: #5a4012 !important;
+  font-weight: 800 !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5) !important;
+  box-shadow: 0 4px 0 #a68520, 0 6px 20px rgba(201, 162, 39, 0.4) !important;
+  padding: 10px 18px !important;
+  transition: all 0.15s ease !important;
+}
+
+#barra button:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 0 #a68520, 0 10px 30px rgba(201, 162, 39, 0.5) !important;
+}
+
+#barra button:active {
+  transform: translateY(2px) !important;
+  box-shadow: 0 2px 0 #a68520 !important;
+}
+
+#barra button b {
+  background: rgba(90, 64, 18, 0.3) !important;
+  border-color: #a68520 !important;
+  color: #5a4012 !important;
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 6px !important;
+}
+
+#barra button.frio {
+  opacity: 0.4 !important;
+  filter: grayscale(0.5) !important;
+  transform: none !important;
+  box-shadow: 0 4px 0 #a68520 !important;
+}
+
+/* ===== LABELS DOS POKEMON ===== */
+.rotulo {
+  background: var(--ft-bg-panel) !important;
+  border: 2px solid var(--ft-purple) !important;
+  border-radius: 10px !important;
+  padding: 6px 12px !important;
+}
+
+.rotulo.mon {
+  background: linear-gradient(180deg, #3d2a6d 0%, #251850 100%) !important;
+  border: 2px solid var(--ft-purple) !important;
+  min-width: 90px !important;
+}
+
+.rotulo.mon i {
+  height: 6px !important;
+  background: #1a0a2e !important;
+  border-radius: 3px !important;
+  margin-top: 5px !important;
+}
+
+.rotulo.mon i b {
+  background: linear-gradient(90deg, #7dff7d, var(--ft-hp-high)) !important;
+  box-shadow: 0 0 6px var(--ft-hp-high) !important;
+}
+
+.rotulo.mon.alvo {
+  border-color: var(--ft-pink) !important;
+  box-shadow: 0 0 15px rgba(255, 107, 157, 0.5) !important;
+}
+
+.rotulo.mon.alvo i b {
+  background: linear-gradient(90deg, #ff7777, var(--ft-hp-low)) !important;
+  box-shadow: 0 0 6px var(--ft-hp-low) !important;
+}
+
+/* ===== TEXTO DE DANO ===== */
+.dano {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  color: var(--ft-gold) !important;
+  text-shadow:
+    0 0 10px var(--ft-orange),
+    0 2px 0 var(--ft-gold-dark),
+    0 4px 10px rgba(0,0,0,0.8) !important;
+}
+
+/* ===== TELA DE LOADING ===== */
+#boot {
+  background: var(--ft-bg-dark) !important;
+  color: #a89ec9 !important;
+}
+
+/* ===== CARDS DE SELEÇÃO ===== */
+#cards {
+  background: radial-gradient(ellipse at 50% 30%, #3d2a6d 0%, var(--ft-bg-dark) 70%) !important;
+}
+
+#cards .caixa {
+  background: var(--ft-bg-panel) !important;
+  border: 4px solid var(--ft-purple) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 0 40px rgba(155, 109, 255, 0.3), 0 20px 60px rgba(0,0,0,0.5) !important;
+}
+
+#cards h1 {
+  color: var(--ft-gold) !important;
+  text-shadow: 0 3px 0 var(--ft-gold-dark), 0 6px 20px rgba(0,0,0,0.5) !important;
+  font-size: 28px !important;
+}
+
+#cards .sub {
+  color: #a89ec9 !important;
+}
+
+#cards h2 {
+  color: var(--ft-purple) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+}
+
+#cards .card {
+  background: var(--ft-bg-panel) !important;
+  border: 3px solid var(--ft-purple) !important;
+  border-radius: 14px !important;
+  transition: all 0.2s ease !important;
+}
+
+#cards .card:hover {
+  transform: translateY(-6px) scale(1.02) !important;
+  border-color: var(--ft-gold) !important;
+  box-shadow: 0 10px 30px rgba(255, 216, 85, 0.3) !important;
+}
+
+#cards .card.on {
+  border-color: var(--ft-gold) !important;
+  box-shadow: 0 0 0 4px rgba(255, 216, 85, 0.3), 0 10px 30px rgba(255, 216, 85, 0.4) !important;
+}
+
+#cards .vitrine {
+  background: radial-gradient(ellipse at 50% 70%, #4a3080 0%, #1a1033 80%) !important;
+}
+
+#cards .card b {
+  color: var(--ft-gold) !important;
+  font-size: 16px !important;
+}
+
+#cards .card span {
+  color: #a89ec9 !important;
+}
+
+#cards .card span.golpes {
+  color: var(--ft-cyan) !important;
+}
+
+#cards #jogar {
+  background: linear-gradient(180deg, var(--ft-gold) 0%, var(--ft-gold-dark) 100%) !important;
+  border: 3px solid var(--ft-gold-dark) !important;
+  border-radius: 14px !important;
+  color: #5a4012 !important;
+  font-weight: 800 !important;
+  font-size: 18px !important;
+  padding: 14px 40px !important;
+  box-shadow: 0 4px 0 #a68520, 0 6px 20px rgba(201, 162, 39, 0.4) !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5) !important;
+}
+
+#cards #jogar:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 6px 0 #a68520, 0 10px 30px rgba(201, 162, 39, 0.5) !important;
+}
+
+#cards .dica {
+  color: #a89ec9 !important;
+}
+
+#cards .dica b {
+  background: var(--ft-gold) !important;
+  border-color: var(--ft-gold-dark) !important;
+  color: #5a4012 !important;
+}
+
+/* ===== EFEITOS EXTRAS ===== */
+@keyframes goldGlow {
+  0%, 100% { box-shadow: 0 0 10px rgba(255, 216, 85, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(255, 216, 85, 0.6); }
+}
+
+.gold-glow {
+  animation: goldGlow 2s ease-in-out infinite;
+}
+
+/* ===== MINIMAPA ===== */
+#minimap {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  width: 200px;
+  background: var(--ft-bg-panel);
+  border: 3px solid var(--ft-purple);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(155, 109, 255, 0.3), 0 8px 30px rgba(0,0,0,0.5);
+  overflow: hidden;
+  z-index: 100;
+}
+
+#minimap-header {
+  background: linear-gradient(180deg, var(--ft-gold) 0%, var(--ft-gold-dark) 100%);
+  padding: 6px 10px;
+  text-align: center;
+  border-bottom: 2px solid var(--ft-gold-dark);
+}
+
+#minimap-area {
+  color: #5a4012;
+  font-weight: 800;
+  font-size: 13px;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+}
+
+#minimap-canvas {
+  display: block;
+  width: 100%;
+  height: 180px;
+  background: #0d0818;
+}
+
+#minimap-coords {
+  background: rgba(0,0,0,0.4);
+  color: var(--ft-cyan);
+  font-size: 11px;
+  font-family: monospace;
+  text-align: center;
+  padding: 4px;
+  border-top: 1px solid rgba(155, 109, 255, 0.3);
+}
+
+/* ===== MENU BAR INFERIOR ===== */
+#menubar {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--ft-bg-panel);
+  border: 3px solid var(--ft-purple);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(155, 109, 255, 0.3), 0 8px 30px rgba(0,0,0,0.5);
+  z-index: 100;
+}
+
+.menu-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(180deg, #3d2a6d 0%, #251850 100%);
+  border: 2px solid var(--ft-purple);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-btn svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--ft-cyan);
+  transition: all 0.15s ease;
+}
+
+.menu-btn:hover {
+  transform: translateY(-4px);
+  border-color: var(--ft-gold);
+  box-shadow: 0 6px 20px rgba(255, 216, 85, 0.3);
+}
+
+.menu-btn:hover svg {
+  fill: var(--ft-gold);
+}
+
+.menu-btn:active {
+  transform: translateY(0);
+}
+
+.menu-btn::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: #a89ec9;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.menu-btn:hover::after {
+  opacity: 1;
+}

@@ -1,0 +1,57 @@
+[
+ {
+  "gen": 1,
+  "dex": 1,
+  "nome": "Bulbasaur",
+  "glb": "pm0001_00",
+  "tipos": [
+   "Grass",
+   "Poison"
+  ]
+ },
+ {
+  "gen": 1,
+  "dex": 4,
+  "nome": "Charmander",
+  "glb": "pm0004_00",
+  "tipos": [
+   "Fire"
+  ]
+ },
+ {
+  "gen": 1,
+  "dex": 7,
+  "nome": "Squirtle",
+  "glb": "pm0007_00",
+  "tipos": [
+   "Water"
+  ]
+ },
+ {
+  "gen": 2,
+  "dex": 152,
+  "nome": "Chikorita",
+  "glb": "pm0152_00",
+  "tipos": [
+   "Grass"
+  ]
+ },
+ {
+  "gen": 2,
+  "dex": 155,
+  "nome": "Cyndaquil",
+  "glb": "pm0155_00",
+  "tipos": [
+   "Fire"
+  ]
+ },
+ {
+  "gen": 2,
+  "dex": 158,
+  "nome": "Totodile",
+  "glb": "pm0158_00",
+  "tipos": [
+   "Water"
+  ]
+ }
+]

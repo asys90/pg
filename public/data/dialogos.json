@@ -1,0 +1,22 @@
+{
+ "oakNome": "Professor Samuel",
+ "portao": [
+  "Espera! Sem um Pokémon, a grama alta da Rota 1 é perigosa.",
+  "Fale com o Professor Oak no laboratório antes de sair de Pallet."
+ ],
+ "portaoBalao": "Fale com o Professor Oak antes de sair!",
+ "portaoChat": "Assistente do professor: fale com o Professor Oak antes de sair de Pallet.",
+ "oakJaEscolheu": [
+  "Você já escolheu {nome}. Cuide bem dele!"
+ ],
+ "oakEntrega": [
+  "{nome} é seu! Cuide bem dele.",
+  "Na Rota 1 tem Pokémon selvagem: derrube um e jogue a bola (F) pra capturar."
+ ],
+ "escolhaTitulo": "Escolhe o Pokémon que desejas.",
+ "escolhaSub": "O Início da Jornada · o escolhido vira o seu parceiro (Lv 5) e entra no time",
+ "jaVenceu": "Você já me venceu!",
+ "introLiga": "Liga Índigo — a final do campeonato",
+ "introRed": "Red: — Ainda não acabou.",
+ "introMega": "Mega Charizard X!"
+}

@@ -1,0 +1,2114 @@
+{
+ "gen": 1,
+ "cenas": [
+  {
+   "id": 1000001,
+   "nome": "Cidade Pallet",
+   "areas": [
+    {
+     "id": 1101,
+     "nome": "Cidade Pallet",
+     "tipo": 1
+    },
+    {
+     "id": 1102,
+     "nome": "Cidade Viridian",
+     "tipo": 1
+    },
+    {
+     "id": 1103,
+     "nome": "Cidade Pewter",
+     "tipo": 1
+    },
+    {
+     "id": 1104,
+     "nome": "Cidade Celeste",
+     "tipo": 1
+    },
+    {
+     "id": 1105,
+     "nome": "Cidade Vermilion",
+     "tipo": 1
+    },
+    {
+     "id": 1106,
+     "nome": "Cidade Lavanda",
+     "tipo": 1
+    },
+    {
+     "id": 1107,
+     "nome": "Cidade Celadon",
+     "tipo": 1
+    },
+    {
+     "id": 1108,
+     "nome": "Cidade Saffron",
+     "tipo": 1
+    },
+    {
+     "id": 1109,
+     "nome": "Cidade Fuchsia",
+     "tipo": 1
+    },
+    {
+     "id": 1110,
+     "nome": "Ilha Cinnabar",
+     "tipo": 1
+    },
+    {
+     "id": 1191,
+     "nome": "Floresta Verde",
+     "tipo": 1
+    },
+    {
+     "id": 1192,
+     "nome": "campo de safári",
+     "tipo": 1
+    },
+    {
+     "id": 1193,
+     "nome": "Centro de Competição",
+     "tipo": 1
+    },
+    {
+     "id": 1201,
+     "nome": "Rota 1",
+     "tipo": 1
+    },
+    {
+     "id": 1202,
+     "nome": "Rota 2",
+     "tipo": 1
+    },
+    {
+     "id": 1203,
+     "nome": "Rota 3",
+     "tipo": 1
+    },
+    {
+     "id": 1204,
+     "nome": "Rota 4",
+     "tipo": 1
+    },
+    {
+     "id": 1205,
+     "nome": "Rota 5",
+     "tipo": 1
+    },
+    {
+     "id": 1206,
+     "nome": "Rota 6",
+     "tipo": 1
+    },
+    {
+     "id": 1207,
+     "nome": "Rota 7",
+     "tipo": 1
+    },
+    {
+     "id": 1208,
+     "nome": "Rota 8",
+     "tipo": 1
+    },
+    {
+     "id": 1209,
+     "nome": "Rota 9",
+     "tipo": 1
+    },
+    {
+     "id": 1210,
+     "nome": "Rota 10",
+     "tipo": 1
+    },
+    {
+     "id": 1211,
+     "nome": "Rota 11",
+     "tipo": 1
+    },
+    {
+     "id": 1212,
+     "nome": "Rota 12",
+     "tipo": 1
+    },
+    {
+     "id": 1213,
+     "nome": "Rota 13",
+     "tipo": 1
+    },
+    {
+     "id": 1214,
+     "nome": "Rota 14",
+     "tipo": 1
+    },
+    {
+     "id": 1215,
+     "nome": "Rota 15",
+     "tipo": 1
+    },
+    {
+     "id": 1216,
+     "nome": "Rota 16",
+     "tipo": 1
+    },
+    {
+     "id": 1217,
+     "nome": "Rota 17",
+     "tipo": 1
+    },
+    {
+     "id": 1218,
+     "nome": "Rota 18",
+     "tipo": 1
+    },
+    {
+     "id": 1219,
+     "nome": "Rota 19",
+     "tipo": 1
+    },
+    {
+     "id": 1220,
+     "nome": "Rota 20",
+     "tipo": 1
+    },
+    {
+     "id": 1221,
+     "nome": "Rota 21",
+     "tipo": 1
+    },
+    {
+     "id": 1222,
+     "nome": "Rota 22",
+     "tipo": 1
+    },
+    {
+     "id": 1223,
+     "nome": "Rota 23",
+     "tipo": 1
+    },
+    {
+     "id": 1224,
+     "nome": "Rota 24",
+     "tipo": 1
+    },
+    {
+     "id": 1225,
+     "nome": "Rota 25",
+     "tipo": 1
+    },
+    {
+     "id": 1299,
+     "nome": "ilhas seaform",
+     "tipo": 1
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 1000002,
+   "nome": "Habitat",
+   "areas": [
+    {
+     "id": 100002,
+     "nome": "Habitat",
+     "tipo": 3
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2100001,
+   "nome": "Torre de Pokémon",
+   "areas": [
+    {
+     "id": 1301,
+     "nome": "Torre de Pokémon Piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 1302,
+     "nome": "Torre de Pokémon Piso 2",
+     "tipo": 2
+    },
+    {
+     "id": 1303,
+     "nome": "Torre de Pokémon Piso 3",
+     "tipo": 2
+    },
+    {
+     "id": 1304,
+     "nome": "Torre de Pokémon Piso 4",
+     "tipo": 2
+    },
+    {
+     "id": 1305,
+     "nome": "Torre de Pokémon Piso 5",
+     "tipo": 2
+    },
+    {
+     "id": 1306,
+     "nome": "Torre de Pokémon Piso 6",
+     "tipo": 2
+    },
+    {
+     "id": 1307,
+     "nome": "Torre de Pokémon Piso 7",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2100002,
+   "nome": "Usina Elétrica Abandonada",
+   "areas": [
+    {
+     "id": 1332,
+     "nome": "Usina Elétrica Abandonada",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2100003,
+   "nome": "Ilhas Seaform",
+   "areas": [
+    {
+     "id": 1310,
+     "nome": "Ilhas Seaform Piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 1311,
+     "nome": "Ilhas Seaform Piso 2",
+     "tipo": 2
+    },
+    {
+     "id": 1312,
+     "nome": "Ilhas Seaform Piso 3",
+     "tipo": 2
+    },
+    {
+     "id": 1313,
+     "nome": "Ilhas Seaform Piso 4",
+     "tipo": 2
+    },
+    {
+     "id": 1314,
+     "nome": "Ilhas Seaform Piso 5",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2100004,
+   "nome": "Caminho dos Campeões",
+   "areas": [
+    {
+     "id": 1315,
+     "nome": "Caminho dos Campeões Piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 1316,
+     "nome": "Caminho dos Campeões Piso 2",
+     "tipo": 2
+    },
+    {
+     "id": 1317,
+     "nome": "Caminho dos Campeões Piso 3",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2100005,
+   "nome": "Esconderijo da Equipe Rocket",
+   "areas": [
+    {
+     "id": 1308,
+     "nome": "Esconderijo da Equipe Rocket Piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 1309,
+     "nome": "Esconderijo da Equipe Rocket Piso 2",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2100006,
+   "nome": "Caverna Celeste",
+   "areas": [
+    {
+     "id": 1318,
+     "nome": "Caverna Celeste Piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 1319,
+     "nome": "Caverna Celeste Piso 2",
+     "tipo": 2
+    },
+    {
+     "id": 1320,
+     "nome": "Caverna Celeste Piso 3",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2100007,
+   "nome": "Monte Lua",
+   "areas": [
+    {
+     "id": 1322,
+     "nome": "Monte Lua Piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 1323,
+     "nome": "Monte Lua Piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 1324,
+     "nome": "Monte Lua Piso 1",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2100008,
+   "nome": "Caverna Diglett",
+   "areas": [
+    {
+     "id": 1321,
+     "nome": "Caverna Diglett",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2100009,
+   "nome": "Companhia Silph",
+   "areas": [
+    {
+     "id": 1325,
+     "nome": "Companhia Silph Piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 1326,
+     "nome": "Companhia Silph Piso 2",
+     "tipo": 2
+    },
+    {
+     "id": 1327,
+     "nome": "Companhia Silph Piso 3",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2100010,
+   "nome": "Edifício de Celadon",
+   "areas": [
+    {
+     "id": 1328,
+     "nome": "Edifício de Celadon Piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 1329,
+     "nome": "Edifício de Celadon Piso 2",
+     "tipo": 2
+    },
+    {
+     "id": 1330,
+     "nome": "Edifício de Celadon Piso 3",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2100011,
+   "nome": "Campo de Safári (Kanto)",
+   "areas": [
+    {
+     "id": 3101,
+     "nome": "Campo de Safári (Kanto)",
+     "tipo": 1
+    },
+    {
+     "id": 3104,
+     "nome": "Campo de Safári 1",
+     "tipo": 1
+    },
+    {
+     "id": 3111,
+     "nome": "Campo de Safári 1",
+     "tipo": 1
+    },
+    {
+     "id": 3112,
+     "nome": "Campo de Safári 2",
+     "tipo": 1
+    },
+    {
+     "id": 3113,
+     "nome": "Campo de Safári 3",
+     "tipo": 1
+    },
+    {
+     "id": 3114,
+     "nome": "Campo de Safári 1",
+     "tipo": 1
+    },
+    {
+     "id": 100001,
+     "nome": "área 100001",
+     "tipo": 9998
+    }
+   ],
+   "objeto": false
+  },
+  {
+   "id": 2100012,
+   "nome": "Túnel de pedra",
+   "areas": [
+    {
+     "id": 1333,
+     "nome": "Túnel de pedra piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 1334,
+     "nome": "Túnel de pedra piso 2",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2100013,
+   "nome": "Casa de Pokémon",
+   "areas": [
+    {
+     "id": 1335,
+     "nome": "Casa de Pokémon",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2500001,
+   "nome": "Ilha Um",
+   "areas": [
+    {
+     "id": 2249,
+     "nome": "Ilha Um",
+     "tipo": 1
+    },
+    {
+     "id": 2250,
+     "nome": "Ilha Dois",
+     "tipo": 1
+    },
+    {
+     "id": 2251,
+     "nome": "Ilha Três",
+     "tipo": 1
+    },
+    {
+     "id": 2252,
+     "nome": "Ilha Quatro",
+     "tipo": 1
+    },
+    {
+     "id": 2253,
+     "nome": "Ilha Cinco",
+     "tipo": 1
+    },
+    {
+     "id": 2254,
+     "nome": "Ilha Seis",
+     "tipo": 1
+    },
+    {
+     "id": 2255,
+     "nome": "Ilha Sete",
+     "tipo": 1
+    },
+    {
+     "id": 2265,
+     "nome": "Cabo da Ponta",
+     "tipo": 1
+    },
+    {
+     "id": 2266,
+     "nome": "Porto",
+     "tipo": 1
+    },
+    {
+     "id": 2267,
+     "nome": "Ponte Suspensa",
+     "tipo": 1
+    },
+    {
+     "id": 2268,
+     "nome": "Floresta dos Berries",
+     "tipo": 1
+    },
+    {
+     "id": 2270,
+     "nome": "Lugar Vazio",
+     "tipo": 1
+    },
+    {
+     "id": 2271,
+     "nome": "Torre Memorial",
+     "tipo": 1
+    },
+    {
+     "id": 2272,
+     "nome": "Labirinto das Águas",
+     "tipo": 1
+    },
+    {
+     "id": 2273,
+     "nome": "Resort Luxuoso",
+     "tipo": 1
+    },
+    {
+     "id": 2275,
+     "nome": "Caminho das águas",
+     "tipo": 1
+    },
+    {
+     "id": 2276,
+     "nome": "Vale das Ruínas",
+     "tipo": 1
+    },
+    {
+     "id": 2277,
+     "nome": "Caverna de ponto Piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 2278,
+     "nome": "Caverna de ponto Piso -1",
+     "tipo": 2
+    },
+    {
+     "id": 2279,
+     "nome": "Caverna de ponto Sala Secreta",
+     "tipo": 2
+    },
+    {
+     "id": 2280,
+     "nome": "Caminho Verde",
+     "tipo": 1
+    },
+    {
+     "id": 2281,
+     "nome": "Bosque Marcado",
+     "tipo": 1
+    },
+    {
+     "id": 2282,
+     "nome": "Ilha Solitária",
+     "tipo": 1
+    },
+    {
+     "id": 2284,
+     "nome": "Entrada do cânion",
+     "tipo": 1
+    },
+    {
+     "id": 2285,
+     "nome": "Sevault Canyon",
+     "tipo": 1
+    },
+    {
+     "id": 2287,
+     "nome": "Rocha do umbigo",
+     "tipo": 1
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2520001,
+   "nome": "Monte das Brasas-Caverna do Meio da Montanha",
+   "areas": [
+    {
+     "id": 2263,
+     "nome": "Monte das Brasas-Caverna do Meio da Montanha",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2520002,
+   "nome": "Monte das Brasas-Caverna Direita",
+   "areas": [
+    {
+     "id": 2260,
+     "nome": "Monte das Brasas-Caverna Direita Piso -1",
+     "tipo": 2
+    },
+    {
+     "id": 2261,
+     "nome": "Monte das Brasas-Caverna Direita Piso -2",
+     "tipo": 2
+    },
+    {
+     "id": 2262,
+     "nome": "Monte das Brasas-Sala Secreta da Caverna Direita",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2520003,
+   "nome": "Fonte Termal do monte das Brasas",
+   "areas": [
+    {
+     "id": 2258,
+     "nome": "Fonte Termal do monte das Brasas",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2520004,
+   "nome": "Caverna Glacial",
+   "areas": [
+    {
+     "id": 2269,
+     "nome": "Caverna Glacial",
+     "tipo": 1
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2520005,
+   "nome": "Caverna da Alteração",
+   "areas": [
+    {
+     "id": 2283,
+     "nome": "Caverna da Alteração",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2520006,
+   "nome": "Ruínas de Tanoby",
+   "areas": [
+    {
+     "id": 2286,
+     "nome": "Ruínas de Tanoby",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2520007,
+   "nome": "Caverna perdida",
+   "areas": [
+    {
+     "id": 2274,
+     "nome": "Caverna perdida",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2540001,
+   "nome": "Ilha um-Centro de Pokémon",
+   "areas": [
+    {
+     "id": 2289,
+     "nome": "Ilha um-Centro de Pokémon",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 2540002,
+   "nome": "Arzamento de Equipe Rocket",
+   "areas": [
+    {
+     "id": 2288,
+     "nome": "Arzamento de Equipe Rocket",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4110001,
+   "nome": "Viridian-Centro de Pokémon",
+   "areas": [
+    {
+     "id": 1401,
+     "nome": "Viridian-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 1402,
+     "nome": "Pewter-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 1403,
+     "nome": "Celeste-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 1404,
+     "nome": "Vermilion-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 1405,
+     "nome": "Lavanda-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 1406,
+     "nome": "Celadon-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 1407,
+     "nome": "Saffron-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 1408,
+     "nome": "Fuchsia-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 1409,
+     "nome": "Cinnabar-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 1410,
+     "nome": "Rota 4-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 1411,
+     "nome": "Rota 10-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 2290,
+     "nome": "Ilha dois-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 2291,
+     "nome": "Ilha três-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 2292,
+     "nome": "Ilha Quatro-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 2293,
+     "nome": "Ilha Cinco-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 2294,
+     "nome": "Ilha seis-Centro de Pokémon",
+     "tipo": 2
+    },
+    {
+     "id": 2295,
+     "nome": "Ilha sete-Centro de Pokémon",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4110002,
+   "nome": "Laboratório do Professor Oak",
+   "areas": [
+    {
+     "id": 1801,
+     "nome": "Laboratório do Professor Oak",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4110003,
+   "nome": "Bicicleta milagrosa",
+   "areas": [
+    {
+     "id": 1802,
+     "nome": "Bicicleta milagrosa",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4110004,
+   "nome": "Escola de Treinadores",
+   "areas": [
+    {
+     "id": 1803,
+     "nome": "Escola de Treinadores",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4110006,
+   "nome": "Liga Índigo-Centro de Pokémon",
+   "areas": [
+    {
+     "id": 1412,
+     "nome": "Liga Índigo-Centro de Pokémon",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4110007,
+   "nome": "Loja da Cidade Viridian",
+   "areas": [
+    {
+     "id": 1501,
+     "nome": "Loja da Cidade Viridian",
+     "tipo": 2
+    },
+    {
+     "id": 1502,
+     "nome": "Loja da Cidade Pewter",
+     "tipo": 2
+    },
+    {
+     "id": 1503,
+     "nome": "Loja da Cidade Celeste",
+     "tipo": 2
+    },
+    {
+     "id": 1504,
+     "nome": "Loja da Cidade Vermilion",
+     "tipo": 2
+    },
+    {
+     "id": 1505,
+     "nome": "Loja da Cidade Lavanda",
+     "tipo": 2
+    },
+    {
+     "id": 1507,
+     "nome": "Loja de da Cidade Saffron",
+     "tipo": 2
+    },
+    {
+     "id": 1508,
+     "nome": "Loja da Cidade Fuchsia",
+     "tipo": 2
+    },
+    {
+     "id": 1509,
+     "nome": "Loja da Cidade Cinnabar",
+     "tipo": 2
+    },
+    {
+     "id": 2296,
+     "nome": "Ilha três-Loja de Amizade",
+     "tipo": 2
+    },
+    {
+     "id": 2297,
+     "nome": "Ilha Quatro-Loja de Amizade",
+     "tipo": 2
+    },
+    {
+     "id": 2298,
+     "nome": "Ilha seis-Loja de Amizade",
+     "tipo": 2
+    },
+    {
+     "id": 2299,
+     "nome": "Ilha sete-Loja de Amizade",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4110008,
+   "nome": "A casa do personagem principal",
+   "areas": [
+    {
+     "id": 1804,
+     "nome": "A casa do personagem principal Piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 1805,
+     "nome": "A casa do personagem principal Piso 2",
+     "tipo": 2
+    },
+    {
+     "id": 1823,
+     "nome": "Pewter-Casa do Brock",
+     "tipo": 2
+    },
+    {
+     "id": 1827,
+     "nome": "Saffron-Casa da moça Piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 18231,
+     "nome": "Pewter-Casa do Brock",
+     "tipo": 2
+    },
+    {
+     "id": 18271,
+     "nome": "Saffron-Casa da moça Piso 2",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4110009,
+   "nome": "Cidade Pallet-Casa do Gary Oak",
+   "areas": [
+    {
+     "id": 1806,
+     "nome": "Cidade Pallet-Casa do Gary Oak",
+     "tipo": 2
+    },
+    {
+     "id": 1807,
+     "nome": "Rota 2-Instituto de Florestas",
+     "tipo": 2
+    },
+    {
+     "id": 1813,
+     "nome": "Rota 5 - Casa central da Rota 5",
+     "tipo": 2
+    },
+    {
+     "id": 1814,
+     "nome": "Rota 16-Casa",
+     "tipo": 2
+    },
+    {
+     "id": 1816,
+     "nome": "Viridian-Casa da Velha",
+     "tipo": 2
+    },
+    {
+     "id": 1824,
+     "nome": "Celeste-Casa do Professor",
+     "tipo": 2
+    },
+    {
+     "id": 1828,
+     "nome": "Fuchsia-Quarto 2 Casa do Bill",
+     "tipo": 2
+    },
+    {
+     "id": 1831,
+     "nome": "Celeste-Casa da Jenny",
+     "tipo": 2
+    },
+    {
+     "id": 1850,
+     "nome": "Campo de Safári Casa 5",
+     "tipo": 2
+    }
+   ],
+   "objeto": false
+  },
+  {
+   "id": 4110010,
+   "nome": "Lavanda-Casa do Avaliador",
+   "areas": [
+    {
+     "id": 1811,
+     "nome": "Lavanda-Casa do Avaliador",
+     "tipo": 2
+    },
+    {
+     "id": 1815,
+     "nome": "Fuchsia-Casa do diretor",
+     "tipo": 2
+    },
+    {
+     "id": 1817,
+     "nome": "Celeste-Quarto pequeno comum",
+     "tipo": 2
+    },
+    {
+     "id": 1818,
+     "nome": "Vermilion-Quarto 1",
+     "tipo": 2
+    },
+    {
+     "id": 1821,
+     "nome": "Fuchsia-Quarto 1",
+     "tipo": 2
+    },
+    {
+     "id": 1822,
+     "nome": "Saffron-Casa do Tio Lutador",
+     "tipo": 2
+    },
+    {
+     "id": 1830,
+     "nome": "Vermilion-Quarto 1",
+     "tipo": 2
+    }
+   ],
+   "objeto": false
+  },
+  {
+   "id": 4110011,
+   "nome": "Vermilion-Quarto 3",
+   "areas": [
+    {
+     "id": 1810,
+     "nome": "Vermilion-Quarto 3",
+     "tipo": 2
+    },
+    {
+     "id": 1812,
+     "nome": "Celadon-Quarto 1",
+     "tipo": 2
+    },
+    {
+     "id": 1846,
+     "nome": "Campo de Safári Casa 1",
+     "tipo": 2
+    },
+    {
+     "id": 1847,
+     "nome": "Campo de Safári Casa 2",
+     "tipo": 2
+    },
+    {
+     "id": 1848,
+     "nome": "Campo de Safári Casa 3",
+     "tipo": 2
+    },
+    {
+     "id": 1849,
+     "nome": "Campo de Safári Casa 4",
+     "tipo": 2
+    }
+   ],
+   "objeto": false
+  },
+  {
+   "id": 4110012,
+   "nome": "Pewter-Casa do Ata",
+   "areas": [
+    {
+     "id": 1808,
+     "nome": "Pewter-Casa do Ata",
+     "tipo": 2
+    },
+    {
+     "id": 1825,
+     "nome": "Lavanda- Casa do Velho",
+     "tipo": 2
+    },
+    {
+     "id": 1834,
+     "nome": "Rota 12-Casa",
+     "tipo": 2
+    }
+   ],
+   "objeto": false
+  },
+  {
+   "id": 4110013,
+   "nome": "Celeste-Tio de medalhas",
+   "areas": [
+    {
+     "id": 1809,
+     "nome": "Celeste-Tio de medalhas",
+     "tipo": 2
+    },
+    {
+     "id": 1832,
+     "nome": "Cinnabar-Edifício Abandonado",
+     "tipo": 2
+    },
+    {
+     "id": 1833,
+     "nome": "Fuchsia-Casa do Pescador",
+     "tipo": 2
+    },
+    {
+     "id": 1838,
+     "nome": "Celeste-Casa Roubada",
+     "tipo": 2
+    }
+   ],
+   "objeto": false
+  },
+  {
+   "id": 4110014,
+   "nome": "Loja de departamentos",
+   "areas": [
+    {
+     "id": 1506,
+     "nome": "Loja de departamentos Piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 1588,
+     "nome": "Loja de departamentos Piso 2",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4110015,
+   "nome": "Lavanda-Casa dos Espíritos",
+   "areas": [
+    {
+     "id": 1839,
+     "nome": "Lavanda-Casa dos Espíritos",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4110016,
+   "nome": "Celadon-Quarto 3",
+   "areas": [
+    {
+     "id": 1819,
+     "nome": "Celadon-Quarto 3",
+     "tipo": 2
+    },
+    {
+     "id": 1820,
+     "nome": "Saffron-Clube de treinadores",
+     "tipo": 2
+    },
+    {
+     "id": 1826,
+     "nome": "Celadon-Quarto 2",
+     "tipo": 2
+    },
+    {
+     "id": 1829,
+     "nome": "Fuchsia-Sala de descanso do Diretor",
+     "tipo": 2
+    },
+    {
+     "id": 1840,
+     "nome": "Clube dos Entusiastas",
+     "tipo": 2
+    }
+   ],
+   "objeto": false
+  },
+  {
+   "id": 4110017,
+   "nome": "Pewter-Museu de Ciências",
+   "areas": [
+    {
+     "id": 1841,
+     "nome": "Pewter-Museu de Ciências Piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 1842,
+     "nome": "Pewter-Museu de Ciências Piso 2",
+     "tipo": 2
+    },
+    {
+     "id": 1851,
+     "nome": "Pewter-Museu de Ciências Piso 1",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4110018,
+   "nome": "Salão de Videogames",
+   "areas": [
+    {
+     "id": 1843,
+     "nome": "Salão de Videogames",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4110019,
+   "nome": "Laboratório Cinnabar",
+   "areas": [
+    {
+     "id": 1844,
+     "nome": "Laboratório Cinnabar",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4110020,
+   "nome": "Cabana do Cabo",
+   "areas": [
+    {
+     "id": 1845,
+     "nome": "Cabana do Cabo",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120001,
+   "nome": "Ginásio-Pewter",
+   "areas": [
+    {
+     "id": 1601,
+     "nome": "Ginásio-Pewter",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120002,
+   "nome": "Ginásio - Celeste",
+   "areas": [
+    {
+     "id": 1602,
+     "nome": "Ginásio - Celeste",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120003,
+   "nome": "Ginásio-Vermilion 1",
+   "areas": [
+    {
+     "id": 1603,
+     "nome": "Ginásio-Vermilion 1",
+     "tipo": 2
+    },
+    {
+     "id": 1604,
+     "nome": "Ginásio-Vermilion 2",
+     "tipo": 2
+    },
+    {
+     "id": 1605,
+     "nome": "Ginásio-Vermilion 3",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120004,
+   "nome": "Celadon-Ginásio",
+   "areas": [
+    {
+     "id": 1606,
+     "nome": "Celadon-Ginásio",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120005,
+   "nome": "Fuchsia-Ginásio 1",
+   "areas": [
+    {
+     "id": 1607,
+     "nome": "Fuchsia-Ginásio 1",
+     "tipo": 2
+    },
+    {
+     "id": 1608,
+     "nome": "Fuchsia-Ginásio 2",
+     "tipo": 2
+    },
+    {
+     "id": 1609,
+     "nome": "Fuchsia-Ginásio 3",
+     "tipo": 2
+    },
+    {
+     "id": 1610,
+     "nome": "Fuchsia-Ginásio 4",
+     "tipo": 2
+    },
+    {
+     "id": 1611,
+     "nome": "Fuchsia-Ginásio 5",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120006,
+   "nome": "Saffron-Ginásio",
+   "areas": [
+    {
+     "id": 1612,
+     "nome": "Saffron-Ginásio",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120007,
+   "nome": "Cinnabar-Ginásio",
+   "areas": [
+    {
+     "id": 1613,
+     "nome": "Cinnabar-Ginásio",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120008,
+   "nome": "Viridian-Ginásio",
+   "areas": [
+    {
+     "id": 1614,
+     "nome": "Viridian-Ginásio",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120009,
+   "nome": "Quarto da Lorelei",
+   "areas": [
+    {
+     "id": 1701,
+     "nome": "Quarto da Lorelei",
+     "tipo": 2
+    },
+    {
+     "id": 1707,
+     "nome": "Quarto da Lorelei",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120010,
+   "nome": "Quarto do Bruno",
+   "areas": [
+    {
+     "id": 1702,
+     "nome": "Quarto do Bruno",
+     "tipo": 2
+    },
+    {
+     "id": 1708,
+     "nome": "Quarto do Bruno",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120011,
+   "nome": "Quarto da Agatha",
+   "areas": [
+    {
+     "id": 1703,
+     "nome": "Quarto da Agatha",
+     "tipo": 2
+    },
+    {
+     "id": 1709,
+     "nome": "Quarto da Agatha",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120012,
+   "nome": "Quarto do Lance",
+   "areas": [
+    {
+     "id": 1704,
+     "nome": "Quarto do Lance",
+     "tipo": 2
+    },
+    {
+     "id": 1710,
+     "nome": "Quarto do Lance",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120013,
+   "nome": "Quarto do Campeão",
+   "areas": [
+    {
+     "id": 1705,
+     "nome": "Quarto do Campeão",
+     "tipo": 2
+    },
+    {
+     "id": 1711,
+     "nome": "Quarto do Campeão",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120014,
+   "nome": "Ginásio lutador",
+   "areas": [
+    {
+     "id": 1331,
+     "nome": "Ginásio lutador",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120015,
+   "nome": "Fuchsia-Ginásio",
+   "areas": [
+    {
+     "id": 1618,
+     "nome": "Fuchsia-Ginásio",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120016,
+   "nome": "Ginásio-Vermilion",
+   "areas": [
+    {
+     "id": 1616,
+     "nome": "Ginásio-Vermilion",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120017,
+   "nome": "Ginásio-Pewter",
+   "areas": [
+    {
+     "id": 1615,
+     "nome": "Ginásio-Pewter",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120018,
+   "nome": "centro de conexões",
+   "areas": [
+    {
+     "id": 1706,
+     "nome": "centro de conexões",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120019,
+   "nome": "Celadon-Ginásio",
+   "areas": [
+    {
+     "id": 1617,
+     "nome": "Celadon-Ginásio",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4120020,
+   "nome": "Santa Anne",
+   "areas": [
+    {
+     "id": 1336,
+     "nome": "Santa Anne",
+     "tipo": 2
+    },
+    {
+     "id": 1337,
+     "nome": "Santa Anne Piso 1",
+     "tipo": 2
+    },
+    {
+     "id": 1338,
+     "nome": "Santa Anne Piso -1",
+     "tipo": 2
+    },
+    {
+     "id": 1339,
+     "nome": "Santa Anne Piso 2",
+     "tipo": 2
+    },
+    {
+     "id": 1340,
+     "nome": "cabine do capitão de Santa Anne",
+     "tipo": 2
+    },
+    {
+     "id": 1341,
+     "nome": "corredor do convés de Santa Anne",
+     "tipo": 2
+    },
+    {
+     "id": 1342,
+     "nome": "cozinha de de Santa Anne",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4220010,
+   "nome": "Caminho de Provas",
+   "areas": [
+    {
+     "id": 3201,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3202,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3203,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3204,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3205,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3206,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3207,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3208,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3209,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3210,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3211,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3212,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3213,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3214,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3215,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3216,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3217,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    },
+    {
+     "id": 3218,
+     "nome": "Caminho de Provas",
+     "tipo": 3
+    }
+   ],
+   "objeto": false
+  },
+  {
+   "id": 4220013,
+   "nome": "parque natural",
+   "areas": [
+    {
+     "id": 3121,
+     "nome": "parque natural",
+     "tipo": 1
+    },
+    {
+     "id": 3132,
+     "nome": "Pomar",
+     "tipo": 3
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4400007,
+   "nome": "Terra dos Tesouros",
+   "areas": [
+    {
+     "id": 47002,
+     "nome": "Terra dos Tesouros",
+     "tipo": 2
+    }
+   ],
+   "objeto": false
+  },
+  {
+   "id": 4400008,
+   "nome": "Campo de Batalha Gigantamax",
+   "areas": [
+    {
+     "id": 47001,
+     "nome": "Campo de Batalha Gigantamax",
+     "tipo": 2
+    },
+    {
+     "id": 47003,
+     "nome": "área 47003",
+     "tipo": 2
+    },
+    {
+     "id": 47004,
+     "nome": "área 47004",
+     "tipo": 2
+    },
+    {
+     "id": 47005,
+     "nome": "área 47005",
+     "tipo": 2
+    },
+    {
+     "id": 47006,
+     "nome": "área 47006",
+     "tipo": 2
+    },
+    {
+     "id": 47007,
+     "nome": "área 47007",
+     "tipo": 2
+    },
+    {
+     "id": 47008,
+     "nome": "área 47008",
+     "tipo": 2
+    },
+    {
+     "id": 47009,
+     "nome": "área 47009",
+     "tipo": 2
+    },
+    {
+     "id": 47010,
+     "nome": "área 47010",
+     "tipo": 2
+    },
+    {
+     "id": 47011,
+     "nome": "área 47011",
+     "tipo": 2
+    },
+    {
+     "id": 47012,
+     "nome": "área 47012",
+     "tipo": 2
+    },
+    {
+     "id": 47013,
+     "nome": "área 47013",
+     "tipo": 2
+    },
+    {
+     "id": 47014,
+     "nome": "área 47014",
+     "tipo": 2
+    },
+    {
+     "id": 47015,
+     "nome": "área 47015",
+     "tipo": 2
+    },
+    {
+     "id": 47016,
+     "nome": "área 47016",
+     "tipo": 2
+    },
+    {
+     "id": 47017,
+     "nome": "área 47017",
+     "tipo": 2
+    },
+    {
+     "id": 47018,
+     "nome": "área 47018",
+     "tipo": 2
+    },
+    {
+     "id": 47019,
+     "nome": "área 47019",
+     "tipo": 2
+    },
+    {
+     "id": 47020,
+     "nome": "área 47020",
+     "tipo": 2
+    },
+    {
+     "id": 47021,
+     "nome": "área 47021",
+     "tipo": 2
+    },
+    {
+     "id": 47022,
+     "nome": "área 47022",
+     "tipo": 2
+    },
+    {
+     "id": 47023,
+     "nome": "área 47023",
+     "tipo": 2
+    },
+    {
+     "id": 47024,
+     "nome": "área 47024",
+     "tipo": 2
+    },
+    {
+     "id": 47025,
+     "nome": "área 47025",
+     "tipo": 2
+    },
+    {
+     "id": 47026,
+     "nome": "área 47026",
+     "tipo": 2
+    },
+    {
+     "id": 47027,
+     "nome": "área 47027",
+     "tipo": 2
+    },
+    {
+     "id": 47028,
+     "nome": "área 47028",
+     "tipo": 2
+    },
+    {
+     "id": 47029,
+     "nome": "área 47029",
+     "tipo": 2
+    },
+    {
+     "id": 47030,
+     "nome": "área 47030",
+     "tipo": 2
+    },
+    {
+     "id": 47031,
+     "nome": "área 47031",
+     "tipo": 2
+    },
+    {
+     "id": 47032,
+     "nome": "área 47032",
+     "tipo": 2
+    },
+    {
+     "id": 47033,
+     "nome": "área 47033",
+     "tipo": 2
+    },
+    {
+     "id": 47034,
+     "nome": "área 47034",
+     "tipo": 2
+    }
+   ],
+   "objeto": false
+  },
+  {
+   "id": 4400014,
+   "nome": "Território das Bestas Divinas",
+   "areas": [
+    {
+     "id": 47101,
+     "nome": "Território das Bestas Divinas",
+     "tipo": 2
+    }
+   ],
+   "objeto": true
+  },
+  {
+   "id": 4440001,
+   "nome": "Campo de Batalha da Comunidade",
+   "areas": [
+    {
+     "id": 42001,
+     "nome": "Campo de Batalha da Comunidade",
+     "tipo": 3
+    }
+   ],
+   "objeto": false
+  },
+  {
+   "id": 4440037,
+   "nome": "Caminho da Expedição Dificuldade fácil-1",
+   "areas": [
+    {
+     "id": 47201,
+     "nome": "Caminho da Expedição Dificuldade fácil-1",
+     "tipo": 3
+    },
+    {
+     "id": 47202,
+     "nome": "Caminho da Expedição Dificuldade fácil-2",
+     "tipo": 3
+    },
+    {
+     "id": 47203,
+     "nome": "Caminho da Expedição Dificuldade fácil-3",
+     "tipo": 3
+    },
+    {
+     "id": 47204,
+     "nome": "Caminho da Expedição Dificuldade fácil-4",
+     "tipo": 3
+    },
+    {
+     "id": 47205,
+     "nome": "Caminho da Expedição Dificuldade fácil-5",
+     "tipo": 3
+    },
+    {
+     "id": 47206,
+     "nome": "Caminho da Expedição Dificuldade fácil-6",
+     "tipo": 3
+    },
+    {
+     "id": 47207,
+     "nome": "Caminho da Expedição Dificuldade fácil-7",
+     "tipo": 3
+    },
+    {
+     "id": 47208,
+     "nome": "Caminho da Expedição Dificuldade fácil-8",
+     "tipo": 3
+    },
+    {
+     "id": 47209,
+     "nome": "Caminho da Expedição Dificuldade fácil-9",
+     "tipo": 3
+    },
+    {
+     "id": 47210,
+     "nome": "Caminho de Expedição Dificuldade Dificuldade -1",
+     "tipo": 3
+    },
+    {
+     "id": 47211,
+     "nome": "Caminho de Expedição Dificuldade Dificuldade -2",
+     "tipo": 3
+    },
+    {
+     "id": 47212,
+     "nome": "Caminho de Expedição Dificuldade Dificuldade -3",
+     "tipo": 3
+    },
+    {
+     "id": 47213,
+     "nome": "Caminho de Expedição Dificuldade Dificuldade -4",
+     "tipo": 3
+    },
+    {
+     "id": 47214,
+     "nome": "Caminho de Expedição Dificuldade Dificuldade -5",
+     "tipo": 3
+    },
+    {
+     "id": 47215,
+     "nome": "Caminho de Expedição Dificuldade Dificuldade -6",
+     "tipo": 3
+    },
+    {
+     "id": 47216,
+     "nome": "Caminho de Expedição Dificuldade Dificuldade -7",
+     "tipo": 3
+    },
+    {
+     "id": 47217,
+     "nome": "Caminho de Expedição Dificuldade Dificuldade -8",
+     "tipo": 3
+    },
+    {
+     "id": 47218,
+     "nome": "Caminho de Expedição Dificuldade Dificuldade -9",
+     "tipo": 3
+    },
+    {
+     "id": 47219,
+     "nome": "Caminho de Expedição Dificuldade Mestre -1",
+     "tipo": 3
+    },
+    {
+     "id": 47220,
+     "nome": "Caminho de Expedição Dificuldade Mestre -2",
+     "tipo": 3
+    },
+    {
+     "id": 47221,
+     "nome": "Caminho de Expedição Dificuldade Mestre -3",
+     "tipo": 3
+    },
+    {
+     "id": 47222,
+     "nome": "Caminho de Expedição Dificuldade Mestre -4",
+     "tipo": 3
+    },
+    {
+     "id": 47223,
+     "nome": "Caminho de Expedição Dificuldade Mestre -5",
+     "tipo": 3
+    },
+    {
+     "id": 47224,
+     "nome": "Caminho de Expedição Dificuldade Mestre -6",
+     "tipo": 3
+    },
+    {
+     "id": 47225,
+     "nome": "Caminho de Expedição Dificuldade Mestre -7",
+     "tipo": 3
+    },
+    {
+     "id": 47226,
+     "nome": "Caminho de Expedição Dificuldade Mestre -8",
+     "tipo": 3
+    },
+    {
+     "id": 47227,
+     "nome": "Caminho de Expedição Dificuldade Mestre -9",
+     "tipo": 3
+    }
+   ],
+   "objeto": false
+  },
+  {
+   "id": 4700001,
+   "nome": "Casa",
+   "areas": [
+    {
+     "id": 3131,
+     "nome": "Casa",
+     "tipo": 3
+    }
+   ],
+   "objeto": true
+  }
+ ]
+}

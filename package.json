@@ -1,0 +1,19 @@
+{
+  "name": "pokemon-3d-client",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "servidor": "node servidor.mjs",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "fairygui-three": "^1.0.1",
+    "three": "^0.185.0",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

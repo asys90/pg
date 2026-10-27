@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Editor de Cenário 3D — Pokemon 3D Base</title>
+<script type="importmap">
+{ "imports": {
+  "three": "/vendor/three/build/three.module.js",
+  "three/addons/": "/vendor/three/examples/jsm/"
+} }
+</script>
+<style>
+:root{ --bg:#0e1117; --painel:#161a23; --painel2:#1d2230; --borda:#2a3142; --texto:#e6e9f0; --fraco:#8b93a7; --acento:#ffcf3a; --ok:#3ecf8e; --erro:#ff5d5d; --azul:#4da3ff; }
+*{ box-sizing:border-box; }
+html,body{ margin:0; height:100%; background:var(--bg); color:var(--texto); font:14px/1.4 system-ui,"Segoe UI",Roboto,sans-serif; overflow:hidden; }
+button,input,select{ font:inherit; color:inherit; }
+button{ background:var(--painel2); border:1px solid var(--borda); border-radius:6px; padding:6px 11px; cursor:pointer; }
+button:hover{ border-color:#3d4660; }
+button.prim{ background:var(--acento); color:#1a1405; border-color:var(--acento); font-weight:600; }
+button.on{ background:#2b3550; border-color:var(--azul); }
+button.perigo{ color:var(--erro); }
+input[type=number],select{ background:#0f131b; border:1px solid var(--borda); border-radius:6px; padding:5px 7px; width:100%; }
+a{ color:var(--azul); text-decoration:none; }
+.fraco{ color:var(--fraco); }
+[hidden]{ display:none !important; }
+
+#app{ display:grid; grid-template-rows:48px 1fr; height:100%; }
+header{ display:flex; align-items:center; gap:14px; padding:0 16px; background:var(--painel); border-bottom:1px solid var(--borda); z-index:2; }
+header .marca{ font-weight:700; color:var(--acento); }
+header .dir{ margin-left:auto; display:flex; gap:10px; align-items:center; }
+header .sujo{ color:var(--acento); font-size:13px; }
+.corpo{ display:grid; grid-template-columns:1fr 320px; min-height:0; }
+.tela{ position:relative; background:#0a0d12; }
+.tela canvas{ display:block; }
+.hud{ position:absolute; left:12px; bottom:12px; background:rgba(10,13,18,.82); border:1px solid var(--borda); border-radius:6px; padding:6px 10px; font-size:12px; pointer-events:none; }
+.hud b{ color:var(--acento); }
+.ferramentas{ position:absolute; left:12px; top:12px; display:flex; gap:6px; }
+.lado{ background:var(--painel); border-left:1px solid var(--borda); overflow:auto; padding:12px; display:grid; gap:14px; align-content:start; }
+.caixa{ background:var(--painel2); border:1px solid var(--borda); border-radius:10px; padding:12px; }
+.caixa h3{ margin:0 0 10px; font-size:14px; }
+.paleta{ display:grid; grid-template-columns:1fr 1fr; gap:5px; max-height:280px; overflow:auto; }
+.paleta button{ text-align:left; font-size:12px; padding:5px 7px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.paleta button.on{ outline:1px solid var(--azul); }
+.prop{ display:grid; grid-template-columns:auto 1fr 1fr 1fr; gap:6px; align-items:center; }
+.prop label{ font-size:12px; color:var(--fraco); }
+.acoes{ display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+.busca{ width:100%; background:#0f131b; border:1px solid var(--borda); border-radius:6px; padding:6px 8px; margin-bottom:8px; }
+
+#carregando{ position:absolute; inset:0; display:grid; place-items:center; background:var(--bg); z-index:3; font-size:15px; color:var(--fraco); }
+#toast{ position:fixed; right:16px; top:60px; display:grid; gap:8px; z-index:9; }
+#toast div{ background:var(--painel2); border:1px solid var(--borda); border-left:4px solid var(--ok); border-radius:8px; padding:9px 13px; max-width:340px; }
+#toast div.erro{ border-left-color:var(--erro); }
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <span class="marca">Pokemon 3D Base</span><span class="fraco">Editor de Cenário 3D</span>
+    <label class="fraco">Mapa <select id="sel-mapa" style="width:auto"></select></label>
+    <div class="dir">
+      <a href="/admin">← Painel</a>
+      <span class="sujo" id="sujo" hidden>● não salvo</span>
+      <button id="b-recarregar">Descartar</button>
+      <button class="prim" id="b-salvar">Salvar cenário</button>
+    </div>
+  </header>
+  <div class="corpo">
+    <div class="tela" id="tela">
+      <div class="ferramentas">
+        <button id="t-sel" class="on" title="Selecionar/mover (S)">🖱️ Selecionar</button>
+        <button id="t-add" title="Colocar peça (A): escolha na paleta e clique no chão">➕ Colocar</button>
+        <button id="t-foco" title="Enquadrar tudo (F)">🎯 Enquadrar</button>
+        <label class="chk" style="display:flex;align-items:center;gap:5px;background:rgba(10,13,18,.82);border:1px solid var(--borda);border-radius:6px;padding:0 8px"><input type="checkbox" id="t-snap"> snap 0,5m</label>
+      </div>
+      <div class="hud" id="hud">—</div>
+      <div id="carregando">carregando o cenário…</div>
+    </div>
+    <div class="lado">
+      <div class="caixa">
+        <h3>Peça selecionada</h3>
+        <div id="sem-sel" class="fraco">Clique numa peça do cenário pra selecionar. Setas do gizmo movem; <b>Del</b> exclui.</div>
+        <div id="com-sel" hidden>
+          <div style="margin-bottom:8px"><b id="s-nome"></b></div>
+          <div class="prop">
+            <label>Pos</label>
+            <input type="number" id="s-x" step="0.1" title="X">
+            <input type="number" id="s-y" step="0.1" title="Y (altura)">
+            <input type="number" id="s-z" step="0.1" title="Z">
+          </div>
+          <div class="acoes">
+            <button id="s-var" title="Troca por outra variante/rotação da mesma peça">↻ Variante</button>
+            <button id="s-dup">Duplicar</button>
+            <button id="s-del" class="perigo">Excluir (Del)</button>
+          </div>
+        </div>
+      </div>
+      <div class="caixa">
+        <h3>Peças (prefabs) <span class="fraco" id="pal-qtd"></span></h3>
+        <input class="busca" id="pal-busca" placeholder="filtrar peças…">
+        <div class="paleta" id="paleta"></div>
+        <div class="fraco" id="add-dica" style="margin-top:8px" hidden>Modo colocar: clique no chão pra pôr <b id="add-nome"></b>. Esc cancela.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="toast"></div>
+<script type="module" src="/admin/cenario.mjs"></script>
+</body>
+</html>
